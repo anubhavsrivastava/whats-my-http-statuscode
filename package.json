@@ -1,0 +1,40 @@
+{
+	"name": "whats-my-http-statuscode",
+	"version": "0.1.0",
+	"description": "A UI Based interface to guide you to exact http specification status your server should return for any request.",
+	"dependencies": {
+		"react": "^16.6.0",
+		"react-dom": "^16.6.0",
+		"react-redux": "^5.1.0",
+		"react-router": "^4.3.1",
+		"react-router-dom": "^4.3.1",
+		"react-scripts": "2.1.1",
+		"redux": "^4.0.1",
+		"redux-thunk": "^2.3.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/anubhavsrivastava/whats-my-http-statuscode.git"
+	},
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/anubhavsrivastava/whats-my-http-statuscode/issues"
+	},
+	"homepage": "https://github.com/anubhavsrivastava/whats-my-http-statuscode#readme"
+}
