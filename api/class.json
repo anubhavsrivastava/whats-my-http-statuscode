@@ -1,6 +1,17 @@
 [
 	{
 		"name": "1xx",
-		"description": "Informational"
+		"description": "Informational",
+		"stability": -1
+	},
+	{
+		"name": "2xx",
+		"description": "Informational",
+		"stability": 0
+	},
+	{
+		"name": "3xx",
+		"description": "Informational",
+		"stability": 0
 	}
 ]
