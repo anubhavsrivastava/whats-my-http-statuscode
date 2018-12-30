@@ -13,5 +13,15 @@
 		"name": "3xx",
 		"description": "Informational",
 		"stability": 0
+	},
+	{
+		"name": "4xx",
+		"description": "Informational",
+		"stability": 0
+	},
+	{
+		"name": "5xx",
+		"description": "Informational",
+		"stability": 0
 	}
 ]
