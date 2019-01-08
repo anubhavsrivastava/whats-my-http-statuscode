@@ -2,6 +2,13 @@
 	{
 		"name": "HTTP Status Codes",
 		"description": "httpstatuses.com is an easy to reference database of HTTP Status Codes with their definitions and helpful code references all in one place. Visit an individual status code via httpstatuses.com/code or browse the list below.",
-		"url": "https://httpstatuses.com/"
+		"url": "https://httpstatuses.com/",
+		"repo": ""
+	},
+	{
+		"name": "httpstat.us",
+		"description": "This is a super simple service for generating different HTTP codes. It's useful for testing how your own scripts deal with varying responses.",
+		"url": "https://httpstat.us/",
+		"repo": ""
 	}
 ]
