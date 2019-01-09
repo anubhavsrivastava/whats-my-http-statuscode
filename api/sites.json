@@ -22,5 +22,11 @@
 		"description": "Status Codes To Cat Memes, as a Service.",
 		"url": "https://http.cat/",
 		"repo": ""
+	},
+	{
+		"name": "HTTP status Dogs",
+		"description": "Status Codes To Dog Memes, as a Service.",
+		"url": "https://httpstatusdogs.com/",
+		"repo": ""
 	}
 ]
