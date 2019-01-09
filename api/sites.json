@@ -16,5 +16,11 @@
 		"description": "HTTP status codes visualized as a subway map.",
 		"url": "https://restlet.com/http-status-map/",
 		"repo": ""
+	},
+	{
+		"name": "HTTP Cats",
+		"description": "Status Codes To Cat Memes, as a Service.",
+		"url": "https://http.cat/",
+		"repo": ""
 	}
 ]
