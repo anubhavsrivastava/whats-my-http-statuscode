@@ -34,5 +34,11 @@
 		"description": " HTTP Status Code values found Web Concepts site.",
 		"url": "http://webconcepts.info/concepts/http-status-code/",
 		"repo": ""
+	},
+	{
+		"name": "HTTP Status Code Registry by IANA",
+		"description": "The official HTTP Status Code registry is maintained by the Internet Assigned Numbers Authority (IANA).",
+		"url": "http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml",
+		"repo": ""
 	}
 ]
