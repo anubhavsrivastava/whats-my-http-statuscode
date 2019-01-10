@@ -28,5 +28,11 @@
 		"description": "Status Codes To Dog Memes, as a Service.",
 		"url": "https://httpstatusdogs.com/",
 		"repo": ""
+	},
+	{
+		"name": "Web Concepts - HTTP Status Codes",
+		"description": " HTTP Status Code values found Web Concepts site.",
+		"url": "http://webconcepts.info/concepts/http-status-code/",
+		"repo": ""
 	}
 ]
