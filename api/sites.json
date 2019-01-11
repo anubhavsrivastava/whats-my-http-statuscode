@@ -51,6 +51,12 @@
 		"name": "Http Status Codes",
 		"description": "List of HTTP status codes and description for each of them, with reference when have.",
 		"url": "https://github.com/waldemarnt/http-status-codes",
+		"repo": "https://github.com/waldemarnt/http-status-codes"
+	},
+	{
+		"name": "HTTP Status cheatsheet",
+		"description": "HTTP Status cheatsheet. Period.",
+		"url": "https://devhints.io/http-status",
 		"repo": ""
 	}
 ]
