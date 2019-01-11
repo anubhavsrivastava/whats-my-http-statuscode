@@ -46,5 +46,11 @@
 		"description": "Brief about API error codes",
 		"url": "https://blog.restcase.com/rest-api-error-codes-101/",
 		"repo": ""
+	},
+	{
+		"name": "Http Status Codes",
+		"description": "List of HTTP status codes and description for each of them, with reference when have.",
+		"url": "https://github.com/waldemarnt/http-status-codes",
+		"repo": ""
 	}
 ]
