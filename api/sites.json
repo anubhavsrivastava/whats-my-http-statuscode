@@ -40,5 +40,11 @@
 		"description": "The official HTTP Status Code registry is maintained by the Internet Assigned Numbers Authority (IANA).",
 		"url": "http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml",
 		"repo": ""
+	},
+	{
+		"name": "REST API Error Codes 101",
+		"description": "Brief about API error codes",
+		"url": "https://blog.restcase.com/rest-api-error-codes-101/",
+		"repo": ""
 	}
 ]
