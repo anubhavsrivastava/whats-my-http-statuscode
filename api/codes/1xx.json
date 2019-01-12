@@ -1,8 +1,14 @@
 [
 	{
-		"code": 101,
+		"code": 100,
 		"msg": "100 Continue",
 		"description": "The initial part of a request has been received and has not yet been rejected by the server. The server intends to send a final response after the request has been fully received and acted upon.",
 		"additionalInfo": "When the request contains an Expect header field that includes a 100-continue expectation, the 100 response indicates that the server wishes to receive the request payload body1. The client ought to continue sending the request and discard the 100 response. \n If the request did not contain an Expect header field containing the 100-continue expectation, the client can simply discard this interim response."
+	},
+	{
+		"code": 101,
+		"msg": "101 SWITCHING PROTOCOLS",
+		"description": "The server understands and is willing to comply with the client's request, via the Upgrade header field, for a change in the application protocol being used on this connection.",
+		"additionalInfo": "The server MUST generate an Upgrade header field in the response that indicates which protocol(s) will be switched to immediately after the empty line that terminates the 101 response. \n It is assumed that the server will only agree to switch protocols when it is advantageous to do so. For example, switching to a newer version of HTTP might be advantageous over older versions, and switching to a real-time, synchronous protocol might be advantageous when delivering resources that use such features."
 	}
 ]
