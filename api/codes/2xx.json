@@ -67,5 +67,11 @@
 		"msg": "206 PARTIAL CONTENT",
 		"description": "The server is successfully fulfilling a range request for the target resource by transferring one or more parts of the selected representation that correspond to the satisfiable ranges found in the request's Range header field.",
 		"additionalInfo": ["A 206 response is cacheable by default; i.e., unless otherwise indicated by explicit cache controls"]
+	},
+	{
+		"code": 207,
+		"msg": "207 MULTI-STATUS",
+		"description": "A Multi-Status response conveys information about multiple resources in situations where multiple status codes might be appropriate.",
+		"additionalInfo": ["Although '207' is used as the overall response status code, the recipient needs to consult the contents of the multistatus response body for further information about the success or failure of the method execution. The response MAY be used in success, partial success and also in failure situations."]
 	}
 ]
