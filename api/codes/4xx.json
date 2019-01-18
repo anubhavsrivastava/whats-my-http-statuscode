@@ -44,5 +44,13 @@
 		"msg": "405 METHOD NOT ALLOWED",
 		"description": "The method received in the request-line is known by the origin server but not supported by the target resource.",
 		"additionalInfo": ["The origin server MUST generate an Allow header field in a 405 response containing a list of the target resource's currently supported methods.", "A 405 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls."]
+	},
+	{
+		"code": 406,
+		"msg": "406 NOT ACCEPTABLE",
+		"description": "The target resource does not have a current representation that would be acceptable to the user agent, according to the proactive negotiation header fields received in the request, and the server is unwilling to supply a default representation.",
+		"additionalInfo": [
+			"The server SHOULD generate a payload containing a list of available representation characteristics and corresponding resource identifiers from which the user or user agent can choose the one most appropriate. A user agent MAY automatically select the most appropriate choice from that list. However, this specification does not define any standard for such automatic selection, as described in RFC7231 Section 6.4.1."
+		]
 	}
 ]
