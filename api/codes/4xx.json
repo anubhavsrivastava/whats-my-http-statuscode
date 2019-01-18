@@ -29,5 +29,14 @@
 			"If authentication credentials were provided in the request, the server considers them insufficient to grant access. The client SHOULD NOT automatically repeat the request with the same credentials. The client MAY repeat the request with new or different credentials. However, a request might be forbidden for reasons unrelated to the credentials.",
 			"An origin server that wishes to \"hide\" the current existence of a forbidden target resource MAY instead respond with a status code of 404 Not Found."
 		]
+	},
+	{
+		"code": 404,
+		"msg": "404 NOT FOUND",
+		"description": "The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.",
+		"additionalInfo": [
+			"A 404 status code does not indicate whether this lack of representation is temporary or permanent; the 410 Gone status code is preferred over 404 if the origin server knows, presumably through some configurable means, that the condition is likely to be permanent.",
+			"A 404 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls."
+		]
 	}
 ]
