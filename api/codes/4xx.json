@@ -38,5 +38,11 @@
 			"A 404 status code does not indicate whether this lack of representation is temporary or permanent; the 410 Gone status code is preferred over 404 if the origin server knows, presumably through some configurable means, that the condition is likely to be permanent.",
 			"A 404 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls."
 		]
+	},
+	{
+		"code": 405,
+		"msg": "405 METHOD NOT ALLOWED",
+		"description": "The method received in the request-line is known by the origin server but not supported by the target resource.",
+		"additionalInfo": ["The origin server MUST generate an Allow header field in a 405 response containing a list of the target resource's currently supported methods.", "A 405 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls."]
 	}
 ]
