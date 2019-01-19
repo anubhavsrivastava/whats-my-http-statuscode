@@ -1,1 +1,8 @@
-[]
+[
+	{
+		"code": 500,
+		"msg": "500 SERVER ERROR",
+		"description": "",
+		"additionalInfo": []
+	}
+]
