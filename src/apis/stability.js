@@ -1,8 +1,8 @@
-import { getStabilityCodes } from '../../api/index';
+import { getStabilityCodes } from './data';
 
 function fetchStabilitySchemas() {
 	return new Promise(function(resolve, reject) {
-		resolve(getStabilityCodes);
+		resolve(getStabilityCodes());
 	});
 }
 

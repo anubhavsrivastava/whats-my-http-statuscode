@@ -1,0 +1,17 @@
+[
+	{
+		"name": "Irrelevant",
+		"description": "Chances are you can safely ignore these and return a more general status code instead.",
+		"stability": -1
+	},
+	{
+		"name": "Standard",
+		"description": "This is standard API status code. You might probably find these codes all around internet.",
+		"stability": 0
+	},
+	{
+		"name": "Useful",
+		"description": "Returning these wherever appropriate will help anyone who is familiar with HTTP to use website/API and can troubleshoot any issues around this.",
+		"stability": 1
+	}
+]

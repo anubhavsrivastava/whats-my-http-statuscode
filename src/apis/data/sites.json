@@ -1,0 +1,62 @@
+[
+	{
+		"name": "HTTP Status Codes",
+		"description": "httpstatuses.com is an easy to reference database of HTTP Status Codes with their definitions and helpful code references all in one place. Visit an individual status code via httpstatuses.com/code or browse the list below.",
+		"url": "https://httpstatuses.com/",
+		"repo": ""
+	},
+	{
+		"name": "httpstat.us",
+		"description": "This is a super simple service for generating different HTTP codes. It's useful for testing how your own scripts deal with varying responses.",
+		"url": "https://httpstat.us/",
+		"repo": ""
+	},
+	{
+		"name": "HTTP Status Map",
+		"description": "HTTP status codes visualized as a subway map.",
+		"url": "https://restlet.com/http-status-map/",
+		"repo": ""
+	},
+	{
+		"name": "HTTP Cats",
+		"description": "Status Codes To Cat Memes, as a Service.",
+		"url": "https://http.cat/",
+		"repo": ""
+	},
+	{
+		"name": "HTTP status Dogs",
+		"description": "Status Codes To Dog Memes, as a Service.",
+		"url": "https://httpstatusdogs.com/",
+		"repo": ""
+	},
+	{
+		"name": "Web Concepts - HTTP Status Codes",
+		"description": "HTTP Status Code values found Web Concepts site.",
+		"url": "http://webconcepts.info/concepts/http-status-code/",
+		"repo": ""
+	},
+	{
+		"name": "HTTP Status Code Registry by IANA",
+		"description": "The official HTTP Status Code registry is maintained by the Internet Assigned Numbers Authority (IANA).",
+		"url": "http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml",
+		"repo": ""
+	},
+	{
+		"name": "REST API Error Codes 101",
+		"description": "Brief about API error codes",
+		"url": "https://blog.restcase.com/rest-api-error-codes-101/",
+		"repo": ""
+	},
+	{
+		"name": "Http Status Codes",
+		"description": "List of HTTP status codes and description for each of them, with reference when have.",
+		"url": "https://github.com/waldemarnt/http-status-codes",
+		"repo": "https://github.com/waldemarnt/http-status-codes"
+	},
+	{
+		"name": "HTTP Status cheatsheet",
+		"description": "HTTP Status cheatsheet. Period.",
+		"url": "https://devhints.io/http-status",
+		"repo": ""
+	}
+]
