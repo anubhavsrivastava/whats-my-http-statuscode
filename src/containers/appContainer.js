@@ -6,9 +6,6 @@ import RoutesMapping from '../constant/routes';
 import SampleComponent from '../components/SampleComponent';
 import { getApplicationInfo } from '../actions/applicationAction';
 import '../static/css/App.css';
-import 'normalize.css';
-import '@blueprintjs/icons/lib/css/blueprint-icons.css';
-import '@blueprintjs/core/lib/css/blueprint.css';
 const Routes = RoutesMapping.getRoutes();
 
 const mapStateToProps = (state, ownProps) => ({
