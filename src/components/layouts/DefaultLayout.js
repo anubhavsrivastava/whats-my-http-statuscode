@@ -4,7 +4,7 @@ import logo from '../../static/img/logo.svg';
 
 const FixedMenuLayout = props => (
 	<div>
-		<Menu fixed="top" secondary>
+		<Menu secondary>
 			<Container>
 				<Menu.Item as="a" header>
 					<Image size="mini" src={logo} />
@@ -29,6 +29,7 @@ const FixedMenuLayout = props => (
 				</Dropdown> */}
 			</Container>
 		</Menu>
+		{props.children}
 	</div>
 );
 

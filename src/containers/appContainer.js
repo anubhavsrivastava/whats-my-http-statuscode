@@ -29,11 +29,13 @@ class AppContainer extends Component {
 		const { applicationName } = this.props;
 		return (
 			<React.Fragment>
-				<Switch>
-					{/* <Route path={RoutesMapping.HOME} component={}/> */}
-					<Route exact path={Routes.HTTPSTATUS.path} render={() => <FixedMenuLayout name={applicationName} />} />
-					<Redirect to={Routes.HTTPSTATUS.path} />
-				</Switch>
+				<FixedMenuLayout name={applicationName}>
+					<Switch>
+						{/* <Route path={RoutesMapping.HOME} component={}/> */}
+						<Route exact path={Routes.HTTPSTATUS.path} render={() => <SampleComponent name={applicationName} />} />
+						<Redirect to={Routes.HTTPSTATUS.path} />
+					</Switch>
+				</FixedMenuLayout>
 			</React.Fragment>
 		);
 	}
