@@ -10,6 +10,23 @@ const fetchStabilityDataAction = stabilityData => {
 	};
 };
 
+const fetchRelatedSitesDataAction = sitesData => {
+	return {
+		type: actionTypes.FETCH_RELATED_SITES,
+		payload: {
+			sites: sitesData
+		}
+	};
+};
+
+const fetchRelatedSitesData = () => {
+	return dispatch => {
+		return httpAPI.fetchRelatedSitesSchemas().then(stabilityInfo => {
+			dispatch(fetchRelatedSitesDataAction(stabilityInfo));
+		});
+	};
+};
+
 const fetchStabilityData = () => {
 	return dispatch => {
 		return httpAPI.fetchStabilitySchemas().then(stabilityInfo => {
@@ -18,4 +35,4 @@ const fetchStabilityData = () => {
 	};
 };
 
-export { fetchStabilityData };
+export { fetchStabilityData, fetchRelatedSitesData };

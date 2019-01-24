@@ -1,6 +1,6 @@
 import * as actionTypes from './actionTypes';
 import packageJson from '../../package.json';
-import { fetchStabilityData } from './httpStatusInformationAction';
+import { fetchStabilityData, fetchRelatedSitesData } from './httpInfoAction';
 
 const updateApplicationInfo = appInfo => {
 	return {
@@ -17,6 +17,7 @@ const getApplicationInfo = () => {
 		return new Promise(resolve => {
 			dispatch(updateApplicationInfo(packageJson));
 			dispatch(fetchStabilityData());
+			dispatch(fetchRelatedSitesData());
 			resolve(packageJson.name);
 		});
 	};
