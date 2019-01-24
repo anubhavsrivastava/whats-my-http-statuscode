@@ -4,12 +4,18 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-color: #f7f7f7 !important;
 }
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+.inverted-color {
+	filter: invert(100%);
+}
+
+/* 
 .App {
 	text-align: center;
 }
@@ -20,7 +26,6 @@ code {
 }
 
 .App-header {
-	background-color: #282c34;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -41,4 +46,4 @@ code {
 	to {
 		transform: rotate(360deg);
 	}
-}
+} */

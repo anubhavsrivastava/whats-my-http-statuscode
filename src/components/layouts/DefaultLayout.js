@@ -4,10 +4,10 @@ import logo from '../../static/img/logo.svg';
 
 const FixedMenuLayout = props => (
 	<div>
-		<Menu secondary>
+		<Menu inverted>
 			<Container>
 				<Menu.Item as="a" header>
-					<Image size="mini" src={logo} />
+					<Image size="mini" className={'inverted-color'} src={logo} />
 				</Menu.Item>
 				<Menu.Item as="a">Home</Menu.Item>
 				{/* <Dropdown item simple text="Dropdown">
