@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Button, Card, Container, Divider, Grid, Header, Icon, Image, List, Menu, Responsive, Segment, Sidebar, Visibility } from 'semantic-ui-react';
+
+const CardColors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue', 'violet', 'purple', 'pink', 'brown', 'grey', 'black'];
 const mapStateToProps = (state, ownProps) => ({
 	relatedSites: state.httpInfo.sites
 });
@@ -12,6 +14,10 @@ const mapDispatchToProps = dispatch => ({
 
 class ResourceContainer extends Component {
 	componentDidMount = () => {};
+
+	getRandomColor = () => {
+		return CardColors[Math.floor(Math.random() * CardColors.length)];
+	};
 
 	render() {
 		const { relatedSites = [] } = this.props;
@@ -33,7 +39,7 @@ class ResourceContainer extends Component {
 								<Card.Group itemsPerRow={2}>
 									{relatedSites.map(site => {
 										return (
-											<Card key={site.name} color="orange">
+											<Card key={site.name} color={this.getRandomColor()}>
 												<Card.Content>
 													<Card.Header>
 														<a target="_blank" rel="noopener noreferrer" href={site.url}>
