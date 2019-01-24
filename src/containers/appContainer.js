@@ -8,6 +8,7 @@ import { getApplicationInfo } from '../actions/applicationAction';
 import '../static/css/App.css';
 import 'semantic-ui-css/semantic.min.css';
 import FixedMenuLayout from '../components/layouts/DefaultLayout';
+import ResourceContainer from './resourceContainer';
 const Routes = RoutesMapping.getRoutes();
 
 const mapStateToProps = (state, ownProps) => ({
@@ -33,7 +34,8 @@ class AppContainer extends Component {
 					<Switch>
 						{/* <Route path={RoutesMapping.HOME} component={}/> */}
 						<Route exact path={Routes.HTTPSTATUS.path} render={() => <SampleComponent name={applicationName} />} />
-						<Redirect to={Routes.HTTPSTATUS.path} />
+						<Route exact path={Routes.RESOURCE.path} render={() => <ResourceContainer name={applicationName} />} />
+						<Redirect to={Routes.RESOURCE.path} />
 					</Switch>
 				</FixedMenuLayout>
 			</React.Fragment>
