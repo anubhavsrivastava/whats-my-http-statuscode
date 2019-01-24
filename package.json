@@ -86,7 +86,6 @@
 	"bugs": {
 		"url": "https://github.com/anubhavsrivastava/whats-my-http-statuscode/issues"
 	},
-	"homepage": "https://github.com/anubhavsrivastava/whats-my-http-statuscode#readme",
 	"devDependencies": {
 		"coveralls": "^3.0.2",
 		"redux-mock-store": "^1.5.3"
