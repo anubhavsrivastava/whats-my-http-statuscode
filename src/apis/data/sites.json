@@ -1,7 +1,7 @@
 [
 	{
 		"name": "HTTP Status Codes",
-		"description": "httpstatuses.com is an easy to reference database of HTTP Status Codes with their definitions and helpful code references all in one place. Visit an individual status code via httpstatuses.com/code or browse the list below.",
+		"description": "httpstatuses.com is an easy to reference database of HTTP Status Codes with their definitions and helpful code references all in one place. ",
 		"url": "https://httpstatuses.com/",
 		"repo": ""
 	},
@@ -24,7 +24,7 @@
 		"repo": ""
 	},
 	{
-		"name": "HTTP status Dogs",
+		"name": "HTTP  Dogs",
 		"description": "Status Codes To Dog Memes, as a Service.",
 		"url": "https://httpstatusdogs.com/",
 		"repo": ""
