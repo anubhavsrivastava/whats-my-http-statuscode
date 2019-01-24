@@ -1,5 +1,5 @@
 import * as actionTypes from './actionTypes';
-import * as httpAPI from '../apis/stability';
+import * as httpAPI from '../apis/httpInfoApi';
 
 const fetchStabilityDataAction = stabilityData => {
 	return {
