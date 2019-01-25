@@ -42,19 +42,19 @@ class ResourceContainer extends Component {
 											<Card key={site.name} color={this.getRandomColor()}>
 												<Card.Content>
 													<Card.Header>
-														{site.repo ? (
-															<Label as="a" color="blue" ribbon>
-																<Icon name="lab" />
-																Repository
-															</Label>
-														) : (
-															<Label as="a" color="orange" ribbon>
-																<Icon name="at" />
-																Website
-															</Label>
-														)}
-
 														<a target="_blank" rel="noopener noreferrer" href={site.url}>
+															{site.repo ? (
+																<Label as="a" color="blue" ribbon>
+																	<Icon name="lab" />
+																	Repository
+																</Label>
+															) : (
+																<Label as="a" color="orange" ribbon>
+																	<Icon name="at" />
+																	Website
+																</Label>
+															)}
+
 															{site.name}
 														</a>
 													</Card.Header>
