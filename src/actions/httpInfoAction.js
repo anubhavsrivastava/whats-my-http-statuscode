@@ -19,10 +19,19 @@ const fetchRelatedSitesDataAction = sitesData => {
 	};
 };
 
+const fetchHttpCodeClassesDataAction = classesData => {
+	return {
+		type: actionTypes.FETCH_HTTPCODES_CLASS,
+		payload: {
+			httpClass: classesData
+		}
+	};
+};
+
 const fetchRelatedSitesData = () => {
 	return dispatch => {
-		return httpAPI.fetchRelatedSitesSchemas().then(stabilityInfo => {
-			dispatch(fetchRelatedSitesDataAction(stabilityInfo));
+		return httpAPI.fetchRelatedSitesSchemas().then(relatedSites => {
+			dispatch(fetchRelatedSitesDataAction(relatedSites));
 		});
 	};
 };
@@ -35,4 +44,12 @@ const fetchStabilityData = () => {
 	};
 };
 
-export { fetchStabilityData, fetchRelatedSitesData };
+const fetchHttpCodeClassesData = () => {
+	return dispatch => {
+		return httpAPI.fetchHttpCodeClassesSchemas().then(httpClassInfo => {
+			dispatch(fetchHttpCodeClassesDataAction(httpClassInfo));
+		});
+	};
+};
+
+export { fetchHttpCodeClassesData, fetchStabilityData, fetchRelatedSitesData };
