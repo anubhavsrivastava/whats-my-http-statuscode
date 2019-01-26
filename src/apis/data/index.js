@@ -18,4 +18,4 @@ function getHttpCodes() {
 	return httpCodesJSON;
 }
 
-export { getStabilityCodes, getRelatedSites, getHttpCodeClasses };
+export { getHttpCodes, getStabilityCodes, getRelatedSites, getHttpCodeClasses };

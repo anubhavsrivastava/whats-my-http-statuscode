@@ -1,4 +1,4 @@
-import { getStabilityCodes, getRelatedSites, getHttpCodeClasses } from './data';
+import { getHttpCodes, getStabilityCodes, getRelatedSites, getHttpCodeClasses } from './data';
 
 function fetchStabilitySchemas() {
 	return new Promise(function(resolve, reject) {
@@ -18,4 +18,10 @@ function fetchHttpCodeClassesSchemas() {
 	});
 }
 
-export { fetchHttpCodeClassesSchemas, fetchStabilitySchemas, fetchRelatedSitesSchemas };
+function fetchHttpCodeSchemas() {
+	return new Promise(function(resolve, reject) {
+		resolve(getHttpCodes());
+	});
+}
+
+export { fetchHttpCodeSchemas, fetchHttpCodeClassesSchemas, fetchStabilitySchemas, fetchRelatedSitesSchemas };
