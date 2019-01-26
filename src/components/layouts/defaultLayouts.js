@@ -18,7 +18,7 @@ const FixedMenuLayout = props => (
 					</Menu.Item>
 					<Menu.Item as="a" link1="#/httpcodedetails">
 						<a href="#/httpcodedetails">
-							<Icon name="lab" />
+							<Icon name="code" />
 							HTTP Codes Info
 						</a>
 					</Menu.Item>
