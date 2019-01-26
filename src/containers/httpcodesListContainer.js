@@ -1,63 +1,38 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Button, Label, Card, Container, Divider, Grid, Header, Icon, Image, List, Menu, Responsive, Segment, Sidebar, Visibility } from 'semantic-ui-react';
+import { Button, Tab, Label, Card, Container, Divider, Grid, Header, Icon, Image, List, Menu, Responsive, Segment, Sidebar, Visibility } from 'semantic-ui-react';
 import PageHeader from '../components/layouts/pageHeader';
 
 const CardColors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue', 'violet', 'purple', 'pink', 'brown', 'grey', 'black'];
 const mapStateToProps = (state, ownProps) => ({
-	relatedSites: state.httpInfo.sites
+	httpCodeClasses: state.httpInfo.httpCodeClasses
 });
 
-const mapDispatchToProps = dispatch => ({
-	updateApplicationInfo: () => {}
-});
+const mapDispatchToProps = dispatch => ({});
 
+const IconMap = { '1xx': 'info', '2xx': 'check', '3xx': 'redo', '4xx': 'computer', '5xx': 'server' };
 class HTTPCodesListContainer extends Component {
 	componentDidMount = () => {};
 
-	getRandomColor = () => {
-		return CardColors[Math.floor(Math.random() * CardColors.length)];
-	};
-
 	render() {
-		const { relatedSites = [] } = this.props;
+		const { httpCodeClasses = [] } = this.props;
+
+		let panes = httpCodeClasses.map(classCode => {
+			return {
+				menuItem: { key: classCode.name, icon: IconMap[classCode.name], content: `${classCode.name} ${classCode.type}` },
+				render: () => <Tab.Pane>Tab 1 Content</Tab.Pane>
+			};
+		});
+
 		return (
 			<React.Fragment>
-				<PageHeader title="apna TIme aayega" />
+				<PageHeader title="HTTP Status Codes " />
 				<Segment vertical>
 					<Grid container stackable verticalAlign="middle">
 						<Grid.Row>
 							<Grid.Column width={16}>
-								<Card.Group itemsPerRow={2}>
-									{relatedSites.map(site => {
-										return (
-											<Card key={site.url} color={this.getRandomColor()}>
-												<Card.Content>
-													<Card.Header>
-														<a target="_blank" rel="noopener noreferrer" href={site.url}>
-															{site.repo ? (
-																<Label color="blue" ribbon>
-																	<Icon name="lab" />
-																	Repository
-																</Label>
-															) : (
-																<Label color="orange" ribbon>
-																	<Icon name="at" />
-																	Website
-																</Label>
-															)}
-
-															{site.name}
-														</a>
-													</Card.Header>
-													{/* <Card.Meta>{site.repo ? 'Repository' : 'Website'}</Card.Meta> */}
-													<Card.Description>{site.description}</Card.Description>
-												</Card.Content>
-											</Card>
-										);
-									})}
-								</Card.Group>
+								<Tab panes={panes} />
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
