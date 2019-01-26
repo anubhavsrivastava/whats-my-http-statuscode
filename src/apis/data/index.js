@@ -1,5 +1,6 @@
 import stabilityJSON from './stability.json';
 import sitesJSON from './sites.json';
+import httpClassesJSON from './class.json';
 
 function getStabilityCodes() {
 	return stabilityJSON;
@@ -9,4 +10,8 @@ function getRelatedSites() {
 	return sitesJSON;
 }
 
-export { getStabilityCodes, getRelatedSites };
+function getHttpCodeClasses() {
+	return httpClassesJSON;
+}
+
+export { getStabilityCodes, getRelatedSites, getHttpCodeClasses };
