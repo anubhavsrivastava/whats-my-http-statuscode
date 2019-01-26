@@ -23,7 +23,7 @@ const fetchHttpCodeClassesDataAction = classesData => {
 	return {
 		type: actionTypes.FETCH_HTTPCODES_CLASS,
 		payload: {
-			httpClass: classesData
+			httpCodeClasses: classesData
 		}
 	};
 };
