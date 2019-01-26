@@ -1,16 +1,28 @@
 import React from 'react';
-import { Container, Divider, Dropdown, Grid, Header, Image, List, Menu, Segment } from 'semantic-ui-react';
+import { Container, Icon, Divider, Dropdown, Grid, Header, Image, List, Menu, Segment } from 'semantic-ui-react';
 import logo from '../../static/img/logo.svg';
 
 const FixedMenuLayout = props => (
 	<div>
-		<Menu inverted>
-			<Container>
-				<Menu.Item as="a" header>
-					<Image size="mini" className={'inverted-color'} src={logo} />
-				</Menu.Item>
-				<Menu.Item as="a">Home</Menu.Item>
-				{/* <Dropdown item simple text="Dropdown">
+		<Segment inverted>
+			<Menu inverted secondary>
+				<Container>
+					<Menu.Item as="a" header>
+						<Image size="mini" className={'inverted-color'} src={logo} />
+					</Menu.Item>
+					<Menu.Item as="a" link>
+						<a href="#/resource">
+							<Icon name="lab" />
+							Resources
+						</a>
+					</Menu.Item>
+					<Menu.Item as="a" link1="#/httpcodedetails">
+						<a href="#/httpcodedetails">
+							<Icon name="lab" />
+							HTTP Codes Info
+						</a>
+					</Menu.Item>
+					{/* <Dropdown item simple text="Dropdown">
 					<Dropdown.Menu>
 						<Dropdown.Item>List Item</Dropdown.Item>
 						<Dropdown.Item>List Item</Dropdown.Item>
@@ -27,8 +39,9 @@ const FixedMenuLayout = props => (
 						<Dropdown.Item>List Item</Dropdown.Item>
 					</Dropdown.Menu>
 				</Dropdown> */}
-			</Container>
-		</Menu>
+				</Container>
+			</Menu>
+		</Segment>
 		{props.children}
 	</div>
 );
