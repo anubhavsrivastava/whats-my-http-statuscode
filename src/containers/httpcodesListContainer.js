@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Button, Tab, Label, Card, Container, Divider, Grid, Header, Icon, Image, List, Menu, Responsive, Segment, Sidebar, Visibility } from 'semantic-ui-react';
+import { Tab, Grid, Segment } from 'semantic-ui-react';
 import PageHeader from '../components/layouts/pageHeader';
 
-const CardColors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue', 'violet', 'purple', 'pink', 'brown', 'grey', 'black'];
 const mapStateToProps = (state, ownProps) => ({
 	httpCodeClasses: state.httpInfo.httpCodeClasses
 });
