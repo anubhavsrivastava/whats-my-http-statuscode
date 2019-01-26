@@ -10,13 +10,13 @@ const FixedMenuLayout = props => (
 					<Menu.Item as="a" header>
 						<Image size="mini" className={'inverted-color'} src={logo} />
 					</Menu.Item>
-					<Menu.Item as="a" link>
+					<Menu.Item link>
 						<a href="#/resource">
 							<Icon name="lab" />
 							Resources
 						</a>
 					</Menu.Item>
-					<Menu.Item as="a" link1="#/httpcodedetails">
+					<Menu.Item link>
 						<a href="#/httpcodedetails">
 							<Icon name="code" />
 							HTTP Codes Info

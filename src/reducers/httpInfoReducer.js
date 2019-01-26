@@ -1,7 +1,8 @@
 import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
-	stability: []
+	stability: [],
+	sites: []
 };
 
 export default function httpInfoReducer(state = initialState, action) {

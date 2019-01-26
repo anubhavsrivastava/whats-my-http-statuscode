@@ -11,7 +11,8 @@ const initialState = {
 	application: {
 		version: '0.0.0',
 		name: 'application'
-	}
+	},
+	httpInfo: {}
 };
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
