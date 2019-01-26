@@ -3,7 +3,8 @@ import * as actionTypes from '../actions/actionTypes';
 const initialState = {
 	stability: [],
 	sites: [],
-	httpCodeClasses: []
+	httpCodeClasses: [],
+	httpCodes: {}
 };
 
 export default function httpInfoReducer(state = initialState, action) {
@@ -14,6 +15,8 @@ export default function httpInfoReducer(state = initialState, action) {
 			return Object.assign({}, state, { sites: action.payload.sites });
 		case actionTypes.FETCH_HTTPCODES_CLASS:
 			return Object.assign({}, state, { httpCodeClasses: action.payload.httpCodeClasses });
+		case actionTypes.FETCH_HTTPCODES:
+			return Object.assign({}, state, { httpCodes: action.payload.httpCodes });
 		default:
 			return state;
 	}
