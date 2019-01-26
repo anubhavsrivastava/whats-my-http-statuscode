@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({});
 
 const IconMap = { '1xx': 'info', '2xx': 'check', '3xx': 'redo', '4xx': 'computer', '5xx': 'server' };
-
+const ColorMap = { '1xx': 'blue', '2xx': 'green', '3xx': 'orange', '4xx': 'orange', '5xx': 'red' };
 class HTTPCodeList extends Component {
 	componentDidMount = () => {};
 
@@ -30,11 +30,11 @@ class HTTPCodeList extends Component {
 								<Card.Group itemsPerRow={2}>
 									{currentList.map(httpCode => {
 										return (
-											<Card key={httpCode.url}>
+											<Card key={httpCode.code}>
 												<Card.Content>
 													<Card.Header>
 														<a target="_blank" rel="noopener noreferrer" href={httpCode.more}>
-															<Label color="blue" ribbon>
+															<Label color={ColorMap[currentClassCode.name]} ribbon>
 																<Icon name={IconMap[currentClassCode.name]} />
 																{httpCode.msg}
 															</Label>
@@ -69,7 +69,7 @@ class HTTPCodesListContainer extends Component {
 
 		let panes = httpCodeClasses.map(classCode => {
 			return {
-				menuItem: { key: classCode.name, icon: IconMap[classCode.name], content: `${classCode.name} ${classCode.type}` },
+				menuItem: { color: ColorMap[classCode.name], key: classCode.name, icon: IconMap[classCode.name], content: `${classCode.name} ${classCode.type}` },
 				render: () => <HTTPCodeList httpCodes={httpCodes} currentClassCode={classCode} />
 			};
 		});
@@ -81,7 +81,7 @@ class HTTPCodesListContainer extends Component {
 					<Grid container stackable verticalAlign="middle">
 						<Grid.Row>
 							<Grid.Column width={16}>
-								<Tab panes={panes} />
+								<Tab menu={{ attached: false, tabular: false }} panes={panes} />
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
