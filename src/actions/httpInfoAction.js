@@ -28,6 +28,15 @@ const fetchHttpCodeClassesDataAction = classesData => {
 	};
 };
 
+const fetchHttpCodesDataAction = httpCodes => {
+	return {
+		type: actionTypes.FETCH_HTTPCODES,
+		payload: {
+			httpCodes: httpCodes
+		}
+	};
+};
+
 const fetchRelatedSitesData = () => {
 	return dispatch => {
 		return httpAPI.fetchRelatedSitesSchemas().then(relatedSites => {
@@ -52,4 +61,11 @@ const fetchHttpCodeClassesData = () => {
 	};
 };
 
-export { fetchHttpCodeClassesData, fetchStabilityData, fetchRelatedSitesData };
+const fetchHttpCodesData = () => {
+	return dispatch => {
+		return httpAPI.fetchHttpCodeSchemas().then(httpCodesInfo => {
+			dispatch(fetchHttpCodesDataAction(httpCodesInfo));
+		});
+	};
+};
+export { fetchHttpCodesData, fetchHttpCodeClassesData, fetchStabilityData, fetchRelatedSitesData };
