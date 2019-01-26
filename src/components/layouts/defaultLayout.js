@@ -11,15 +11,15 @@ const FixedMenuLayout = props => (
 						<Image size="mini" className={'inverted-color'} src={logo} />
 					</Menu.Item>
 					<Menu.Item link>
-						<a href="#/resource">
-							<Icon name="lab" />
-							Resources
+						<a href="#/httpcodedetails">
+							<Icon name="code" />
+							HTTP Status Codes
 						</a>
 					</Menu.Item>
 					<Menu.Item link>
-						<a href="#/httpcodedetails">
-							<Icon name="code" />
-							HTTP Codes Info
+						<a href="#/resource">
+							<Icon name="lab" />
+							Resources
 						</a>
 					</Menu.Item>
 					{/* <Dropdown item simple text="Dropdown">
