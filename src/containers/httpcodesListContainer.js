@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Button, Label, Card, Container, Divider, Grid, Header, Icon, Image, List, Menu, Responsive, Segment, Sidebar, Visibility } from 'semantic-ui-react';
+import PageHeader from '../components/layouts/pageHeader';
 
 const CardColors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue', 'violet', 'purple', 'pink', 'brown', 'grey', 'black'];
 const mapStateToProps = (state, ownProps) => ({
@@ -23,15 +24,7 @@ class HTTPCodesListContainer extends Component {
 		const { relatedSites = [] } = this.props;
 		return (
 			<React.Fragment>
-				<Segment vertical>
-					<Grid container stackable verticalAlign="middle">
-						<Grid.Row>
-							<Grid.Column width={16}>
-								<Header as="h1">Appna Time Aaayagega</Header>
-							</Grid.Column>
-						</Grid.Row>
-					</Grid>
-				</Segment>
+				<PageHeader title="apna TIme aayega" />
 				<Segment vertical>
 					<Grid container stackable verticalAlign="middle">
 						<Grid.Row>
