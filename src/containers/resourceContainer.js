@@ -39,17 +39,17 @@ class ResourceContainer extends Component {
 								<Card.Group itemsPerRow={2}>
 									{relatedSites.map(site => {
 										return (
-											<Card key={site.name} color={this.getRandomColor()}>
+											<Card key={site.url} color={this.getRandomColor()}>
 												<Card.Content>
 													<Card.Header>
 														<a target="_blank" rel="noopener noreferrer" href={site.url}>
 															{site.repo ? (
-																<Label as="a" color="blue" ribbon>
+																<Label color="blue" ribbon>
 																	<Icon name="lab" />
 																	Repository
 																</Label>
 															) : (
-																<Label as="a" color="orange" ribbon>
+																<Label color="orange" ribbon>
 																	<Icon name="at" />
 																	Website
 																</Label>
