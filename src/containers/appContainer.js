@@ -3,7 +3,6 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import RoutesMapping from '../constant/routes';
-import SampleComponent from '../components/sampleComponent';
 import { getApplicationInfo } from '../actions/applicationAction';
 import '../static/css/App.css';
 import 'semantic-ui-css/semantic.min.css';
@@ -34,7 +33,7 @@ class AppContainer extends Component {
 				<FixedMenuLayout name={applicationName}>
 					<Switch>
 						{/* <Route path={RoutesMapping.HOME} component={}/> */}
-						<Route exact path={Routes.HTTPSTATUS.path} render={() => <SampleComponent name={applicationName} />} />
+						<Route exact path={Routes.HTTPSTATUS.path} render={() => <ResourceContainer name={applicationName} />} />
 						<Route exact path={Routes.RESOURCE.path} render={() => <ResourceContainer name={applicationName} />} />
 						<Route exact path={Routes.HTTPCODEDETAILS.path} render={() => <HTTPCodesListContainer name={applicationName} />} />
 						<Redirect to={Routes.HTTPCODEDETAILS.path} />
