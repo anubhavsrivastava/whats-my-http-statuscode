@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({});
 
 const IconMap = { '1xx': 'info', '2xx': 'check', '3xx': 'redo', '4xx': 'computer', '5xx': 'server' };
-const ColorMap = { '1xx': 'blue', '2xx': 'green', '3xx': 'orange', '4xx': 'orange', '5xx': 'red' };
+const ColorMap = { '1xx': 'blue', '2xx': 'green', '3xx': 'brown', '4xx': 'orange', '5xx': 'red' };
 class HTTPCodeList extends Component {
 	componentDidMount = () => {};
 
