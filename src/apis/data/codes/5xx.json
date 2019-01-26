@@ -3,6 +3,7 @@
 		"code": 500,
 		"msg": "500 SERVER ERROR",
 		"description": "",
-		"additionalInfo": []
+		"additionalInfo": [],
+		"more": "https://httpstatuses.com/500"
 	}
 ]

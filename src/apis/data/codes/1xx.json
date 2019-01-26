@@ -6,7 +6,8 @@
 		"additionalInfo": [
 			"When the request contains an Expect header field that includes a 100-continue expectation, the 100 response indicates that the server wishes to receive the request payload body. The client ought to continue sending the request and discard the 100 response.",
 			"If the request did not contain an Expect header field containing the 100-continue expectation, the client can simply discard this interim response."
-		]
+		],
+		"more": "https://httpstatuses.com/100"
 	},
 	{
 		"code": 101,
@@ -15,7 +16,8 @@
 		"additionalInfo": [
 			"The server MUST generate an Upgrade header field in the response that indicates which protocol(s) will be switched to immediately after the empty line that terminates the 101 response.",
 			"It is assumed that the server will only agree to switch protocols when it is advantageous to do so. For example, switching to a newer version of HTTP might be advantageous over older versions, and switching to a real-time, synchronous protocol might be advantageous when delivering resources that use such features."
-		]
+		],
+		"more": "https://httpstatuses.com/101"
 	},
 	{
 		"code": 102,
@@ -24,6 +26,7 @@
 		"additionalInfo": [
 			"This status code SHOULD only be sent when the server has a reasonable expectation that the request will take significant time to complete. As guidance, if a method is taking longer than 20 seconds (a reasonable, but arbitrary value) to process the server SHOULD return a 102 (Processing) response. The server MUST send a final response after the request has been completed. ",
 			"Methods can potentially take a long period of time to process, especially methods that support the Depth header. In such cases the client may time-out the connection while waiting for a response. To prevent this the server may return a 102 Processing status code to indicate to the client that the server is still processing the method."
-		]
+		],
+		"more": "https://httpstatuses.com/102"
 	}
 ]

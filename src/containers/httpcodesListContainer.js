@@ -28,29 +28,25 @@ class HTTPCodeList extends Component {
 						<Grid.Row>
 							<Grid.Column width={16}>
 								<Card.Group itemsPerRow={2}>
-									{currentList.map(site => {
+									{currentList.map(httpCode => {
 										return (
-											<Card key={site.url}>
+											<Card key={httpCode.url}>
 												<Card.Content>
 													<Card.Header>
-														<a target="_blank" rel="noopener noreferrer" href={site.url}>
-															{site.repo ? (
-																<Label color="blue" ribbon>
-																	<Icon name="lab" />
-																	Repository
-																</Label>
-															) : (
-																<Label color="orange" ribbon>
-																	<Icon name="at" />
-																	Website
-																</Label>
-															)}
-
-															{site.name}
+														<a target="_blank" rel="noopener noreferrer" href={httpCode.more}>
+															<Label color="blue" ribbon>
+																<Icon name={IconMap[currentClassCode.name]} />
+																{httpCode.msg}
+															</Label>
 														</a>
 													</Card.Header>
-													{/* <Card.Meta>{site.repo ? 'Repository' : 'Website'}</Card.Meta> */}
-													<Card.Description>{site.description}</Card.Description>
+													{/* <Card.Meta>{httpCode.repo ? 'Repository' : 'WebhttpCode'}</Card.Meta> */}
+													<Card.Description>
+														{httpCode.description}{' '}
+														<a target="_blank" rel="noopener noreferrer" href={httpCode.more}>
+															Learn more
+														</a>
+													</Card.Description>
 												</Card.Content>
 											</Card>
 										);

@@ -3,7 +3,8 @@
 		"code": 400,
 		"msg": "400 BAD REQUEST",
 		"description": "The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).",
-		"additionalInfo": []
+		"additionalInfo": [],
+		"more": "https://httpstatuses.com/400"
 	},
 	{
 		"code": 401,
@@ -12,13 +13,15 @@
 		"additionalInfo": [
 			"The server generating a 401 response MUST send a WWW-Authenticate header field containing at least one challenge applicable to the target resource.",
 			"If the request included authentication credentials, then the 401 response indicates that authorization has been refused for those credentials. The user agent MAY repeat the request with a new or replaced Authorization header field. If the 401 response contains the same challenge as the prior response, and the user agent has already attempted authentication at least once, then the user agent SHOULD present the enclosed representation to the user, since it usually contains relevant diagnostic information."
-		]
+		],
+		"more": "https://httpstatuses.com/401"
 	},
 	{
 		"code": 402,
 		"msg": "402 PAYMENT REQUIRED",
 		"description": "Reserved for future use.",
-		"additionalInfo": ["Because Money"]
+		"additionalInfo": ["Because Money"],
+		"more": "https://httpstatuses.com/402"
 	},
 	{
 		"code": 403,
@@ -28,7 +31,8 @@
 			"A server that wishes to make public why the request has been forbidden can describe that reason in the response payload (if any).",
 			"If authentication credentials were provided in the request, the server considers them insufficient to grant access. The client SHOULD NOT automatically repeat the request with the same credentials. The client MAY repeat the request with new or different credentials. However, a request might be forbidden for reasons unrelated to the credentials.",
 			"An origin server that wishes to \"hide\" the current existence of a forbidden target resource MAY instead respond with a status code of 404 Not Found."
-		]
+		],
+		"more": "https://httpstatuses.com/403"
 	},
 	{
 		"code": 404,
@@ -37,13 +41,15 @@
 		"additionalInfo": [
 			"A 404 status code does not indicate whether this lack of representation is temporary or permanent; the 410 Gone status code is preferred over 404 if the origin server knows, presumably through some configurable means, that the condition is likely to be permanent.",
 			"A 404 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls."
-		]
+		],
+		"more": "https://httpstatuses.com/404"
 	},
 	{
 		"code": 405,
 		"msg": "405 METHOD NOT ALLOWED",
 		"description": "The method received in the request-line is known by the origin server but not supported by the target resource.",
-		"additionalInfo": ["The origin server MUST generate an Allow header field in a 405 response containing a list of the target resource's currently supported methods.", "A 405 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls."]
+		"additionalInfo": ["The origin server MUST generate an Allow header field in a 405 response containing a list of the target resource's currently supported methods.", "A 405 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls."],
+		"more": "https://httpstatuses.com/405"
 	},
 	{
 		"code": 406,
@@ -51,6 +57,7 @@
 		"description": "The target resource does not have a current representation that would be acceptable to the user agent, according to the proactive negotiation header fields received in the request, and the server is unwilling to supply a default representation.",
 		"additionalInfo": [
 			"The server SHOULD generate a payload containing a list of available representation characteristics and corresponding resource identifiers from which the user or user agent can choose the one most appropriate. A user agent MAY automatically select the most appropriate choice from that list. However, this specification does not define any standard for such automatic selection, as described in RFC7231 Section 6.4.1."
-		]
+		],
+		"more": "https://httpstatuses.com/406"
 	}
 ]

@@ -13,13 +13,15 @@
 			"`TRACE` a representation of the request message as received by the end server.",
 			"Aside from responses to CONNECT, a 200 response always has a payload, though an origin server MAY generate a payload body of zero length. If no payload is desired, an origin server ought to send 204 No Content instead. For CONNECT, no payload is allowed because the successful result is a tunnel, which begins immediately after the 200 response header section.",
 			"A 200 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls."
-		]
+		],
+		"more": "https://httpstatuses.com/200"
 	},
 	{
 		"code": 201,
 		"msg": "201 CREATED",
 		"description": "The request has been fulfilled and has resulted in one or more new resources being created.",
-		"additionalInfo": ["The primary resource created by the request is identified by either a Location header field in the response or, if no Location field is received, by the effective request URI.", "The 201 response payload typically describes and links to the resource(s) created. "]
+		"additionalInfo": ["The primary resource created by the request is identified by either a Location header field in the response or, if no Location field is received, by the effective request URI.", "The 201 response payload typically describes and links to the resource(s) created. "],
+		"more": "https://httpstatuses.com/201"
 	},
 	{
 		"code": 202,
@@ -28,7 +30,8 @@
 		"additionalInfo": [
 			"There is no facility in HTTP for re-sending a status code from an asynchronous operation.",
 			"The 202 response is intentionally noncommittal. Its purpose is to allow a server to accept a request for some other process (perhaps a batch-oriented process that is only run once per day) without requiring that the user agent's connection to the server persist until the process is completed. The representation sent with this response ought to describe the request's current status and point to (or embed) a status monitor that can provide the user with an estimate of when the request will be fulfilled."
-		]
+		],
+		"more": "https://httpstatuses.com/202"
 	},
 	{
 		"code": 203,
@@ -38,7 +41,8 @@
 			"This status code allows the proxy to notify recipients when a transformation has been applied, since that knowledge might impact later decisions regarding the content. For example, future cache validation requests for the content might only be applicable along the same request path (through the same proxies).",
 			"The 203 response is similar to the Warning code of 214 Transformation Applied, which has the advantage of being applicable to responses with any status code.",
 			"A 203 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls."
-		]
+		],
+		"more": "https://httpstatuses.com/203"
 	},
 	{
 		"code": 204,
@@ -51,7 +55,8 @@
 			"For example, a 204 status code is commonly used with document editing interfaces corresponding to a \"save\" action, such that the document being saved remains available to the user for editing. It is also frequently used with interfaces that expect automated data transfers to be prevalent, such as within distributed version control systems.",
 			"A 204 response is terminated by the first empty line after the header fields because it cannot contain a message body.",
 			"A 204 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls."
-		]
+		],
+		"more": "https://httpstatuses.com/204"
 	},
 	{
 		"code": 205,
@@ -60,19 +65,22 @@
 		"additionalInfo": [
 			"This response is intended to support a common data entry use case where the user receives content that supports data entry (a form, notepad, canvas, etc.), enters or manipulates data in that space, causes the entered data to be submitted in a request, and then the data entry mechanism is reset for the next entry so that the user can easily initiate another input action.",
 			"Since the 205 status code implies that no additional content will be provided, a server MUST NOT generate a payload in a 205 response. In other words, a server MUST do one of the following for a 205 response: a) indicate a zero-length body for the response by including a Content-Length header field with a value of 0; b) indicate a zero-length payload for the response by including a Transfer-Encoding header field with a value of chunked and a message body consisting of a single chunk of zero-length; or, c) close the connection immediately after sending the blank line terminating the header section."
-		]
+		],
+		"more": "https://httpstatuses.com/205"
 	},
 	{
 		"code": 206,
 		"msg": "206 PARTIAL CONTENT",
 		"description": "The server is successfully fulfilling a range request for the target resource by transferring one or more parts of the selected representation that correspond to the satisfiable ranges found in the request's Range header field.",
-		"additionalInfo": ["A 206 response is cacheable by default; i.e., unless otherwise indicated by explicit cache controls"]
+		"additionalInfo": ["A 206 response is cacheable by default; i.e., unless otherwise indicated by explicit cache controls"],
+		"more": "https://httpstatuses.com/206"
 	},
 	{
 		"code": 207,
 		"msg": "207 MULTI-STATUS",
 		"description": "A Multi-Status response conveys information about multiple resources in situations where multiple status codes might be appropriate.",
-		"additionalInfo": ["Although '207' is used as the overall response status code, the recipient needs to consult the contents of the multistatus response body for further information about the success or failure of the method execution. The response MAY be used in success, partial success and also in failure situations."]
+		"additionalInfo": ["Although '207' is used as the overall response status code, the recipient needs to consult the contents of the multistatus response body for further information about the success or failure of the method execution. The response MAY be used in success, partial success and also in failure situations."],
+		"more": "https://httpstatuses.com/207"
 	},
 	{
 		"code": 208,
@@ -83,7 +91,8 @@
 			"Note that the 208 status will only occur for \"Depth: infinity\" requests, and that it is of particular importance when the multiple collection bindings cause a bind loop",
 			"A client can request the DAV:resource-id property in a PROPFIND request to guarantee that they can accurately reconstruct the binding structure of a collection with multiple bindings to a single resource.",
 			"For backward compatibility with clients not aware of the 208 status code appearing in multistatus response bodies, it SHOULD NOT be used unless the client has signaled support for this specification using the \"DAV\" request header. Instead, a 508 Loop Detected status should be returned when a binding loop is discovered. This allows the server to return the 508 as the top-level return status, if it discovers it before it started the response, or in the middle of a multistatus, if it discovers it in the middle of streaming out a multistatus response."
-		]
+		],
+		"more": "https://httpstatuses.com/208"
 	},
 	{
 		"code": 226,
@@ -94,6 +103,7 @@
 			"The request MUST have included an A-IM header field listing at least one instance-manipulation. The response MUST include an Etag header field giving the entity tag of the current instance.",
 			"A response received with a status code of 226 MAY be stored by a cache and used in reply to a subsequent request, subject to the HTTP expiration mechanism and any Cache-Control headers, and to the requirements in section 10.6.",
 			"A response received with a status code of 226 MAY be used by a cache, in conjunction with a cache entry for the base instance, to create a cache entry for the current instance."
-		]
+		],
+		"more": "https://httpstatuses.com/226"
 	}
 ]

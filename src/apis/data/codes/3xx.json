@@ -9,7 +9,8 @@
 			"For request methods other than HEAD, the server SHOULD generate a payload in the 300 response containing a list of representation metadata and URI reference(s) from which the user or user agent can choose the one most preferred. The user agent MAY make a selection from that list automatically if it understands the provided media type. A specific format for automatic selection is not defined by this specification because HTTP tries to remain orthogonal to the definition of its payloads. In practice, the representation is provided in some easily parsed format believed to be acceptable to the user agent, as determined by shared design or content negotiation, or in some commonly accepted hypertext format.",
 			"A 300 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls.",
 			"Note: The original proposal for the 300 status code defined the URI header field as providing a list of alternative representations, such that it would be usable for 200, 300, and 406 responses and be transferred in responses to the HEAD method. However, lack of deployment and disagreement over syntax led to both URI and Alternates (a subsequent proposal) being dropped from this specification. It is possible to communicate the list using a set of Link header fields, each with a relationship of \"alternate\", though deployment is a chicken-and-egg problem."
-		]
+		],
+		"more": "https://httpstatuses.com/300"
 	},
 	{
 		"code": 301,
@@ -20,7 +21,8 @@
 			"The server SHOULD generate a Location header field in the response containing a preferred URI reference for the new permanent URI. The user agent MAY use the Location field value for automatic redirection. The server's response payload usually contains a short hypertext note with a hyperlink to the new URI(s)",
 			"Note: For historical reasons, a user agent MAY change the request method from POST to GET for the subsequent request. If this behavior is undesired, the 307 Temporary Redirect status code can be used instead.",
 			"A 301 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls."
-		]
+		],
+		"more": "https://httpstatuses.com/301"
 	},
 	{
 		"code": 302,
@@ -29,7 +31,8 @@
 		"additionalInfo": [
 			"The server SHOULD generate a Location header field in the response containing a URI reference for the different URI. The user agent MAY use the Location field value for automatic redirection. The server's response payload usually contains a short hypertext note with a hyperlink to the different URI(s).",
 			"Note: For historical reasons, a user agent MAY change the request method from POST to GET for the subsequent request. If this behavior is undesired, the 307 Temporary Redirect status code can be used instead."
-		]
+		],
+		"more": "https://httpstatuses.com/302"
 	},
 	{
 		"code": 303,
@@ -40,6 +43,7 @@
 			"This status code is applicable to any HTTP method. It is primarily used to allow the output of a POST action to redirect the user agent to a selected resource, since doing so provides the information corresponding to the POST response in a form that can be separately identified, bookmarked, and cached, independent of the original request.",
 			"A 303 response to a GET request indicates that the origin server does not have a representation of the target resource that can be transferred by the server over HTTP. However, the Location field value refers to a resource that is descriptive of the target resource, such that making a retrieval request on that other resource might result in a representation that is useful to recipients without implying that it represents the original target resource. Note that answers to the questions of what can be represented, what representations are adequate, and what might be a useful description are outside the scope of HTTP.",
 			"Except for responses to a HEAD request, the representation of a 303 response ought to contain a short hypertext note with a hyperlink to the same URI reference provided in the Location header field."
-		]
+		],
+		"more": "https://httpstatuses.com/303"
 	}
 ]
