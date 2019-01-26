@@ -1,27 +1,27 @@
 [
 	{
 		"name": "1xx",
-		"description": "Informational",
+		"type": "Informational",
 		"stability": -1
 	},
 	{
 		"name": "2xx",
-		"description": "Success",
+		"type": "Success",
 		"stability": 0
 	},
 	{
 		"name": "3xx",
-		"description": "Redirection",
+		"type": "Redirection",
 		"stability": 0
 	},
 	{
 		"name": "4xx",
-		"description": "Client Error",
+		"type": "Client Error",
 		"stability": 0
 	},
 	{
 		"name": "5xx",
-		"description": "Server Error",
+		"type": "Server Error",
 		"stability": 0
 	}
 ]
