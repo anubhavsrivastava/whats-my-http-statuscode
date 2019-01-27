@@ -22,6 +22,12 @@ const FixedMenuLayout = props => (
 							Resources
 						</a>
 					</Menu.Item>
+					<Menu.Item link>
+						<a href="#/faq">
+							<Icon name="question" />
+							FAQ
+						</a>
+					</Menu.Item>
 					{/* <Dropdown item simple text="Dropdown">
 					<Dropdown.Menu>
 						<Dropdown.Item>List Item</Dropdown.Item>

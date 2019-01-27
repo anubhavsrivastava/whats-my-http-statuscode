@@ -42,7 +42,7 @@ class HTTPCodeList extends Component {
 													</Card.Header>
 													{/* <Card.Meta>{httpCode.repo ? 'Repository' : 'WebhttpCode'}</Card.Meta> */}
 													<Card.Description>
-														{httpCode.description}{' '}
+														{`${httpCode.description} `}
 														<a target="_blank" rel="noopener noreferrer" href={httpCode.more}>
 															Learn more
 														</a>
