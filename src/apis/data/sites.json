@@ -45,7 +45,8 @@
 		"name": "REST API Error Codes 101",
 		"description": "Brief about API error codes",
 		"url": "https://blog.restcase.com/rest-api-error-codes-101/",
-		"repo": ""
+		"repo": "",
+		"blog": true
 	},
 	{
 		"name": "HTTP Status Codes",

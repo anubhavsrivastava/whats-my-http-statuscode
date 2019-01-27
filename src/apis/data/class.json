@@ -1,26 +1,31 @@
 [
 	{
 		"name": "1xx",
+		"description": "An informational response indicates that the request was received and understood. It is issued on a provisional basis while request processing continues. It alerts the client to wait for a final response",
 		"type": "Informational",
 		"stability": -1
 	},
 	{
 		"name": "2xx",
+		"description": "This class of status codes indicates the action requested by the client was received, understood and accepted.",
 		"type": "Success",
 		"stability": 0
 	},
 	{
 		"name": "3xx",
+		"description": "This class of status code indicates the client must take additional action to complete the request. Many of these status codes are used in URL redirection.",
 		"type": "Redirection",
 		"stability": 0
 	},
 	{
 		"name": "4xx",
+		"description": "This class of status code is intended for situations in which the error seems to have been caused by the client. These status codes are applicable to any request method.",
 		"type": "Client Error",
 		"stability": 0
 	},
 	{
 		"name": "5xx",
+		"description": "The server failed to fulfill an apparently valid request. Response status codes beginning with the digit \"5\" indicate cases in which the server is aware that it has encountered an error or is otherwise incapable of performing the request. These response codes are applicable to any request method.",
 		"type": "Server Error",
 		"stability": 0
 	}
