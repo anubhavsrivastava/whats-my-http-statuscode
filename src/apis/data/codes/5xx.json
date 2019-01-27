@@ -19,5 +19,12 @@
 		"description": "The server, while acting as a gateway or proxy, received an invalid response from an inbound server it accessed while attempting to fulfill the request.",
 		"additionalInfo": [],
 		"more": "https://httpstatuses.com/502"
+	},
+	{
+		"code": 503,
+		"msg": "503 SERVICE UNAVAILABLE",
+		"description": "The server is currently unable to handle the request due to a temporary overload or scheduled maintenance, which will likely be alleviated after some delay.",
+		"additionalInfo": ["The server MAY send a Retry-After header field to suggest an appropriate amount of time for the client to wait before retrying the request.", "Note: The existence of the 503 status code does not imply that a server has to use it when becoming overloaded. Some servers might simply refuse the connection"],
+		"more": "https://httpstatuses.com/503"
 	}
 ]
