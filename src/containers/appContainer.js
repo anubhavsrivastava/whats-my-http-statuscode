@@ -9,6 +9,7 @@ import 'semantic-ui-css/semantic.min.css';
 import FixedMenuLayout from '../components/layouts/defaultLayout';
 import ResourceContainer from './resourceContainer';
 import HTTPCodesListContainer from './httpcodesListContainer';
+import FAQContainer from './FAQContainer';
 const Routes = RoutesMapping.getRoutes();
 
 const mapStateToProps = (state, ownProps) => ({
@@ -36,6 +37,7 @@ class AppContainer extends Component {
 						<Route exact path={Routes.HTTPSTATUS.path} render={() => <ResourceContainer name={applicationName} />} />
 						<Route exact path={Routes.RESOURCE.path} render={() => <ResourceContainer name={applicationName} />} />
 						<Route exact path={Routes.HTTPCODEDETAILS.path} render={() => <HTTPCodesListContainer name={applicationName} />} />
+						<Route exact path={Routes.FAQ.path} render={() => <FAQContainer name={applicationName} />} />
 						<Redirect to={Routes.HTTPCODEDETAILS.path} />
 					</Switch>
 				</FixedMenuLayout>
