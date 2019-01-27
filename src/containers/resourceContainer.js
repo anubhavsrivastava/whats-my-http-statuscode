@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Label, Card, Grid, Icon, Segment } from 'semantic-ui-react';
-import PageHeader from '../components/layouts/pageHeader';
+import PageHeader from '../components/common/pageHeader';
 
 const CardColors = ['red', 'orange', 'yellow', 'olive', 'green', 'teal', 'blue', 'violet', 'purple', 'pink', 'brown', 'grey', 'black'];
 const mapStateToProps = (state, ownProps) => ({

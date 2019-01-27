@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Card, Label, Icon, Tab, Grid, Segment } from 'semantic-ui-react';
-import PageHeader from '../components/layouts/pageHeader';
-
+import PageHeader from '../components/common/pageHeader';
+import ContentHeader from '../components/common/contentHeader';
 const mapStateToProps = (state, ownProps) => ({
 	httpCodeClasses: state.httpInfo.httpCodeClasses,
 	httpCodes: state.httpInfo.httpCodes
@@ -22,7 +22,7 @@ class HTTPCodeList extends Component {
 		const currentList = httpCodes[currentClassCode.name] || [];
 		return (
 			<Tab.Pane>
-				<PageHeader title={`${currentClassCode.name} ${currentClassCode.type}`} />
+				<ContentHeader icon={IconMap[currentClassCode.name]} description={currentClassCode.description} title={`${currentClassCode.name} ${currentClassCode.type}`} />
 				<Segment vertical>
 					<Grid container stackable verticalAlign="middle">
 						<Grid.Row>
