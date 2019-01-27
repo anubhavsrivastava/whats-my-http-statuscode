@@ -1,5 +1,5 @@
 class RoutesMapping {
-	_routes = [{ path: '/', name: 'Home' }, { path: '/http-status', exact: true, name: 'httpstatus' }, { path: '/resource', exact: true, name: 'resource' }, { path: '/faq', exact: true, name: 'faq' }, { path: '/httpcodedetails', exact: true, name: 'httpcodedetails' }];
+	_routes = [{ path: '/', name: 'Home' }, { path: '/http-status', exact: true, name: 'httpstatus' }, { path: '/resource', exact: true, name: 'resource' }, { path: '/faq', exact: true, name: 'faq' }, { path: '/httpstatusanswer', exact: true, name: 'httpstatusanswer' }, { path: '/httpcodedetails', exact: true, name: 'httpcodedetails' }];
 
 	getRoutes() {
 		const routesMap = {};
