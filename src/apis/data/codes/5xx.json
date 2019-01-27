@@ -1,8 +1,8 @@
 [
 	{
 		"code": 500,
-		"msg": "500 SERVER ERROR",
-		"description": "",
+		"msg": "500 INTERNAL SERVER ERROR",
+		"description": "The server encountered an unexpected condition that prevented it from fulfilling the request.",
 		"additionalInfo": [],
 		"more": "https://httpstatuses.com/500"
 	}
