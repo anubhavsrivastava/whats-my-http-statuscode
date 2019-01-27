@@ -25,7 +25,7 @@
 	},
 	{
 		"name": "5xx",
-		"description": "The server failed to fulfill an apparently valid request. Response status codes beginning with the digit \"5\" indicate cases in which the server is aware that it has encountered an error or is otherwise incapable of performing the request. These response codes are applicable to any request method.",
+		"description": "The server failed to fulfill an apparently valid request. Server has encountered an error or is otherwise incapable of performing the request. These response codes are applicable to any request method.",
 		"type": "Server Error",
 		"stability": 0
 	}
