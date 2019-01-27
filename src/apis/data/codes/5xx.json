@@ -85,6 +85,13 @@
 			"Responses with the 511 status code MUST NOT be stored by a cache.",
 			"The 511 status code is designed to mitigate problems caused by \"captive portals\" to software (especially non-browser agents) that is expecting a response from the server that a request was made to, not the intervening network infrastructure. It is not intended to encourage deployment of captive portals -- only to limit the damage caused by them."
 		],
-		"more": "https://httpstatuses.com/510"
+		"more": "https://httpstatuses.com/511"
+	},
+	{
+		"code": 599,
+		"msg": "599 NETWORK CONNECT TIMEOUT ERROR",
+		"description": "This status code is not specified in any RFCs, but is used by some HTTP proxies to signal a network connect timeout behind the proxy to a client in front of the proxy.",
+		"additionalInfo": [],
+		"more": "https://httpstatuses.com/599"
 	}
 ]
