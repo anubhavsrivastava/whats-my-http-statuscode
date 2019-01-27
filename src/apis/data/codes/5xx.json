@@ -42,5 +42,12 @@
 			"The server is indicating that it is unable or unwilling to complete the request using the same major version as the client, as described in Section 2.6 of RFC7230, other than with this error message. The server SHOULD generate a representation for the 505 response that describes why that version is not supported and what other protocols are supported by that server."
 		],
 		"more": "https://httpstatuses.com/505"
+	},
+	{
+		"code": 506,
+		"msg": "506 VARIANT ALSO NEGOTIATES",
+		"description": "The server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself, and is therefore not a proper end point in the negotiation process.",
+		"additionalInfo": [],
+		"more": "https://httpstatuses.com/506"
 	}
 ]
