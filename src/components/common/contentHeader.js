@@ -10,10 +10,8 @@ export default function ContentHeader(props) {
 					<Grid.Column width={16}>
 						<Header as="h2">
 							{icon ? <Icon name={icon} /> : null}
-							<Header.Content>
-								{title}
-								<Header.Subheader>{description}</Header.Subheader>
-							</Header.Content>
+							<Header.Content>{title}</Header.Content>
+							<Header.Subheader>{description}</Header.Subheader>
 						</Header>
 					</Grid.Column>
 				</Grid.Row>
