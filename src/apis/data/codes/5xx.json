@@ -63,5 +63,15 @@
 		"description": "The server terminated an operation because it encountered an infinite loop while processing a request with \"Depth: infinity\". This status indicates that the entire operation failed.",
 		"additionalInfo": [],
 		"more": "https://httpstatuses.com/508"
+	},
+	{
+		"code": 510,
+		"msg": "510 NOT EXTENDED",
+		"description": "The policy for accessing the resource has not been met in the request. The server should send back all the information necessary for the client to issue an extended request.",
+		"additionalInfo": [
+			"It is outside the scope of this specification to specify how the extensions inform the client.",
+			"If the 510 response contains information about extensions that were not present in the initial request then the client MAY repeat the request if it has reason to believe it can fulfill the extension policy by modifying the request according to the information provided in the 510 response. Otherwise the client MAY present any entity included in the 510 response to the user, since that entity may include relevant diagnostic information."
+		],
+		"more": "https://httpstatuses.com/510"
 	}
 ]
