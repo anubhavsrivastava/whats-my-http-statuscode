@@ -56,5 +56,12 @@
 		"description": "The method could not be performed on the resource because the server is unable to store the representation needed to successfully complete the request.",
 		"additionalInfo": ["This condition is considered to be temporary. If the request that received this status code was the result of a user action, the request MUST NOT be repeated until it is requested by a separate user action."],
 		"more": "https://httpstatuses.com/507"
+	},
+	{
+		"code": 508,
+		"msg": "508 LOOP DETECTED",
+		"description": "The server terminated an operation because it encountered an infinite loop while processing a request with \"Depth: infinity\". This status indicates that the entire operation failed.",
+		"additionalInfo": [],
+		"more": "https://httpstatuses.com/508"
 	}
 ]
