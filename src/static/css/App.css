@@ -15,6 +15,11 @@ code {
 	filter: invert(100%);
 }
 
+.container-box {
+	background: #fff;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
 /* 
 .App {
 	text-align: center;
