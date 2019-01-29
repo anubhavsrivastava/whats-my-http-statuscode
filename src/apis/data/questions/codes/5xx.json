@@ -11,6 +11,20 @@
 		"type": "question",
 		"mainText": "Is it a problem with another server for this request?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 2 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 4 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 2 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 3 } }]
+	},
+	{
+		"id": 2,
+		"type": "question",
+		"mainText": "Is the other server responding to this request?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "502" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "504" } }]
+	},
+	{
+		"id": 3,
+		"type": "question",
+		"mainText": "Does you code does not handle such request and will handle such request in future ?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "501" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "500" } }]
 	}
 ]
