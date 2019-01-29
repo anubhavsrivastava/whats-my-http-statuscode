@@ -1,0 +1,9 @@
+[
+	{
+		"id": 0,
+		"type": "question",
+		"mainText": "Should the user retry after sometime?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "503" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 1 } }]
+	}
+]
