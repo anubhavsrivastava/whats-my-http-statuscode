@@ -1,0 +1,9 @@
+[
+	{
+		"isMain": true,
+		"type": "question",
+		"mainText": "Is there problem with the request",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": 1 } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": 1 } }]
+	}
+]
