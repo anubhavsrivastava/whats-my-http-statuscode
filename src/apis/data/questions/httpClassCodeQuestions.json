@@ -1,9 +1,16 @@
 [
 	{
-		"isMain": true,
+		"id": 0,
 		"type": "question",
-		"mainText": "Is there problem with the request",
+		"mainText": "Is there problem with the request?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": 1 } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": 1 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "4xx" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 1 } }]
+	},
+	{
+		"id": 1,
+		"type": "question",
+		"mainText": "Is there problem at server(or server side)?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "5xx" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": 2 } }]
 	}
 ]
