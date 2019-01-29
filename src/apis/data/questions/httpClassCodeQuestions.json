@@ -11,6 +11,13 @@
 		"type": "question",
 		"mainText": "Is there problem at server(or server side)?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "5xx" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": 2 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "5xx" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
+	},
+	{
+		"id": 2,
+		"type": "question",
+		"mainText": "Are you implementing a web server?",
+		"additionalTexts": ["Implementing anything that is above the application layer"],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["1xx", "2xx", "3xx"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["2xx", "3xx"] } }]
 	}
 ]
