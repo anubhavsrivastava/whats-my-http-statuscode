@@ -61,5 +61,12 @@
 		"mainText": "Is the HTTP method/verb handled by resource?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 9 } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "405" } }]
+	},
+	{
+		"id": 9,
+		"type": "question",
+		"mainText": "Is there any problem with the header?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 10 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 11 } }]
 	}
 ]
