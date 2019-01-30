@@ -19,5 +19,12 @@
 		"mainText": "Does the user need to authenticate?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 3 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 4 } }]
+	},
+	{
+		"id": 3,
+		"type": "question",
+		"mainText": "Are you using HTTP auth?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "401" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 5 } }]
 	}
 ]
