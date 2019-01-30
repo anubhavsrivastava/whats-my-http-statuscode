@@ -33,5 +33,12 @@
 		"mainText": "Does the user have access to the resource?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 6 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 5 } }]
+	},
+	{
+		"id": 5,
+		"type": "question",
+		"mainText": "is the resource a secret?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "404" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "403" } }]
 	}
 ]
