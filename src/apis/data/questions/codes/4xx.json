@@ -1,0 +1,9 @@
+[
+	{
+		"id": 0,
+		"type": "question",
+		"mainText": "Is the request/user being throttled with rate limiting?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": "1" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
+	}
+]
