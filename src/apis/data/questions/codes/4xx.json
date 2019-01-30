@@ -68,5 +68,18 @@
 		"mainText": "Is there any problem with the header?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 10 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 11 } }]
+	},
+	{
+		"id": 10,
+		"type": "question",
+		"mainText": "Which header is missing or is mandatory?",
+		"additionalTexts": [],
+		"options": [
+			{ "option": "Accept", "type": "bool", "action": { "type": "node", "value": 406 } },
+			{ "option": "content-length", "type": "bool", "action": { "type": "node", "value": "411" } },
+			{ "option": "if-*", "type": "bool", "action": { "type": "node", "value": "412" } },
+			{ "option": "content-type", "type": "bool", "action": { "type": "node", "value": "415" } },
+			{ "option": "expect", "type": "bool", "action": { "type": "node", "value": "417" } }
+		]
 	}
 ]
