@@ -26,5 +26,12 @@
 		"mainText": "Are you using HTTP auth?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "401" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 5 } }]
+	},
+	{
+		"id": 4,
+		"type": "question",
+		"mainText": "Does the user have access to the resource?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 6 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 5 } }]
 	}
 ]
