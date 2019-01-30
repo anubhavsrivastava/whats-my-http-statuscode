@@ -12,5 +12,12 @@
 		"mainText": "Are you twitter or want to act cool?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "420" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": 429 } }]
+	},
+	{
+		"id": 2,
+		"type": "question",
+		"mainText": "Does the user need to authenticate?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 3 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 4 } }]
 	}
 ]
