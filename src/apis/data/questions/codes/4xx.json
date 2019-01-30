@@ -47,5 +47,12 @@
 		"mainText": "Does the resource even exists?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 8 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 7 } }]
+	},
+	{
+		"id": 7,
+		"type": "question",
+		"mainText": "Are you rage-quitting the internet or resource has been removed/soft-deleted?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "410" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "404" } }]
 	}
 ]
