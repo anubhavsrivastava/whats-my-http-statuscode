@@ -103,5 +103,12 @@
 		"mainText": "Is it april 1st?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "418" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 14 } }]
+	},
+	{
+		"id": 14,
+		"type": "question",
+		"mainText": "Are you implementing a web server?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["408", "413", "414", "416", "426"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": 400 } }]
 	}
 ]
