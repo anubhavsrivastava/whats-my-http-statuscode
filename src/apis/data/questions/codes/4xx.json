@@ -4,6 +4,13 @@
 		"type": "question",
 		"mainText": "Is the request/user being throttled with rate limiting?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": "1" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 1 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
+	},
+	{
+		"id": 1,
+		"type": "question",
+		"mainText": "Are you twitter or want to act cool?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "420" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": 429 } }]
 	}
 ]
