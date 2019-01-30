@@ -40,5 +40,12 @@
 		"mainText": "is the resource a secret?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "404" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "403" } }]
+	},
+	{
+		"id": 6,
+		"type": "question",
+		"mainText": "Does the resource even exists?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 8 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 7 } }]
 	}
 ]
