@@ -89,5 +89,12 @@
 		"mainText": "Request incompatible with previos request or condition?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "409" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 12 } }]
+	},
+	{
+		"id": 12,
+		"type": "question",
+		"mainText": "is the request body/header well formed but is invalid?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "422" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 13 } }]
 	}
 ]
