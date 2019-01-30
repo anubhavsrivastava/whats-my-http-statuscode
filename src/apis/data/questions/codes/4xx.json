@@ -54,5 +54,12 @@
 		"mainText": "Are you rage-quitting the internet or resource has been removed/soft-deleted?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "410" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "404" } }]
+	},
+	{
+		"id": 8,
+		"type": "question",
+		"mainText": "Is the HTTP method/verb handled by resource?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 9 } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "405" } }]
 	}
 ]
