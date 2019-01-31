@@ -12,5 +12,12 @@
 		"mainText": "Do you want the user's view to be unchanged?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "204" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
+	},
+	{
+		"id": 2,
+		"type": "question",
+		"mainText": "Are you implementing a web server?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["206", "304"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "200" } }]
 	}
 ]
