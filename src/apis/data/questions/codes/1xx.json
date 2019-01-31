@@ -2,8 +2,8 @@
 	{
 		"id": 0,
 		"type": "question",
-		"mainText": "Do you want to redirect user to new location?",
+		"mainText": "Will the request be completed later?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 1 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "202" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 1 } }]
 	}
 ]
