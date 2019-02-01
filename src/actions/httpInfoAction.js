@@ -38,34 +38,30 @@ const fetchHttpCodesDataAction = httpCodes => {
 };
 
 const fetchRelatedSitesData = () => {
-	return dispatch => {
-		return httpAPI.fetchRelatedSitesSchemas().then(relatedSites => {
-			dispatch(fetchRelatedSitesDataAction(relatedSites));
-		});
+	return async dispatch => {
+		const relatedSites = await httpAPI.fetchRelatedSitesSchemas();
+		dispatch(fetchRelatedSitesDataAction(relatedSites));
 	};
 };
 
 const fetchStabilityData = () => {
-	return dispatch => {
-		return httpAPI.fetchStabilitySchemas().then(stabilityInfo => {
-			dispatch(fetchStabilityDataAction(stabilityInfo));
-		});
+	return async dispatch => {
+		const stabilityInfo = await httpAPI.fetchStabilitySchemas();
+		dispatch(fetchStabilityDataAction(stabilityInfo));
 	};
 };
 
 const fetchHttpCodeClassesData = () => {
-	return dispatch => {
-		return httpAPI.fetchHttpCodeClassesSchemas().then(httpClassInfo => {
-			dispatch(fetchHttpCodeClassesDataAction(httpClassInfo));
-		});
+	return async dispatch => {
+		const httpClassInfo = await httpAPI.fetchHttpCodeClassesSchemas();
+		dispatch(fetchHttpCodeClassesDataAction(httpClassInfo));
 	};
 };
 
 const fetchHttpCodesData = () => {
-	return dispatch => {
-		return httpAPI.fetchHttpCodeSchemas().then(httpCodesInfo => {
-			dispatch(fetchHttpCodesDataAction(httpCodesInfo));
-		});
+	return async dispatch => {
+		const httpCodesInfo = await httpAPI.fetchHttpCodeSchemas();
+		dispatch(fetchHttpCodesDataAction(httpCodesInfo));
 	};
 };
 export { fetchHttpCodesData, fetchHttpCodeClassesData, fetchStabilityData, fetchRelatedSitesData };
