@@ -23,10 +23,10 @@ export default function httpInfoReducer(state = initialState, action) {
 			return Object.assign({}, state, { httpCodes: action.payload.httpCodes });
 		case actionTypes.FETCH_HTTPCODES_CLASS_QUESTIONS:
 			//TODO: this has to be new reducers
-			return Object.assign({}, state, { questions: { httpCodeClasses: action.payload.httpCodeClasses } });
+			return Object.assign({}, state, { questions: Object.assign({}, state.questions, { httpCodeClasses: action.payload.httpCodeClasses }) });
 		case actionTypes.FETCH_HTTPCODES_QUESTIONS:
 			//TODO: this has to be new reducers
-			return Object.assign({}, state, { questions: { httpCodes: action.payload.httpCodes } });
+			return Object.assign({}, state, { questions: Object.assign({}, state.questions, { httpCodes: action.payload.httpCodes }) });
 		default:
 			return state;
 	}
