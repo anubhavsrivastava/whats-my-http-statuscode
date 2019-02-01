@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Card, Label, Header, Container, Step, Icon, Grid, Segment } from 'semantic-ui-react';
+import { Card, Header, Container, Step, Icon, Grid, Segment } from 'semantic-ui-react';
 import PageHeader from '../components/common/pageHeader';
 const mapStateToProps = (state, ownProps) => ({
 	relatedSites: state.httpInfo.sites,
