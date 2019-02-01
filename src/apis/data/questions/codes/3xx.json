@@ -26,5 +26,12 @@
 		"mainText": "Is the new Location temporary?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "302" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "301" } }]
+	},
+	{
+		"id": 4,
+		"type": "question",
+		"mainText": "Is the new Location temporary?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "307" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "308" } }]
 	}
 ]
