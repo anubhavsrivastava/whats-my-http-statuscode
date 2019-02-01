@@ -4,7 +4,11 @@ const initialState = {
 	stability: [],
 	sites: [],
 	httpCodeClasses: [],
-	httpCodes: {}
+	httpCodes: {},
+	questions: {
+		httpCodeClasses: [],
+		httpCodes: {}
+	}
 };
 
 export default function httpInfoReducer(state = initialState, action) {
@@ -17,6 +21,12 @@ export default function httpInfoReducer(state = initialState, action) {
 			return Object.assign({}, state, { httpCodeClasses: action.payload.httpCodeClasses });
 		case actionTypes.FETCH_HTTPCODES:
 			return Object.assign({}, state, { httpCodes: action.payload.httpCodes });
+		case actionTypes.FETCH_HTTPCODES_CLASS_QUESTIONS:
+			//TODO: this has to be new reducers
+			return Object.assign({}, state, { questions: { httpCodeClasses: action.payload.httpCodeClasses } });
+		case actionTypes.FETCH_HTTPCODES_QUESTIONS:
+			//TODO: this has to be new reducers
+			return Object.assign({}, state, { questions: { httpCodes: action.payload.httpCodes } });
 		default:
 			return state;
 	}
