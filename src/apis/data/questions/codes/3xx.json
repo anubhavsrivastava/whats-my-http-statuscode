@@ -5,5 +5,12 @@
 		"mainText": "Is it to same resouce at new location?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 1 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
+	},
+	{
+		"id": 1,
+		"type": "question",
+		"mainText": "Can the method change to GET verb?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 3 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 4 } }]
 	}
 ]
