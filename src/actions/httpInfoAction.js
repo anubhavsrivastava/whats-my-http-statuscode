@@ -46,6 +46,15 @@ const fetchHttpCodesDataAction = httpCodes => {
 	};
 };
 
+const fetchHttpCodesQuestionAction = questions => {
+	return {
+		type: actionTypes.FETCH_HTTPCODES_QUESTIONS,
+		payload: {
+			httpCodes: questions
+		}
+	};
+};
+
 const fetchRelatedSitesData = () => {
 	return async dispatch => {
 		const relatedSites = await httpAPI.fetchRelatedSitesSchemas();
@@ -81,4 +90,11 @@ const fetchHttpCodesData = () => {
 	};
 };
 
-export { fetchHttpCodesData, fetchHttpCodeClassesData, fetchStabilityData, fetchRelatedSitesData };
+const fetchHttpCodesQuestions = () => {
+	return async dispatch => {
+		const httpCodeQuestions = await httpAPI.fetchHttpCodeQuestions();
+		dispatch(fetchHttpCodesQuestionAction(httpCodeQuestions));
+	};
+};
+
+export { fetchHttpCodesQuestions, fetchHttpCodeClassesQuestions, fetchHttpCodesData, fetchHttpCodeClassesData, fetchStabilityData, fetchRelatedSitesData };
