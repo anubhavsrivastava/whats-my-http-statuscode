@@ -28,6 +28,15 @@ const fetchHttpCodeClassesDataAction = classesData => {
 	};
 };
 
+const fetchHttpCodeClassesQuestionAction = questions => {
+	return {
+		type: actionTypes.FETCH_HTTPCODES_CLASS_QUESTIONS,
+		payload: {
+			httpCodeClasses: questions
+		}
+	};
+};
+
 const fetchHttpCodesDataAction = httpCodes => {
 	return {
 		type: actionTypes.FETCH_HTTPCODES,
@@ -58,10 +67,18 @@ const fetchHttpCodeClassesData = () => {
 	};
 };
 
+const fetchHttpCodeClassesQuestions = () => {
+	return async dispatch => {
+		const codeClassQuestions = await httpAPI.fetchHttpCodeClassesQuestions();
+		dispatch(fetchHttpCodeClassesQuestionAction(codeClassQuestions));
+	};
+};
+
 const fetchHttpCodesData = () => {
 	return async dispatch => {
 		const httpCodesInfo = await httpAPI.fetchHttpCodeSchemas();
 		dispatch(fetchHttpCodesDataAction(httpCodesInfo));
 	};
 };
+
 export { fetchHttpCodesData, fetchHttpCodeClassesData, fetchStabilityData, fetchRelatedSitesData };
