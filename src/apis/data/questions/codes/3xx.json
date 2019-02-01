@@ -12,5 +12,12 @@
 		"mainText": "Can the method change to GET verb?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 3 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 4 } }]
+	},
+	{
+		"id": 2,
+		"type": "question",
+		"mainText": "Was the location created for the request?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "201" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "303" } }]
 	}
 ]
