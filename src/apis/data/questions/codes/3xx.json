@@ -1,0 +1,9 @@
+[
+	{
+		"id": 0,
+		"type": "question",
+		"mainText": "Is it to same resouce at new location?",
+		"additionalTexts": [],
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 1 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
+	}
+]
