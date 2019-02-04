@@ -58,9 +58,9 @@ class HTTPStatusAnswerContainer extends Component {
 											{currentQuestion.mainText}
 										</Header>
 										<Segment.Inline>
-											{currentQuestion.options.map(opt => {
+											{currentQuestion.options.map((opt, i) => {
 												return (
-													<Button className="title-cased" key={opt.option}>
+													<Button primary={i === 0} className="title-cased" key={opt.option}>
 														{opt.option}
 													</Button>
 												);
