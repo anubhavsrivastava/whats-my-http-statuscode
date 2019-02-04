@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Header, Button, Step, Icon, Grid, Segment } from 'semantic-ui-react';
+import { Transition, Header, Button, Step, Icon, Grid, Segment } from 'semantic-ui-react';
 import PageHeader from '../components/common/pageHeader';
 const mapStateToProps = (state, ownProps) => ({
 	relatedSites: state.httpInfo.sites,
@@ -14,12 +14,20 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({});
 
 class HTTPStatusAnswerContainer extends Component {
+	constructor(props) {
+		super(props);
+		this.state = { question: true };
+	}
 	componentDidMount = () => {};
 
+	onOptionChoose = (question, opt) => {
+		this.setState({ question: false });
+	};
 	render() {
 		const { httpCodeClassesQuestions = [] } = this.props;
+		const { question } = this.state;
 		const currentQuestion = httpCodeClassesQuestions.find(t => t.id === 0);
-		console.log(currentQuestion);
+
 		return (
 			<React.Fragment>
 				<PageHeader title="What's my HTTP status?" />
@@ -51,23 +59,27 @@ class HTTPStatusAnswerContainer extends Component {
 									</Step>
 								</Step.Group>
 
-								{currentQuestion ? (
-									<Segment placeholder>
-										<Header icon>
-											<Icon name="question" />
-											{currentQuestion.mainText}
-										</Header>
-										<Segment.Inline>
-											{currentQuestion.options.map((opt, i) => {
-												return (
-													<Button primary={i === 0} className="title-cased" key={opt.option}>
-														{opt.option}
-													</Button>
-												);
-											})}
-										</Segment.Inline>
-									</Segment>
-								) : null}
+								<Segment placeholder>
+									<Transition.Group animation={'zoom'} duration={500}>
+										{currentQuestion && question ? (
+											<React.Fragment>
+												<Header icon>
+													<Icon name="question" />
+													{currentQuestion.mainText}
+												</Header>
+												<Segment.Inline>
+													{currentQuestion.options.map((opt, i) => {
+														return (
+															<Button onClick={this.onOptionChoose} primary={i === 0} className="title-cased" key={opt.option}>
+																{opt.option}
+															</Button>
+														);
+													})}
+												</Segment.Inline>
+											</React.Fragment>
+										) : null}
+									</Transition.Group>
+								</Segment>
 							</Grid.Column>
 						</Grid.Row>
 						{/* <Segment vertical>
