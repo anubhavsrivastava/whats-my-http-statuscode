@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Card, Header, Container, Step, Icon, Grid, Segment } from 'semantic-ui-react';
+import { Card, Step, Icon, Grid, Segment } from 'semantic-ui-react';
 import PageHeader from '../components/common/pageHeader';
 const mapStateToProps = (state, ownProps) => ({
 	relatedSites: state.httpInfo.sites,
@@ -53,10 +53,10 @@ class HTTPStatusAnswerContainer extends Component {
 							<Grid container stackable verticalAlign="middle">
 								<Grid.Row>
 									<Grid.Column width={16}>
-										<Card.Group itemsPerRow={2} fluid>
+										<Card.Group itemsPerRow={2}>
 											{httpCodeClasses.map(classCode => {
 												return (
-													<Card key={classCode.url}>
+													<Card key={classCode.name}>
 														<Card.Content>
 															<Card.Header>
 																<a target="_blank" rel="noopener noreferrer" href={classCode.url}>
@@ -99,17 +99,6 @@ class HTTPStatusAnswerContainer extends Component {
 								</Grid.Row>
 							</Grid>
 						</Segment>
-						<Container fluid>
-							<Header as="h2">Dogs Roles with Humans</Header>
-							<p>
-								Domestic dogs inherited complex behaviors, such as bite inhibition, from their wolf ancestors, which would have been pack hunters with complex body language. These sophisticated forms of social cognition and communication may account for their trainability, playfulness, and ability to fit into human households and
-								social situations, and these attributes have given dogs a relationship with humans that has enabled them to become one of the most successful species on the planet today.
-							</p>
-							<p>
-								The dogs' value to early human hunter-gatherers led to them quickly becoming ubiquitous across world cultures. Dogs perform many roles for people, such as hunting, herding, pulling loads, protection, assisting police and military, companionship, and, more recently, aiding handicapped individuals. This impact on human
-								society has given them the nickname "man's best friend" in the Western world. In some cultures, however, dogs are also a source of meat.
-							</p>
-						</Container>
 					</Grid>
 				</Segment>
 			</React.Fragment>
