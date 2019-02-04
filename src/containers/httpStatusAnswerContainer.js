@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Card, Step, Icon, Grid, Segment } from 'semantic-ui-react';
+import { Header, Button, Step, Icon, Grid, Segment } from 'semantic-ui-react';
 import PageHeader from '../components/common/pageHeader';
 const mapStateToProps = (state, ownProps) => ({
 	relatedSites: state.httpInfo.sites,
 	httpCodeClasses: state.httpInfo.httpCodeClasses,
-	httpCodes: state.httpInfo.httpCodes
+	httpCodes: state.httpInfo.httpCodes,
+	httpCodeClassesQuestions: state.httpInfo.questions.httpCodeClasses,
+	httpCodesQuestions: state.httpInfo.questions.httpCodes
 });
 
 const mapDispatchToProps = dispatch => ({});
@@ -15,8 +17,9 @@ class HTTPStatusAnswerContainer extends Component {
 	componentDidMount = () => {};
 
 	render() {
-		const { httpCodeClasses = [] } = this.props;
-
+		const { httpCodeClassesQuestions = [] } = this.props;
+		const currentQuestion = httpCodeClassesQuestions.find(t => t.id === 0);
+		console.log(currentQuestion);
 		return (
 			<React.Fragment>
 				<PageHeader title="What's my HTTP status?" />
@@ -47,9 +50,27 @@ class HTTPStatusAnswerContainer extends Component {
 										</Step.Content>
 									</Step>
 								</Step.Group>
+
+								{currentQuestion ? (
+									<Segment placeholder>
+										<Header icon>
+											<Icon name="question" />
+											{currentQuestion.mainText}
+										</Header>
+										<Segment.Inline>
+											{currentQuestion.options.map(opt => {
+												return (
+													<Button className="title-cased" key={opt.option}>
+														{opt.option}
+													</Button>
+												);
+											})}
+										</Segment.Inline>
+									</Segment>
+								) : null}
 							</Grid.Column>
 						</Grid.Row>
-						<Segment vertical>
+						{/* <Segment vertical>
 							<Grid container stackable verticalAlign="middle">
 								<Grid.Row>
 									<Grid.Column width={16}>
@@ -68,37 +89,14 @@ class HTTPStatusAnswerContainer extends Component {
 													</Card>
 												);
 											})}
-											{/* {relatedSites.slice(-2).map(site => {
-												return (
-													<Card key={site.url}>
-														<Card.Content>
-															<Card.Header>
-																<a target="_blank" rel="noopener noreferrer" href={site.url}>
-																	{site.repo ? (
-																		<Label color="blue" ribbon>
-																			<Icon name="lab" />
-																			Repository
-																		</Label>
-																	) : (
-																		<Label color="orange" ribbon>
-																			<Icon name="at" />
-																			Website
-																		</Label>
-																	)}
 
-																	{site.name}
-																</a>
-															</Card.Header>
-															<Card.Description>{site.description}</Card.Description>
-														</Card.Content>
-													</Card>
-												);
-											})} */}
+											{JSON.stringify(httpCodeClassesQuestions[0])}
+											
 										</Card.Group>
 									</Grid.Column>
 								</Grid.Row>
 							</Grid>
-						</Segment>
+						</Segment> */}
 					</Grid>
 				</Segment>
 			</React.Fragment>

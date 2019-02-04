@@ -20,6 +20,13 @@ code {
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
+.title-cased {
+	text-transform: lowercase;
+}
+
+.title-cased::first-letter {
+	text-transform: uppercase;
+}
 /* 
 .App {
 	text-align: center;
