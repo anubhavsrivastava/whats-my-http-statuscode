@@ -12,7 +12,7 @@ export default function QuestionCompoent(props) {
 			<Segment.Inline>
 				{question.options.map((opt, i) => {
 					return (
-						<Button onClick={onOptionChoose} primary={i === 0} className="title-cased" key={opt.option}>
+						<Button onClick={() => onOptionChoose(opt.option)} primary={i === 0} className="title-cased" key={opt.option}>
 							{opt.option}
 						</Button>
 					);

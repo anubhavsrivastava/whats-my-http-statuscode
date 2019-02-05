@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import { Transition, Header, Button, Step, Icon, Grid, Segment } from 'semantic-ui-react';
 import QuestionComponent from '../components/flow/questionComponent';
 import PageHeader from '../components/common/pageHeader';
+import { addQuestionaire } from '../actions/questionaireAction';
 const mapStateToProps = (state, ownProps) => ({
 	relatedSites: state.httpInfo.sites,
 	httpCodeClasses: state.httpInfo.httpCodeClasses,
@@ -12,30 +13,26 @@ const mapStateToProps = (state, ownProps) => ({
 	httpCodesQuestions: state.httpInfo.questions.httpCodes
 });
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+	addQuestion: () => {
+		return dispatch(addQuestionaire());
+	}
+});
 
 class HTTPStatusAnswerContainer extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { currentSeries: [], currentQuestion: null };
+		this.state = { currentSeries: [], currentIndex: 0 };
 	}
-	componentDidMount = () => {
-		const { httpCodeClassesQuestions = [] } = this.props;
-
-		const currentQuestion = httpCodeClassesQuestions.find(t => t.id === 0);
-
-		this.setState({ currentQuestion });
-		console.log(currentQuestion);
-	};
 
 	onOptionChoose = (question, opt) => {
-		this.setState({ question: false });
+		const { addQuestion } = this.props;
+		addQuestion(question);
 	};
 	render() {
-		// const { currentQuestion } = this.state;
 		const { httpCodeClassesQuestions = [] } = this.props;
-
-		const currentQuestion = httpCodeClassesQuestions.find(t => t.id === 0);
+		const { currentIndex } = this.state;
+		const currentQuestion = httpCodeClassesQuestions.find(t => t.id === currentIndex);
 
 		return (
 			<React.Fragment>
@@ -69,7 +66,7 @@ class HTTPStatusAnswerContainer extends Component {
 								</Step.Group>
 
 								<Segment placeholder>
-									<QuestionComponent question={currentQuestion} />
+									<QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />
 								</Segment>
 							</Grid.Column>
 						</Grid.Row>
