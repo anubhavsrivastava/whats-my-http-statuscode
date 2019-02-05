@@ -27,9 +27,9 @@ class HTTPStatusAnswerContainer extends Component {
 
 	onOptionChoose = (question, option) => {
 		const { addQuestion } = this.props;
-		addQuestion(question, option.option);
+		// addQuestion(question, option.option);
 		if (option.action.type === 'node') {
-			this.setState({ answered: true });
+			this.setState({ answered: true, currentAnswer: option.action.value });
 		}
 		if (option.action.type === 'link') {
 			this.setState({ currentIndex: option.action.value });
@@ -38,7 +38,7 @@ class HTTPStatusAnswerContainer extends Component {
 
 	render() {
 		const { httpCodeClassesQuestions = [] } = this.props;
-		const { currentIndex } = this.state;
+		const { currentIndex, answered, currentAnswer } = this.state;
 		const currentQuestion = httpCodeClassesQuestions.find(t => t.id === currentIndex);
 
 		return (
@@ -72,9 +72,7 @@ class HTTPStatusAnswerContainer extends Component {
 									</Step>
 								</Step.Group>
 
-								<Segment placeholder>
-									<QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />
-								</Segment>
+								<Segment placeholder>{answered ? currentAnswer : <QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />}</Segment>
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
