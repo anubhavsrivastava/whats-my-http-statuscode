@@ -4,14 +4,14 @@
 		"type": "question",
 		"mainText": "Is there problem with the request?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "4xx" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 1 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["4xx"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 1 } }]
 	},
 	{
 		"id": 1,
 		"type": "question",
 		"mainText": "Is there problem at server(or server side)?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "5xx" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["5xx"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
 	},
 	{
 		"id": 2,
@@ -25,6 +25,6 @@
 		"type": "question",
 		"mainText": "Do you want to redirect the user to new location?",
 		"additionalTexts": ["Implementing anything that is above the application layer"],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "3xx" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "2xx" } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["3xx"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["2xx"] } }]
 	}
 ]
