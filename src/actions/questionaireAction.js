@@ -1,8 +1,8 @@
 import * as actionTypes from './actionTypes';
 function actionCreator(action) {
-	return args => {
+	return (...args) => {
 		return dispatch => {
-			return dispatch(action.apply(this, args));
+			return dispatch(action.call(this, ...args));
 		};
 	};
 }
