@@ -14,21 +14,28 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-	addQuestion: question => {
-		return dispatch(addQuestionaire(question));
+	addQuestion: (question, option) => {
+		return dispatch(addQuestionaire(question, option));
 	}
 });
 
 class HTTPStatusAnswerContainer extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { currentSeries: [], currentIndex: 0 };
+		this.state = { answered: false, currentSeries: [], currentIndex: 0 };
 	}
 
-	onOptionChoose = (question, opt) => {
+	onOptionChoose = (question, option) => {
 		const { addQuestion } = this.props;
-		addQuestion(question);
+		addQuestion(question, option.option);
+		if (option.action.type === 'node') {
+			this.setState({ answered: true });
+		}
+		if (option.action.type === 'link') {
+			this.setState({ currentIndex: option.action.value });
+		}
 	};
+
 	render() {
 		const { httpCodeClassesQuestions = [] } = this.props;
 		const { currentIndex } = this.state;

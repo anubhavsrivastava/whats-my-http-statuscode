@@ -18,7 +18,7 @@
 		"type": "question",
 		"mainText": "Are you implementing a web server?",
 		"additionalTexts": ["Implementing anything that is above the application layer"],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": ["1xx", "2xx", "3xx"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 3 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["1xx", "2xx", "3xx"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 3 } }]
 	},
 	{
 		"id": 3,

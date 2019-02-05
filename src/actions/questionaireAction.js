@@ -7,10 +7,10 @@ function actionCreator(action) {
 	};
 }
 
-const addQuestionaireAction = question => {
+const addQuestionaireAction = (question, opt) => {
 	return {
 		type: actionTypes.ADD_QUESTIONAIRE,
-		payload: question
+		payload: { id: question.id, opt: opt }
 	};
 };
 
