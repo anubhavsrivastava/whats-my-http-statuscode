@@ -18,20 +18,20 @@
 		"type": "question",
 		"mainText": "Was the location created for the request?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "201" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "303" } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["201"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["303"] } }]
 	},
 	{
 		"id": 3,
 		"type": "question",
 		"mainText": "Is the new Location temporary?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "302" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "301" } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["302"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["301"] } }]
 	},
 	{
 		"id": 4,
 		"type": "question",
 		"mainText": "Is the new Location temporary?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "307" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "308" } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["307"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["308"] } }]
 	}
 ]

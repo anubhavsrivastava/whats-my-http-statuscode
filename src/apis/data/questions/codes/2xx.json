@@ -4,20 +4,20 @@
 		"type": "question",
 		"mainText": "Will the request be completed later?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "202" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 1 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["202"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 1 } }]
 	},
 	{
 		"id": 1,
 		"type": "question",
 		"mainText": "Do you want the user's view to be unchanged?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "204" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["204"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
 	},
 	{
 		"id": 2,
 		"type": "question",
 		"mainText": "Are you implementing a web server?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["206", "304"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "200" } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["206", "304"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["200"] } }]
 	}
 ]

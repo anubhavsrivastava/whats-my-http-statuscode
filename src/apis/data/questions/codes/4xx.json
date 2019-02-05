@@ -11,7 +11,7 @@
 		"type": "question",
 		"mainText": "Are you twitter or want to act cool?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "420" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": 429 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["420"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["429"] } }]
 	},
 	{
 		"id": 2,
@@ -25,7 +25,7 @@
 		"type": "question",
 		"mainText": "Are you using HTTP auth?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "401" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 5 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["401"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 5 } }]
 	},
 	{
 		"id": 4,
@@ -39,7 +39,7 @@
 		"type": "question",
 		"mainText": "is the resource a secret?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "404" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "403" } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["404"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["403"] } }]
 	},
 	{
 		"id": 6,
@@ -53,14 +53,14 @@
 		"type": "question",
 		"mainText": "Are you rage-quitting the internet or resource has been removed/soft-deleted?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "410" } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "404" } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["410"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["404"] } }]
 	},
 	{
 		"id": 8,
 		"type": "question",
 		"mainText": "Is the HTTP method/verb handled by resource?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 9 } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": "405" } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 9 } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["405"] } }]
 	},
 	{
 		"id": 9,
@@ -75,11 +75,11 @@
 		"mainText": "Which header is missing or is mandatory?",
 		"additionalTexts": [],
 		"options": [
-			{ "option": "Accept", "type": "bool", "action": { "type": "node", "value": 406 } },
-			{ "option": "content-length", "type": "bool", "action": { "type": "node", "value": "411" } },
-			{ "option": "if-*", "type": "bool", "action": { "type": "node", "value": "412" } },
-			{ "option": "content-type", "type": "bool", "action": { "type": "node", "value": "415" } },
-			{ "option": "expect", "type": "bool", "action": { "type": "node", "value": "417" } },
+			{ "option": "Accept", "type": "bool", "action": { "type": "node", "value": ["406"] } },
+			{ "option": "content-length", "type": "bool", "action": { "type": "node", "value": ["411"] } },
+			{ "option": "if-*", "type": "bool", "action": { "type": "node", "value": ["412"] } },
+			{ "option": "content-type", "type": "bool", "action": { "type": "node", "value": ["415"] } },
+			{ "option": "expect", "type": "bool", "action": { "type": "node", "value": ["417"] } },
 			{ "option": "other", "type": "bool", "action": { "type": "link", "value": 11 } }
 		]
 	},
@@ -88,27 +88,27 @@
 		"type": "question",
 		"mainText": "Request incompatible with previos request or condition?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "409" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 12 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["409"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 12 } }]
 	},
 	{
 		"id": 12,
 		"type": "question",
 		"mainText": "Is the request body/header well formed but is invalid?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "422" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 13 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["422"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 13 } }]
 	},
 	{
 		"id": 13,
 		"type": "question",
 		"mainText": "Is it april 1st?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": "418" } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 14 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["418"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 14 } }]
 	},
 	{
 		"id": 14,
 		"type": "question",
 		"mainText": "Are you implementing a web server?",
 		"additionalTexts": [],
-		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["408", "413", "414", "416", "426"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": 400 } }]
+		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["408", "413", "414", "416", "426"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["400"] } }]
 	}
 ]
