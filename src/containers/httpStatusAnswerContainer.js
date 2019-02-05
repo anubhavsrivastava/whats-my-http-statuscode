@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Transition, Header, Button, Step, Icon, Grid, Segment } from 'semantic-ui-react';
+import { Step, Icon, Grid, Segment } from 'semantic-ui-react';
 import QuestionComponent from '../components/flow/questionComponent';
 import PageHeader from '../components/common/pageHeader';
 import { addQuestionaire } from '../actions/questionaireAction';
@@ -26,7 +26,6 @@ class HTTPStatusAnswerContainer extends Component {
 	}
 
 	onOptionChoose = (question, option) => {
-		const { addQuestion } = this.props;
 		// addQuestion(question, option.option);
 		if (option.action.type === 'node') {
 			this.setState({ answered: true, currentAnswer: option.action.value });
