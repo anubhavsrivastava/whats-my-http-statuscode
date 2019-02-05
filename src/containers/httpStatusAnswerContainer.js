@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Transition, Header, Button, Step, Icon, Grid, Segment } from 'semantic-ui-react';
+import QuestionComponent from '../components/flow/questionComponent';
 import PageHeader from '../components/common/pageHeader';
 const mapStateToProps = (state, ownProps) => ({
 	relatedSites: state.httpInfo.sites,
@@ -16,16 +17,24 @@ const mapDispatchToProps = dispatch => ({});
 class HTTPStatusAnswerContainer extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { question: true };
+		this.state = { currentSeries: [], currentQuestion: null };
 	}
-	componentDidMount = () => {};
+	componentDidMount = () => {
+		const { httpCodeClassesQuestions = [] } = this.props;
+
+		const currentQuestion = httpCodeClassesQuestions.find(t => t.id === 0);
+
+		this.setState({ currentQuestion });
+		console.log(currentQuestion);
+	};
 
 	onOptionChoose = (question, opt) => {
 		this.setState({ question: false });
 	};
 	render() {
+		// const { currentQuestion } = this.state;
 		const { httpCodeClassesQuestions = [] } = this.props;
-		const { question } = this.state;
+
 		const currentQuestion = httpCodeClassesQuestions.find(t => t.id === 0);
 
 		return (
@@ -60,60 +69,17 @@ class HTTPStatusAnswerContainer extends Component {
 								</Step.Group>
 
 								<Segment placeholder>
-									<Transition.Group animation={'zoom'} duration={500}>
-										{currentQuestion && question ? (
-											<React.Fragment>
-												<Header icon>
-													<Icon name="question" />
-													{currentQuestion.mainText}
-												</Header>
-												<Segment.Inline>
-													{currentQuestion.options.map((opt, i) => {
-														return (
-															<Button onClick={this.onOptionChoose} primary={i === 0} className="title-cased" key={opt.option}>
-																{opt.option}
-															</Button>
-														);
-													})}
-												</Segment.Inline>
-											</React.Fragment>
-										) : null}
-									</Transition.Group>
+									<QuestionComponent question={currentQuestion} />
 								</Segment>
 							</Grid.Column>
 						</Grid.Row>
-						{/* <Segment vertical>
-							<Grid container stackable verticalAlign="middle">
-								<Grid.Row>
-									<Grid.Column width={16}>
-										<Card.Group itemsPerRow={2}>
-											{httpCodeClasses.map(classCode => {
-												return (
-													<Card key={classCode.name}>
-														<Card.Content>
-															<Card.Header>
-																<a target="_blank" rel="noopener noreferrer" href={classCode.url}>
-																	{classCode.name}
-																</a>
-															</Card.Header>
-															<Card.Description>{classCode.description}</Card.Description>
-														</Card.Content>
-													</Card>
-												);
-											})}
-
-											{JSON.stringify(httpCodeClassesQuestions[0])}
-											
-										</Card.Group>
-									</Grid.Column>
-								</Grid.Row>
-							</Grid>
-						</Segment> */}
 					</Grid>
 				</Segment>
 			</React.Fragment>
 		);
 	}
+
+	QuestionOptionComponent(currentQuestion) {}
 }
 
 export default withRouter(
