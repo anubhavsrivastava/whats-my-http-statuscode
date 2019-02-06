@@ -5,6 +5,7 @@ import { Step, Icon, Grid, Segment } from 'semantic-ui-react';
 import QuestionComponent from '../components/flow/questionComponent';
 import PageHeader from '../components/common/pageHeader';
 import { addQuestionaire } from '../actions/questionaireAction';
+import HttpClassCardMinimal from '../components/flow/httpClassCardMinimal';
 const mapStateToProps = (state, ownProps) => ({
 	relatedSites: state.httpInfo.sites,
 	httpCodeClasses: state.httpInfo.httpCodeClasses,
@@ -22,7 +23,7 @@ const mapDispatchToProps = dispatch => ({
 class HTTPStatusAnswerContainer extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { answered: false, currentSeries: [], currentIndex: 0 };
+		this.state = { currentAnswer: [], answered: false, currentSeries: [], currentIndex: 0 };
 	}
 
 	onOptionChoose = (question, option) => {
@@ -36,7 +37,7 @@ class HTTPStatusAnswerContainer extends Component {
 	};
 
 	render() {
-		const { httpCodeClassesQuestions = [] } = this.props;
+		const { httpCodeClassesQuestions = [], httpCodeClasses = {} } = this.props;
 		const { currentIndex, answered, currentAnswer } = this.state;
 		const currentQuestion = httpCodeClassesQuestions.find(t => t.id === currentIndex);
 
@@ -71,7 +72,7 @@ class HTTPStatusAnswerContainer extends Component {
 									</Step>
 								</Step.Group>
 
-								<Segment placeholder>{answered ? currentAnswer : <QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />}</Segment>
+								<Segment placeholder>{answered ? <HttpClassCardMinimal httpClass={httpCodeClasses.find(t => (t.name = currentAnswer[0]))} /> : <QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />}</Segment>
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
