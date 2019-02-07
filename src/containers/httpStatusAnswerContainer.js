@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Step, Icon, Grid, Segment } from 'semantic-ui-react';
+import { Header, Step, Icon, Grid, Segment } from 'semantic-ui-react';
 import QuestionComponent from '../components/flow/questionComponent';
 import PageHeader from '../components/common/pageHeader';
 import { addQuestionaire } from '../actions/questionaireAction';
@@ -64,7 +64,19 @@ class HTTPStatusAnswerContainer extends Component {
 									</Step>
 								</Step.Group>
 
-								<Segment placeholder>{answered ? <HttpClassCardList httpClassList={httpCodeClasses.filter(t => currentAnswer.includes(t.name))} /> : <QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />}</Segment>
+								<Segment placeholder>
+									{answered ? (
+										<React.Fragment>
+											<Header as="h2">
+												<Icon name="flag checkered" />
+												<Header.Content>Possible HTTP Status Code Class </Header.Content>
+											</Header>
+											<HttpClassCardList httpClassList={httpCodeClasses.filter(t => currentAnswer.includes(t.name))} />
+										</React.Fragment>
+									) : (
+										<QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />
+									)}
+								</Segment>
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>

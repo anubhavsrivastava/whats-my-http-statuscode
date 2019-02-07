@@ -8,9 +8,9 @@ export default function HttpClassCardMinimal(props) {
 		<Card>
 			<Card.Content>
 				<Card.Header>
-					<Label color={ColorMap[httpClass.name]} ribbon>
+					<Label color={ColorMap[httpClass.name]}>
 						<Icon name={IconMap[httpClass.name]} />
-						{httpClass.name}
+						{httpClass.name} {httpClass.type}
 					</Label>
 				</Card.Header>
 
