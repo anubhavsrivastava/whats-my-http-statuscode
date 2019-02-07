@@ -72,7 +72,7 @@ class HTTPStatusAnswerContainer extends Component {
 									</Step>
 								</Step.Group>
 
-								<Segment placeholder>{answered ? <HttpClassCardMinimal httpClass={httpCodeClasses.find(t => (t.name = currentAnswer[0]))} /> : <QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />}</Segment>
+								<Segment placeholder>{answered ? <HttpClassCardMinimal httpClassList={httpCodeClasses.find(t => (t.name = currentAnswer[0]))} /> : <QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />}</Segment>
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>

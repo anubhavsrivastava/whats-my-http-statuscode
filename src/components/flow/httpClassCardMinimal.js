@@ -3,8 +3,9 @@ import { Label, Icon, Card } from 'semantic-ui-react';
 import { ColorMap, IconMap } from '../../constant/params';
 
 export default function HttpClassCardMinimal(props) {
-	const { httpClass } = props;
-	return httpClass ? (
+	const { httpClassList } = props;
+	const httpClass = httpClassList;
+	return httpClassList ? (
 		<Card.Group>
 			<Card>
 				<Card.Content>
@@ -23,8 +24,6 @@ export default function HttpClassCardMinimal(props) {
 					</Card.Description>
 				</Card.Content>
 			</Card>
-			<Card fluid color="orange" header="Option 2" />
-			<Card fluid color="yellow" header="Option 3" />
 		</Card.Group>
 	) : null;
 }
