@@ -8,7 +8,7 @@ export default function HttpClassCardMinimal(props) {
 		<Card>
 			<Card.Content>
 				<Card.Header>
-					<Label color={ColorMap[httpClass.name]}>
+					<Label size={'big'} color={ColorMap[httpClass.name]}>
 						<Icon name={IconMap[httpClass.name]} />
 						{httpClass.name} {httpClass.type}
 					</Label>
@@ -16,9 +16,11 @@ export default function HttpClassCardMinimal(props) {
 
 				<Card.Description>
 					{`${httpClass.description} `}
-					<a target="_blank" rel="noopener noreferrer" href={httpClass.more}>
-						Learn more
-					</a>
+					{httpClass.more ? (
+						<a target="_blank" rel="noopener noreferrer" href={httpClass.more}>
+							Learn more
+						</a>
+					) : null}
 				</Card.Description>
 			</Card.Content>
 		</Card>
