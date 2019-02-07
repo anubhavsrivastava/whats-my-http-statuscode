@@ -50,26 +50,26 @@ class HTTPStatusAnswerContainer extends Component {
 							<Grid.Column width={16}>
 								<Step.Group fluid>
 									<Step active>
-										<Icon name="question circle" />
-										<Step.Content>
-											<Step.Title>Category</Step.Title>
-											<Step.Description>Choose your class of HTTP code</Step.Description>
-										</Step.Content>
-									</Step>
-									<Step disabled>
 										<Icon name="cubes" />
 										<Step.Content>
-											<Step.Title>Questions</Step.Title>
-											<Step.Description>Answer few questions</Step.Description>
+											<Step.Title>HTTP Class code</Step.Title>
+											<Step.Description>Choose class of HTTP status code</Step.Description>
 										</Step.Content>
 									</Step>
-									<Step disabled>
+									<Step>
+										<Icon name="code" />
+										<Step.Content>
+											<Step.Title>HTTP Status Code</Step.Title>
+											<Step.Description>Choose exact HTTP status code </Step.Description>
+										</Step.Content>
+									</Step>
+									{/* <Step disabled>
 										<Icon name="code" />
 										<Step.Content>
 											<Step.Title>Answer</Step.Title>
 											<Step.Description>HTTP Status code your API should return</Step.Description>
 										</Step.Content>
-									</Step>
+									</Step> */}
 								</Step.Group>
 
 								<Segment placeholder>{answered ? <HttpClassCardMinimal httpClassList={httpCodeClasses.find(t => (t.name = currentAnswer[0]))} /> : <QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />}</Segment>
