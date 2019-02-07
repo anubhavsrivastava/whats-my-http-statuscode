@@ -5,7 +5,7 @@ import { Step, Icon, Grid, Segment } from 'semantic-ui-react';
 import QuestionComponent from '../components/flow/questionComponent';
 import PageHeader from '../components/common/pageHeader';
 import { addQuestionaire } from '../actions/questionaireAction';
-import HttpClassCardMinimal from '../components/flow/httpClassCardMinimal';
+import HttpClassCardList from '../components/flow/httpClassCardList';
 const mapStateToProps = (state, ownProps) => ({
 	relatedSites: state.httpInfo.sites,
 	httpCodeClasses: state.httpInfo.httpCodeClasses,
@@ -40,7 +40,6 @@ class HTTPStatusAnswerContainer extends Component {
 		const { httpCodeClassesQuestions = [], httpCodeClasses = {} } = this.props;
 		const { currentIndex, answered, currentAnswer } = this.state;
 		const currentQuestion = httpCodeClassesQuestions.find(t => t.id === currentIndex);
-
 		return (
 			<React.Fragment>
 				<PageHeader title="What's my HTTP status?" />
@@ -63,16 +62,9 @@ class HTTPStatusAnswerContainer extends Component {
 											<Step.Description>Choose exact HTTP status code </Step.Description>
 										</Step.Content>
 									</Step>
-									{/* <Step disabled>
-										<Icon name="code" />
-										<Step.Content>
-											<Step.Title>Answer</Step.Title>
-											<Step.Description>HTTP Status code your API should return</Step.Description>
-										</Step.Content>
-									</Step> */}
 								</Step.Group>
 
-								<Segment placeholder>{answered ? <HttpClassCardMinimal httpClassList={httpCodeClasses.find(t => (t.name = currentAnswer[0]))} /> : <QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />}</Segment>
+								<Segment placeholder>{answered ? <HttpClassCardList httpClassList={httpCodeClasses.filter(t => currentAnswer.includes(t.name))} /> : <QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />}</Segment>
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
