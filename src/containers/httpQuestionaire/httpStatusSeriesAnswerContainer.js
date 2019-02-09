@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Divider, Button, Header, Step, Icon, Grid, Segment } from 'semantic-ui-react';
-import QuestionComponent from '../components/flow/questionComponent';
-import PageHeader from '../components/common/pageHeader';
-import { addQuestionaire } from '../actions/questionaireAction';
-import HttpClassCardList from '../components/flow/httpClassCardList';
+import { Divider, Button, Header, Icon, Grid, Segment } from 'semantic-ui-react';
+import QuestionComponent from '../../components/flow/questionComponent';
+import PageHeader from '../../components/common/pageHeader';
+import HttpClassCardList from '../../components/flow/httpClassCardList';
 const mapStateToProps = (state, ownProps) => ({
 	relatedSites: state.httpInfo.sites,
 	httpCodeSeries: state.httpInfo.httpCodeSeries,
@@ -14,13 +13,9 @@ const mapStateToProps = (state, ownProps) => ({
 	httpCodesQuestions: state.httpInfo.questions.httpCodes
 });
 
-const mapDispatchToProps = dispatch => ({
-	addQuestion: (question, option) => {
-		return dispatch(addQuestionaire(question, option));
-	}
-});
+const mapDispatchToProps = dispatch => ({});
 
-class HTTPStatusAnswerContainer extends Component {
+class HTTPStatusSeriesAnswerContainer extends Component {
 	initialState = { currentAnswer: [], answered: false, currentSeries: [], currentIndex: 0 };
 	constructor(props) {
 		super(props);
@@ -52,23 +47,6 @@ class HTTPStatusAnswerContainer extends Component {
 					<Grid className="container-box" container stackable verticalAlign="middle">
 						<Grid.Row>
 							<Grid.Column width={16}>
-								<Step.Group fluid>
-									<Step active>
-										<Icon name="cubes" />
-										<Step.Content>
-											<Step.Title>HTTP Class code</Step.Title>
-											<Step.Description>Choose HTTP status code series</Step.Description>
-										</Step.Content>
-									</Step>
-									<Step>
-										<Icon name="code" />
-										<Step.Content>
-											<Step.Title>HTTP Status Code</Step.Title>
-											<Step.Description>Choose exact HTTP status code </Step.Description>
-										</Step.Content>
-									</Step>
-								</Step.Group>
-
 								{answered ? (
 									<Segment placeholder>
 										<Grid.Row>
@@ -95,13 +73,11 @@ class HTTPStatusAnswerContainer extends Component {
 			</React.Fragment>
 		);
 	}
-
-	QuestionOptionComponent(currentQuestion) {}
 }
 
 export default withRouter(
 	connect(
 		mapStateToProps,
 		mapDispatchToProps
-	)(HTTPStatusAnswerContainer)
+	)(HTTPStatusSeriesAnswerContainer)
 );

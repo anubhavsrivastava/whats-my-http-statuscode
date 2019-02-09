@@ -10,7 +10,7 @@ import FixedMenuLayout from '../components/layouts/defaultLayout';
 import ResourceContainer from './resourceContainer';
 import HTTPCodesListContainer from './httpcodesListContainer';
 import FAQContainer from './FAQContainer';
-import HTTPStatusAnswerContainer from './httpStatusAnswerContainer';
+import HTTPStatusAnswerContainer from './httpQuestionaire/httpStatusAnswerContainer';
 const Routes = RoutesMapping.getRoutes();
 
 const mapStateToProps = (state, ownProps) => ({});
