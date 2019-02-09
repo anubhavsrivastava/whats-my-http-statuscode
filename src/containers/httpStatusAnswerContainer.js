@@ -80,7 +80,7 @@ class HTTPStatusAnswerContainer extends Component {
 										</Grid.Row>
 										<Divider />
 										<Grid.Row>
-											<Button floated="right" icon="redo" content="Try Again" onClick={this.clearState} />
+											<Button floated="right" icon="redo" color="blue" content="Try Again" onClick={this.clearState} />
 										</Grid.Row>
 									</Segment>
 								) : (
