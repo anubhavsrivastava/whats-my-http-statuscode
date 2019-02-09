@@ -17,11 +17,11 @@ export default function httpInfoReducer(state = initialState, action) {
 			return Object.assign({}, state, { stability: action.payload.stability });
 		case actionTypes.FETCH_RELATED_SITES:
 			return Object.assign({}, state, { sites: action.payload.sites });
-		case actionTypes.FETCH_HTTPCODES_CLASS:
+		case actionTypes.FETCH_HTTPCODES_SERIES:
 			return Object.assign({}, state, { httpCodeSeries: action.payload.httpCodeSeries });
 		case actionTypes.FETCH_HTTPCODES:
 			return Object.assign({}, state, { httpCodes: action.payload.httpCodes });
-		case actionTypes.FETCH_HTTPCODES_CLASS_QUESTIONS:
+		case actionTypes.FETCH_HTTPCODES_SERIES_QUESTIONS:
 			//TODO: this has to be new reducers
 			return Object.assign({}, state, { questions: Object.assign({}, state.questions, { httpCodeSeries: action.payload.httpCodeSeries }) });
 		case actionTypes.FETCH_HTTPCODES_QUESTIONS:

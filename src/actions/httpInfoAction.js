@@ -21,7 +21,7 @@ const fetchRelatedSitesDataAction = sitesData => {
 
 const fetchhttpCodeSeriesDataAction = classesData => {
 	return {
-		type: actionTypes.FETCH_HTTPCODES_CLASS,
+		type: actionTypes.FETCH_HTTPCODES_SERIES,
 		payload: {
 			httpCodeSeries: classesData
 		}
@@ -30,7 +30,7 @@ const fetchhttpCodeSeriesDataAction = classesData => {
 
 const fetchhttpCodeSeriesQuestionAction = questions => {
 	return {
-		type: actionTypes.FETCH_HTTPCODES_CLASS_QUESTIONS,
+		type: actionTypes.FETCH_HTTPCODES_SERIES_QUESTIONS,
 		payload: {
 			httpCodeSeries: questions
 		}
