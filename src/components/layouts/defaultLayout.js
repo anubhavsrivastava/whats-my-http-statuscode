@@ -7,7 +7,7 @@ const FixedMenuLayout = props => (
 		<Segment inverted>
 			<Menu inverted secondary>
 				<Container>
-					<Menu.Item as="a" header>
+					<Menu.Item as="a" href="#/" header>
 						<Image size="mini" className={'inverted-color'} src={logo} />
 					</Menu.Item>
 					<Menu.Item link>
