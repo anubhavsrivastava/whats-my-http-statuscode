@@ -3,10 +3,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Divider, Button, Header, Icon, Grid, Segment } from 'semantic-ui-react';
 import QuestionComponent from '../../components/flow/questionComponent';
-import PageHeader from '../../components/common/pageHeader';
 import HttpClassCardList from '../../components/flow/httpClassCardList';
 const mapStateToProps = (state, ownProps) => ({
-	relatedSites: state.httpInfo.sites,
 	httpCodeSeries: state.httpInfo.httpCodeSeries,
 	httpCodes: state.httpInfo.httpCodes,
 	httpCodeSeriesQuestions: state.httpInfo.questions.httpCodeSeries,
@@ -27,7 +25,6 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 	};
 
 	onOptionChoose = (question, option) => {
-		// addQuestion(question, option.option);
 		if (option.action.type === 'node') {
 			this.setState({ answered: true, currentAnswer: option.action.value });
 		}
@@ -42,7 +39,6 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 		const currentQuestion = httpCodeSeriesQuestions.find(t => t.id === currentIndex);
 		return (
 			<React.Fragment>
-				<PageHeader title="What's my HTTP status?" />
 				<Segment vertical>
 					<Grid className="container-box" container stackable verticalAlign="middle">
 						<Grid.Row>
