@@ -8,9 +8,9 @@ import { addQuestionaire } from '../actions/questionaireAction';
 import HttpClassCardList from '../components/flow/httpClassCardList';
 const mapStateToProps = (state, ownProps) => ({
 	relatedSites: state.httpInfo.sites,
-	httpCodeClasses: state.httpInfo.httpCodeClasses,
+	httpCodeSeries: state.httpInfo.httpCodeSeries,
 	httpCodes: state.httpInfo.httpCodes,
-	httpCodeClassesQuestions: state.httpInfo.questions.httpCodeClasses,
+	httpCodeSeriesQuestions: state.httpInfo.questions.httpCodeSeries,
 	httpCodesQuestions: state.httpInfo.questions.httpCodes
 });
 
@@ -37,9 +37,9 @@ class HTTPStatusAnswerContainer extends Component {
 	};
 
 	render() {
-		const { httpCodeClassesQuestions = [], httpCodeClasses = {} } = this.props;
+		const { httpCodeSeriesQuestions = [], httpCodeSeries = {} } = this.props;
 		const { currentIndex, answered, currentAnswer } = this.state;
-		const currentQuestion = httpCodeClassesQuestions.find(t => t.id === currentIndex);
+		const currentQuestion = httpCodeSeriesQuestions.find(t => t.id === currentIndex);
 		return (
 			<React.Fragment>
 				<PageHeader title="What's my HTTP status?" />
@@ -71,7 +71,7 @@ class HTTPStatusAnswerContainer extends Component {
 												<Icon name="flag checkered" />
 												<Header.Content>HTTP Status Code Series </Header.Content>
 											</Header>
-											<HttpClassCardList httpClassList={httpCodeClasses.filter(t => currentAnswer.includes(t.name))} />
+											<HttpClassCardList httpClassList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))} />
 										</React.Fragment>
 									) : (
 										<QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />

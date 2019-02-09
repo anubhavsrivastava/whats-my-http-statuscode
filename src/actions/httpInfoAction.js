@@ -19,20 +19,20 @@ const fetchRelatedSitesDataAction = sitesData => {
 	};
 };
 
-const fetchHttpCodeClassesDataAction = classesData => {
+const fetchhttpCodeSeriesDataAction = classesData => {
 	return {
 		type: actionTypes.FETCH_HTTPCODES_CLASS,
 		payload: {
-			httpCodeClasses: classesData
+			httpCodeSeries: classesData
 		}
 	};
 };
 
-const fetchHttpCodeClassesQuestionAction = questions => {
+const fetchhttpCodeSeriesQuestionAction = questions => {
 	return {
 		type: actionTypes.FETCH_HTTPCODES_CLASS_QUESTIONS,
 		payload: {
-			httpCodeClasses: questions
+			httpCodeSeries: questions
 		}
 	};
 };
@@ -69,17 +69,17 @@ const fetchStabilityData = () => {
 	};
 };
 
-const fetchHttpCodeClassesData = () => {
+const fetchhttpCodeSeriesData = () => {
 	return async dispatch => {
-		const httpClassInfo = await httpAPI.fetchHttpCodeClassesSchemas();
-		dispatch(fetchHttpCodeClassesDataAction(httpClassInfo));
+		const httpClassInfo = await httpAPI.fetchhttpCodeSeriesSchemas();
+		dispatch(fetchhttpCodeSeriesDataAction(httpClassInfo));
 	};
 };
 
-const fetchHttpCodeClassesQuestions = () => {
+const fetchhttpCodeSeriesQuestions = () => {
 	return async dispatch => {
-		const codeClassQuestions = await httpAPI.fetchHttpCodeClassesQuestions();
-		dispatch(fetchHttpCodeClassesQuestionAction(codeClassQuestions));
+		const codeClassQuestions = await httpAPI.fetchhttpCodeSeriesQuestions();
+		dispatch(fetchhttpCodeSeriesQuestionAction(codeClassQuestions));
 	};
 };
 
@@ -97,4 +97,4 @@ const fetchHttpCodesQuestions = () => {
 	};
 };
 
-export { fetchHttpCodesQuestions, fetchHttpCodeClassesQuestions, fetchHttpCodesData, fetchHttpCodeClassesData, fetchStabilityData, fetchRelatedSitesData };
+export { fetchHttpCodesQuestions, fetchhttpCodeSeriesQuestions, fetchHttpCodesData, fetchhttpCodeSeriesData, fetchStabilityData, fetchRelatedSitesData };

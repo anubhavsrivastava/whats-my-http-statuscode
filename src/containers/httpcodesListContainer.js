@@ -6,7 +6,7 @@ import { IconMap, ColorMap } from '../constant/params';
 import PageHeader from '../components/common/pageHeader';
 import ContentHeader from '../components/common/contentHeader';
 const mapStateToProps = (state, ownProps) => ({
-	httpCodeClasses: state.httpInfo.httpCodeClasses,
+	httpCodeSeries: state.httpInfo.httpCodeSeries,
 	httpCodes: state.httpInfo.httpCodes
 });
 
@@ -64,9 +64,9 @@ class HTTPCodesListContainer extends Component {
 	componentDidMount = () => {};
 
 	render() {
-		const { httpCodes = {}, httpCodeClasses = [] } = this.props;
+		const { httpCodes = {}, httpCodeSeries = [] } = this.props;
 
-		let panes = httpCodeClasses.map(classCode => {
+		let panes = httpCodeSeries.map(classCode => {
 			return {
 				menuItem: { color: ColorMap[classCode.name], key: classCode.name, icon: IconMap[classCode.name], content: `${classCode.name} ${classCode.type}` },
 				render: () => <HTTPCodeList httpCodes={httpCodes} currentClassCode={classCode} />

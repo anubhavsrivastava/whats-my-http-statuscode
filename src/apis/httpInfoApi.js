@@ -1,4 +1,4 @@
-import { getHttpCodes, getStabilityCodes, getRelatedSites, getHttpCodeClasses, getHttpCodeClassesQuestions, getHttpCodeQuestions } from './data';
+import { getHttpCodes, getStabilityCodes, getRelatedSites, gethttpCodeSeries, gethttpCodeSeriesQuestions, getHttpCodeQuestions } from './data';
 
 function fetchStabilitySchemas() {
 	return new Promise(function(resolve, reject) {
@@ -12,9 +12,9 @@ function fetchRelatedSitesSchemas() {
 	});
 }
 
-function fetchHttpCodeClassesSchemas() {
+function fetchhttpCodeSeriesSchemas() {
 	return new Promise(function(resolve, reject) {
-		resolve(getHttpCodeClasses());
+		resolve(gethttpCodeSeries());
 	});
 }
 
@@ -30,10 +30,10 @@ function fetchHttpCodeQuestions() {
 	});
 }
 
-function fetchHttpCodeClassesQuestions() {
+function fetchhttpCodeSeriesQuestions() {
 	return new Promise(function(resolve, reject) {
-		resolve(getHttpCodeClassesQuestions());
+		resolve(gethttpCodeSeriesQuestions());
 	});
 }
 
-export { fetchHttpCodeQuestions, fetchHttpCodeClassesQuestions, fetchHttpCodeSchemas, fetchHttpCodeClassesSchemas, fetchStabilitySchemas, fetchRelatedSitesSchemas };
+export { fetchHttpCodeQuestions, fetchhttpCodeSeriesQuestions, fetchHttpCodeSchemas, fetchhttpCodeSeriesSchemas, fetchStabilitySchemas, fetchRelatedSitesSchemas };

@@ -1,6 +1,6 @@
 import * as actionTypes from './actionTypes';
 import packageJson from '../../package.json';
-import { fetchHttpCodeClassesQuestions, fetchHttpCodesQuestions, fetchHttpCodesData, fetchStabilityData, fetchRelatedSitesData, fetchHttpCodeClassesData } from './httpInfoAction';
+import { fetchhttpCodeSeriesQuestions, fetchHttpCodesQuestions, fetchHttpCodesData, fetchStabilityData, fetchRelatedSitesData, fetchhttpCodeSeriesData } from './httpInfoAction';
 
 const updateApplicationInfo = appInfo => {
 	return {
@@ -18,9 +18,9 @@ const getApplicationInfo = () => {
 			dispatch(updateApplicationInfo(packageJson));
 			dispatch(fetchStabilityData());
 			dispatch(fetchRelatedSitesData());
-			dispatch(fetchHttpCodeClassesData());
+			dispatch(fetchhttpCodeSeriesData());
 			dispatch(fetchHttpCodesData());
-			dispatch(fetchHttpCodeClassesQuestions());
+			dispatch(fetchhttpCodeSeriesQuestions());
 			dispatch(fetchHttpCodesQuestions());
 			resolve(packageJson.name);
 		});

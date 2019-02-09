@@ -3,10 +3,10 @@ import * as actionTypes from '../actions/actionTypes';
 const initialState = {
 	stability: [],
 	sites: [],
-	httpCodeClasses: [],
+	httpCodeSeries: [],
 	httpCodes: {},
 	questions: {
-		httpCodeClasses: [],
+		httpCodeSeries: [],
 		httpCodes: {}
 	}
 };
@@ -18,12 +18,12 @@ export default function httpInfoReducer(state = initialState, action) {
 		case actionTypes.FETCH_RELATED_SITES:
 			return Object.assign({}, state, { sites: action.payload.sites });
 		case actionTypes.FETCH_HTTPCODES_CLASS:
-			return Object.assign({}, state, { httpCodeClasses: action.payload.httpCodeClasses });
+			return Object.assign({}, state, { httpCodeSeries: action.payload.httpCodeSeries });
 		case actionTypes.FETCH_HTTPCODES:
 			return Object.assign({}, state, { httpCodes: action.payload.httpCodes });
 		case actionTypes.FETCH_HTTPCODES_CLASS_QUESTIONS:
 			//TODO: this has to be new reducers
-			return Object.assign({}, state, { questions: Object.assign({}, state.questions, { httpCodeClasses: action.payload.httpCodeClasses }) });
+			return Object.assign({}, state, { questions: Object.assign({}, state.questions, { httpCodeSeries: action.payload.httpCodeSeries }) });
 		case actionTypes.FETCH_HTTPCODES_QUESTIONS:
 			//TODO: this has to be new reducers
 			return Object.assign({}, state, { questions: Object.assign({}, state.questions, { httpCodes: action.payload.httpCodes }) });

@@ -12,7 +12,7 @@ function getRelatedSites() {
 	return sitesJSON;
 }
 
-function getHttpCodeClasses() {
+function gethttpCodeSeries() {
 	return httpClassesJSON;
 }
 
@@ -20,7 +20,7 @@ function getHttpCodes() {
 	return httpCodesJSON;
 }
 
-function getHttpCodeClassesQuestions() {
+function gethttpCodeSeriesQuestions() {
 	return httpClassQuestionJSON;
 }
 
@@ -28,4 +28,4 @@ function getHttpCodeQuestions() {
 	return httpCodesQuestionJSON;
 }
 
-export { getHttpCodes, getStabilityCodes, getRelatedSites, getHttpCodeClasses, getHttpCodeClassesQuestions, getHttpCodeQuestions };
+export { getHttpCodes, getStabilityCodes, getRelatedSites, gethttpCodeSeries, gethttpCodeSeriesQuestions, getHttpCodeQuestions };
