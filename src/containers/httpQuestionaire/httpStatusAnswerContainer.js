@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import { Step, Icon, Grid, Segment } from 'semantic-ui-react';
 import PageHeader from '../../components/common/pageHeader';
 import HttpStatusSeriesAnswerContainer from './httpStatusSeriesAnswerContainer';
+import HttpStatusCodeAnswerContainer from './httpStatusCodeAnswerContainer';
 const mapStateToProps = (state, ownProps) => ({
 	// httpCodeSeries: state.httpInfo.httpCodeSeries,
 	// httpCodes: state.httpInfo.httpCodes,
@@ -54,6 +55,7 @@ class HTTPStatusAnswerContainer extends Component {
 						</Grid.Row>
 					</Grid>
 					{tabId === 0 ? <HttpStatusSeriesAnswerContainer /> : null}
+					{tabId === 1 ? <HttpStatusCodeAnswerContainer /> : null}
 				</Segment>
 			</React.Fragment>
 		);

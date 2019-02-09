@@ -5,13 +5,13 @@ import { Divider, Button, Header, Icon, Grid, Segment } from 'semantic-ui-react'
 import QuestionComponent from '../../components/flow/questionComponent';
 import HttpClassCardList from '../../components/flow/httpClassCardList';
 const mapStateToProps = (state, ownProps) => ({
-	httpCodeSeries: state.httpInfo.httpCodeSeries,
-	httpCodeSeriesQuestions: state.httpInfo.questions.httpCodeSeries
+	httpCodes: state.httpInfo.httpCodes,
+	httpCodesQuestions: state.httpInfo.questions.httpCodes
 });
 
 const mapDispatchToProps = dispatch => ({});
 
-class HTTPStatusSeriesAnswerContainer extends Component {
+class HTTPStatusCodeAnswerContainer extends Component {
 	initialState = { currentAnswer: [], answered: false, currentSeries: [], currentIndex: 0 };
 	constructor(props) {
 		super(props);
@@ -32,9 +32,9 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 	};
 
 	render() {
-		const { httpCodeSeriesQuestions = [], httpCodeSeries = {} } = this.props;
+		const { httpCodesQuestions = {}, httpCodes = {} } = this.props;
 		const { currentIndex, answered, currentAnswer } = this.state;
-		const currentQuestion = httpCodeSeriesQuestions.find(t => t.id === currentIndex);
+		const currentQuestion = httpCodesQuestions['2xx'].find(t => t.id === currentIndex);
 		return (
 			<React.Fragment>
 				<Segment vertical>
@@ -48,7 +48,7 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 												<Icon name="flag checkered" />
 												<Header.Content>HTTP Status Code Series </Header.Content>
 											</Header>
-											<HttpClassCardList httpClassList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))} />
+											<HttpClassCardList httpClassList={httpCodes['2xx'].filter(t => currentAnswer.includes(t.name))} />
 										</Grid.Row>
 										<Divider />
 										<Grid.Row>
@@ -73,5 +73,5 @@ export default withRouter(
 	connect(
 		mapStateToProps,
 		mapDispatchToProps
-	)(HTTPStatusSeriesAnswerContainer)
+	)(HTTPStatusCodeAnswerContainer)
 );
