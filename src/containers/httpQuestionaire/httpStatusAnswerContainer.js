@@ -14,7 +14,19 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({});
 
 class HTTPStatusAnswerContainer extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			tabId: 0
+		};
+	}
+
+	switchTab = tabId => {
+		this.setState({ tabId });
+	};
+
 	render() {
+		const { tabId } = this.state;
 		return (
 			<React.Fragment>
 				<PageHeader title="What's my HTTP status?" />
@@ -22,15 +34,15 @@ class HTTPStatusAnswerContainer extends Component {
 					<Grid className="container-box" container stackable verticalAlign="middle">
 						<Grid.Row>
 							<Grid.Column width={16}>
-								<Step.Group fluid>
-									<Step active>
+								<Step.Group fluid stackable="tablet">
+									<Step active={tabId === 0} onClick={() => this.switchTab(0)} link>
 										<Icon name="cubes" />
 										<Step.Content>
 											<Step.Title>HTTP Class code</Step.Title>
 											<Step.Description>Choose HTTP status code series</Step.Description>
 										</Step.Content>
 									</Step>
-									<Step>
+									<Step active={tabId === 1} onClick={() => this.switchTab(1)} link>
 										<Icon name="code" />
 										<Step.Content>
 											<Step.Title>HTTP Status Code</Step.Title>
@@ -38,10 +50,10 @@ class HTTPStatusAnswerContainer extends Component {
 										</Step.Content>
 									</Step>
 								</Step.Group>
-								<HttpStatusSeriesAnswerContainer />
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
+					{tabId === 0 ? <HttpStatusSeriesAnswerContainer /> : null}
 				</Segment>
 			</React.Fragment>
 		);
