@@ -52,7 +52,7 @@ class HTTPStatusAnswerContainer extends Component {
 										<Icon name="cubes" />
 										<Step.Content>
 											<Step.Title>HTTP Class code</Step.Title>
-											<Step.Description>Choose class of HTTP status code</Step.Description>
+											<Step.Description>Choose HTTP status code series</Step.Description>
 										</Step.Content>
 									</Step>
 									<Step>
@@ -69,7 +69,7 @@ class HTTPStatusAnswerContainer extends Component {
 										<React.Fragment>
 											<Header as="h2">
 												<Icon name="flag checkered" />
-												<Header.Content>Possible HTTP Status Code Class </Header.Content>
+												<Header.Content>HTTP Status Code Series </Header.Content>
 											</Header>
 											<HttpClassCardList httpClassList={httpCodeClasses.filter(t => currentAnswer.includes(t.name))} />
 										</React.Fragment>
