@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Header, Step, Icon, Grid, Segment } from 'semantic-ui-react';
+import { Divider, Button, Header, Step, Icon, Grid, Segment } from 'semantic-ui-react';
 import QuestionComponent from '../components/flow/questionComponent';
 import PageHeader from '../components/common/pageHeader';
 import { addQuestionaire } from '../actions/questionaireAction';
@@ -21,10 +21,15 @@ const mapDispatchToProps = dispatch => ({
 });
 
 class HTTPStatusAnswerContainer extends Component {
+	initialState = { currentAnswer: [], answered: false, currentSeries: [], currentIndex: 0 };
 	constructor(props) {
 		super(props);
-		this.state = { currentAnswer: [], answered: false, currentSeries: [], currentIndex: 0 };
+		this.state = this.initialState;
 	}
+
+	clearState = () => {
+		this.setState(this.initialState);
+	};
 
 	onOptionChoose = (question, option) => {
 		// addQuestion(question, option.option);
@@ -64,19 +69,25 @@ class HTTPStatusAnswerContainer extends Component {
 									</Step>
 								</Step.Group>
 
-								<Segment placeholder>
-									{answered ? (
-										<React.Fragment>
+								{answered ? (
+									<Segment placeholder>
+										<Grid.Row>
 											<Header as="h2">
 												<Icon name="flag checkered" />
 												<Header.Content>HTTP Status Code Series </Header.Content>
 											</Header>
 											<HttpClassCardList httpClassList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))} />
-										</React.Fragment>
-									) : (
+										</Grid.Row>
+										<Divider />
+										<Grid.Row>
+											<Button floated="right" icon="redo" content="Try Again" onClick={this.clearState} />
+										</Grid.Row>
+									</Segment>
+								) : (
+									<Segment placeholder>
 										<QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />
-									)}
-								</Segment>
+									</Segment>
+								)}
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
