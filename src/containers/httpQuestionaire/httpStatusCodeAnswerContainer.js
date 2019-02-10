@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({});
 
 class HTTPStatusCodeAnswerContainer extends Component {
-	initialState = { currentAnswer: [], answered: false, currentSeries: [], currentIndex: 0 };
+	initialState = { currentSeries: '', currentAnswer: [], answered: false, currentIndex: 0 };
 	constructor(props) {
 		super(props);
 		this.state = this.initialState;
@@ -24,7 +24,7 @@ class HTTPStatusCodeAnswerContainer extends Component {
 
 	onOptionChoose = (question, option) => {
 		if (option.action.type === 'node') {
-			this.setState({ currentSeries: '', answered: true, currentAnswer: option.action.value });
+			this.setState({ answered: true, currentAnswer: option.action.value });
 		}
 		if (option.action.type === 'link') {
 			this.setState({ currentIndex: option.action.value });
