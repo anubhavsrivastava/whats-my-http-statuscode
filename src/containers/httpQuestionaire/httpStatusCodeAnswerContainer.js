@@ -24,7 +24,7 @@ class HTTPStatusCodeAnswerContainer extends Component {
 
 	onOptionChoose = (question, option) => {
 		if (option.action.type === 'node') {
-			this.setState({ answered: true, currentAnswer: option.action.value });
+			this.setState({ currentSeries: '', answered: true, currentAnswer: option.action.value });
 		}
 		if (option.action.type === 'link') {
 			this.setState({ currentIndex: option.action.value });
