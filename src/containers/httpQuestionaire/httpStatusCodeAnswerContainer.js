@@ -32,9 +32,9 @@ class HTTPStatusCodeAnswerContainer extends Component {
 	};
 
 	render() {
-		const { httpCodesQuestions = {}, httpCodes = {} } = this.props;
+		const { httpCodesQuestions = {}, httpCodes = {}, currentSeries } = this.props;
 		const { currentIndex, answered, currentAnswer } = this.state;
-		const currentQuestion = httpCodesQuestions['2xx'].find(t => t.id === currentIndex);
+		const currentQuestion = httpCodesQuestions.find(t => t.id === currentIndex);
 		return (
 			<React.Fragment>
 				<Segment vertical>
