@@ -30,6 +30,12 @@ class HTTPStatusCodeAnswerContainer extends Component {
 		});
 	};
 
+	onSeriesSelection = (e, d) => {
+		console.log(d);
+
+		this.setState({ currentSeries: d.value });
+	};
+
 	clearState = () => {
 		this.setState(this.initialState);
 	};
@@ -44,8 +50,8 @@ class HTTPStatusCodeAnswerContainer extends Component {
 	};
 
 	render() {
-		const { httpCodesQuestions = {}, httpCodes = {}, currentSeries } = this.props;
-		const { currentIndex, answered, currentAnswer } = this.state;
+		const { httpCodesQuestions = {}, httpCodes = {} } = this.props;
+		const { currentIndex, answered, currentAnswer, currentSeries } = this.state;
 		let currentQuestion = {};
 
 		if (currentSeries) {
@@ -78,7 +84,7 @@ class HTTPStatusCodeAnswerContainer extends Component {
 										</Segment>
 									)
 								) : (
-									<Dropdown placeholder="Select Series" fluid selection options={this.getHttpSeriesDropDown()} />
+									<Dropdown onChange={this.onSeriesSelection} placeholder="Select Series" fluid selection options={this.getHttpSeriesDropDown()} />
 								)}
 							</Grid.Column>
 						</Grid.Row>
