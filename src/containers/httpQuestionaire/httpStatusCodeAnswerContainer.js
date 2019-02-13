@@ -31,8 +31,6 @@ class HTTPStatusCodeAnswerContainer extends Component {
 	};
 
 	onSeriesSelection = (e, d) => {
-		console.log(d);
-
 		this.setState({ currentSeries: d.value });
 	};
 
@@ -63,6 +61,7 @@ class HTTPStatusCodeAnswerContainer extends Component {
 					<Grid className="container-box" container stackable verticalAlign="middle">
 						<Grid.Row>
 							<Grid.Column width={16}>
+								<Dropdown onChange={this.onSeriesSelection} placeholder="Select Series" fluid selection options={this.getHttpSeriesDropDown()} />
 								{currentSeries ? (
 									answered ? (
 										<Segment placeholder>
@@ -71,7 +70,7 @@ class HTTPStatusCodeAnswerContainer extends Component {
 													<Icon name="flag checkered" />
 													<Header.Content>HTTP Status Code Series </Header.Content>
 												</Header>
-												<HttpClassCardList httpClassList={httpCodes['2xx'].filter(t => currentAnswer.includes(t.name))} />
+												<HttpClassCardList httpClassList={httpCodes[currentSeries].filter(t => currentAnswer.includes(t.name))} />
 											</Grid.Row>
 											<Divider />
 											<Grid.Row>
@@ -83,9 +82,7 @@ class HTTPStatusCodeAnswerContainer extends Component {
 											<QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />
 										</Segment>
 									)
-								) : (
-									<Dropdown onChange={this.onSeriesSelection} placeholder="Select Series" fluid selection options={this.getHttpSeriesDropDown()} />
-								)}
+								) : null}
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
