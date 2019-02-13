@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Divider, Button, Header, Icon, Grid, Segment } from 'semantic-ui-react';
 import QuestionComponent from '../../components/flow/questionComponent';
-import HttpClassCardList from '../../components/flow/httpClassCardList';
+import HttpSeriesCardList from '../../components/flow/httpSeriesCardList';
 const mapStateToProps = (state, ownProps) => ({
 	httpCodeSeries: state.httpInfo.httpCodeSeries,
 	httpCodeSeriesQuestions: state.httpInfo.questions.httpCodeSeries
@@ -48,7 +48,7 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 												<Icon name="flag checkered" />
 												<Header.Content>HTTP Status Code Series </Header.Content>
 											</Header>
-											<HttpClassCardList httpClassList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))} />
+											<HttpSeriesCardList httpClassList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))} />
 										</Grid.Row>
 										<Divider />
 										<Grid.Row>
