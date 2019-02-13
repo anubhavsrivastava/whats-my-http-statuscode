@@ -48,7 +48,7 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 												<Icon name="flag checkered" />
 												<Header.Content>HTTP Status Code Series </Header.Content>
 											</Header>
-											<HttpSeriesCardList httpClassList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))} />
+											<HttpSeriesCardList httpSeriesList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))} />
 										</Grid.Row>
 										<Divider />
 										<Grid.Row>
