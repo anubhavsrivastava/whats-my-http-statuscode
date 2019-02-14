@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Label, Icon, Card } from 'semantic-ui-react';
 
-export default function HttpCodeInfoCard({ httpCode, currentClassCode, color, icon }) {
+export default function HttpCodeInfoCard({ httpCode, color, icon }) {
 	return (
 		<Card key={httpCode.code}>
 			<Card.Content>

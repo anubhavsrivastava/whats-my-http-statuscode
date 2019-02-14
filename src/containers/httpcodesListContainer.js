@@ -17,19 +17,19 @@ class HTTPCodeList extends Component {
 	componentDidMount = () => {};
 
 	render() {
-		const { httpCodes = {}, currentClassCode = {} } = this.props;
+		const { httpCodes = {}, currentSeriesCode = {} } = this.props;
 
-		const currentList = httpCodes[currentClassCode.name] || [];
+		const currentList = httpCodes[currentSeriesCode.name] || [];
 		return (
 			<Tab.Pane>
-				<ContentHeader icon={IconMap[currentClassCode.name]} description={currentClassCode.description} title={`${currentClassCode.name} ${currentClassCode.type}`} />
+				<ContentHeader icon={IconMap[currentSeriesCode.name]} description={currentSeriesCode.description} title={`${currentSeriesCode.name} ${currentSeriesCode.type}`} />
 				<Segment vertical>
 					<Grid container stackable verticalAlign="middle">
 						<Grid.Row>
 							<Grid.Column width={16}>
 								<Card.Group itemsPerRow={2}>
 									{currentList.map(httpCode => {
-										return <HttpCodeInfoCard httpCode={httpCode} currentClassCode={currentClassCode} color={ColorMap[currentClassCode.name]} icon={IconMap[currentClassCode.name]} />;
+										return <HttpCodeInfoCard key={httpCode.code} httpCode={httpCode} color={ColorMap[currentSeriesCode.name]} icon={IconMap[currentSeriesCode.name]} />;
 									})}
 								</Card.Group>
 							</Grid.Column>
@@ -47,10 +47,10 @@ class HTTPCodesListContainer extends Component {
 	render() {
 		const { httpCodes = {}, httpCodeSeries = [] } = this.props;
 
-		let panes = httpCodeSeries.map(classCode => {
+		let panes = httpCodeSeries.map(SeriesCode => {
 			return {
-				menuItem: { color: ColorMap[classCode.name], key: classCode.name, icon: IconMap[classCode.name], content: `${classCode.name} ${classCode.type}` },
-				render: () => <HTTPCodeList httpCodes={httpCodes} currentClassCode={classCode} />
+				menuItem: { color: ColorMap[SeriesCode.name], key: SeriesCode.name, icon: IconMap[SeriesCode.name], content: `${SeriesCode.name} ${SeriesCode.type}` },
+				render: () => <HTTPCodeList httpCodes={httpCodes} currentSeriesCode={SeriesCode} />
 			};
 		});
 

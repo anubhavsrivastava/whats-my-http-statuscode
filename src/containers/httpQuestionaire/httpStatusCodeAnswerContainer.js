@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Dropdown, Divider, Button, Header, Icon, Grid, Segment } from 'semantic-ui-react';
 import QuestionComponent from '../../components/flow/questionComponent';
-import HttpSeriesCardList from '../../components/flow/httpSeriesCardList';
+import HttpCodeCardList from '../../components/flow/httpCodeCardList';
 const mapStateToProps = (state, ownProps) => ({
 	httpCodes: state.httpInfo.httpCodes,
 	httpCodeSeries: state.httpInfo.httpCodeSeries,
@@ -66,11 +66,13 @@ class HTTPStatusCodeAnswerContainer extends Component {
 									answered ? (
 										<Segment placeholder>
 											<Grid.Row>
-												<Header as="h2">
-													<Icon name="flag checkered" />
-													<Header.Content>HTTP Status Code Series </Header.Content>
-												</Header>
-												<HttpSeriesCardList httpClassList={httpCodes[currentSeries].filter(t => currentAnswer.includes(t.name))} />
+												<Grid.Column width={16}>
+													<Header as="h2">
+														<Icon name="flag checkered" />
+														<Header.Content>HTTP Status Code </Header.Content>
+													</Header>
+													<HttpCodeCardList currentSeries={currentSeries} httpCodeList={httpCodes[currentSeries].filter(t => currentAnswer.includes(t.code.toString()))} />
+												</Grid.Column>
 											</Grid.Row>
 											<Divider />
 											<Grid.Row>
