@@ -31,11 +31,11 @@ class HTTPStatusCodeAnswerContainer extends Component {
 	};
 
 	onSeriesSelection = (e, d) => {
-		this.setState({ currentSeries: d.value });
+		this.setState({ ...this.initialState, currentSeries: d.value });
 	};
 
 	clearState = () => {
-		this.setState(this.initialState);
+		this.setState({ ...this.initialState, currentSeries: this.props.currentSeries });
 	};
 
 	onOptionChoose = (question, option) => {

@@ -5,7 +5,6 @@ import HttpCodeInfoCard from './httpCodeInfoCard';
 import { ColorMap, IconMap } from '../../constant/params';
 export default function HttpCodeCardList(props) {
 	const { httpCodeList, currentSeries } = props;
-	debugger;
 	return httpCodeList && httpCodeList.length ? (
 		<Card.Group itemsPerRow={httpCodeList.length}>
 			{httpCodeList.map(httpCode => {
