@@ -67,18 +67,24 @@ class HTTPStatusCodeAnswerContainer extends Component {
 								<Dropdown onChange={this.onSeriesSelection} placeholder="Select Series" fluid selection options={this.getHttpSeriesDropDown()} />
 								{currentSeries ? (
 									answered ? (
-										<Segment placeholder>
-											<Grid.Row>
-												<Grid.Column width={16}>
-													<ContentHeader icon={IconMap[currentSeriesObj.name]} description={currentSeriesObj.description} title={`${currentSeriesObj.name} ${currentSeriesObj.type}`} />
-													<HttpCodeCardList currentSeries={currentSeries} httpCodeList={httpCodes[currentSeries].filter(t => currentAnswer.includes(t.code.toString()))} />
-												</Grid.Column>
-											</Grid.Row>
-											<Divider />
-											<Grid.Row>
-												<Button floated="right" icon="redo" color="black" content="Try Again" onClick={this.clearState} />
-											</Grid.Row>
-										</Segment>
+										<React.Fragment>
+											<ContentHeader icon={IconMap[currentSeriesObj.name]} description={currentSeriesObj.description} title={`${currentSeriesObj.name} ${currentSeriesObj.type}`} />
+
+											<Segment vertical>
+												<Grid container stackable verticalAlign="middle">
+													<Grid.Row>
+														<Grid.Column width={16}>
+															<HttpCodeCardList currentSeries={currentSeries} httpCodeList={httpCodes[currentSeries].filter(t => currentAnswer.includes(t.code.toString()))} />
+														</Grid.Column>
+													</Grid.Row>
+													<Grid.Row>
+														<Grid.Column width={16}>
+															<Button floated="right" icon="redo" color="black" content="Try Again" onClick={this.clearState} />
+														</Grid.Column>
+													</Grid.Row>
+												</Grid>
+											</Segment>
+										</React.Fragment>
 									) : (
 										<Segment placeholder>
 											<QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />
