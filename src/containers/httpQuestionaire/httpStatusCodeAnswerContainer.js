@@ -4,6 +4,8 @@ import { withRouter } from 'react-router';
 import { Dropdown, Divider, Button, Header, Icon, Grid, Segment } from 'semantic-ui-react';
 import QuestionComponent from '../../components/flow/questionComponent';
 import HttpCodeCardList from '../../components/flow/httpCodeCardList';
+import ContentHeader from '../../components/common/contentHeader';
+import { IconMap } from '../../constant/params';
 const mapStateToProps = (state, ownProps) => ({
 	httpCodes: state.httpInfo.httpCodes,
 	httpCodeSeries: state.httpInfo.httpCodeSeries,
@@ -48,12 +50,13 @@ class HTTPStatusCodeAnswerContainer extends Component {
 	};
 
 	render() {
-		const { httpCodesQuestions = {}, httpCodes = {} } = this.props;
+		const { httpCodesQuestions = {}, httpCodes = {}, httpCodeSeries = [] } = this.props;
 		const { currentIndex, answered, currentAnswer, currentSeries } = this.state;
 		let currentQuestion = {};
-
+		let currentSeriesObj = {};
 		if (currentSeries) {
 			currentQuestion = httpCodesQuestions[currentSeries].find(t => t.id === currentIndex);
+			currentSeriesObj = httpCodeSeries.find(t => t.name === currentSeries);
 		}
 		return (
 			<React.Fragment>
@@ -67,10 +70,7 @@ class HTTPStatusCodeAnswerContainer extends Component {
 										<Segment placeholder>
 											<Grid.Row>
 												<Grid.Column width={16}>
-													<Header as="h2">
-														<Icon name="flag checkered" />
-														<Header.Content>HTTP Status Code </Header.Content>
-													</Header>
+													<ContentHeader icon={IconMap[currentSeriesObj.name]} description={currentSeriesObj.description} title={`${currentSeriesObj.name} ${currentSeriesObj.type}`} />
 													<HttpCodeCardList currentSeries={currentSeries} httpCodeList={httpCodes[currentSeries].filter(t => currentAnswer.includes(t.code.toString()))} />
 												</Grid.Column>
 											</Grid.Row>
