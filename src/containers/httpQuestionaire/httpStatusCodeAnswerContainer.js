@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Dropdown, Divider, Button, Header, Icon, Grid, Segment } from 'semantic-ui-react';
+import { Dropdown, Button, Grid, Segment } from 'semantic-ui-react';
 import QuestionComponent from '../../components/flow/questionComponent';
 import HttpCodeCardList from '../../components/flow/httpCodeCardList';
 import ContentHeader from '../../components/common/contentHeader';
