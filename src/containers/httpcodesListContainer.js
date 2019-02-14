@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Card, Label, Icon, Tab, Grid, Segment } from 'semantic-ui-react';
+import { Card, Tab, Grid, Segment } from 'semantic-ui-react';
 import { IconMap, ColorMap } from '../constant/params';
 import PageHeader from '../components/common/pageHeader';
 import ContentHeader from '../components/common/contentHeader';
+import HttpCodeInfoCard from '../components/flow/httpCodeInfoCard';
 const mapStateToProps = (state, ownProps) => ({
 	httpCodeSeries: state.httpInfo.httpCodeSeries,
 	httpCodes: state.httpInfo.httpCodes
@@ -28,27 +29,7 @@ class HTTPCodeList extends Component {
 							<Grid.Column width={16}>
 								<Card.Group itemsPerRow={2}>
 									{currentList.map(httpCode => {
-										return (
-											<Card key={httpCode.code}>
-												<Card.Content>
-													<Card.Header>
-														<a target="_blank" rel="noopener noreferrer" href={httpCode.more}>
-															<Label color={ColorMap[currentClassCode.name]} ribbon>
-																<Icon name={IconMap[currentClassCode.name]} />
-																{httpCode.msg}
-															</Label>
-														</a>
-													</Card.Header>
-													{/* <Card.Meta>{httpCode.repo ? 'Repository' : 'WebhttpCode'}</Card.Meta> */}
-													<Card.Description>
-														{`${httpCode.description} `}
-														<a target="_blank" rel="noopener noreferrer" href={httpCode.more}>
-															Learn more
-														</a>
-													</Card.Description>
-												</Card.Content>
-											</Card>
-										);
+										return <HttpCodeInfoCard httpCode={httpCode} currentClassCode={currentClassCode} color={ColorMap[currentClassCode.name]} icon={IconMap[currentClassCode.name]} />;
 									})}
 								</Card.Group>
 							</Grid.Column>
