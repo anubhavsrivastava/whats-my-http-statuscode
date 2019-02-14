@@ -35,7 +35,7 @@ class HTTPStatusCodeAnswerContainer extends Component {
 	};
 
 	clearState = () => {
-		this.setState({ ...this.initialState, currentSeries: this.props.currentSeries });
+		this.setState(Object.assign({}, this.initialState, { currentSeries: this.state.currentSeries }));
 	};
 
 	onOptionChoose = (question, option) => {
