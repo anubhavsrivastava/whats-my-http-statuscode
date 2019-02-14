@@ -42,18 +42,24 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 						<Grid.Row>
 							<Grid.Column width={16}>
 								{answered ? (
-									<Segment placeholder>
-										<Grid.Row>
-											<Header as="h2">
-												<Icon name="flag checkered" />
-												<Header.Content>HTTP Status Code Series </Header.Content>
-											</Header>
-											<HttpSeriesCardList httpSeriesList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))} />
-										</Grid.Row>
-										<Divider />
-										<Grid.Row>
-											<Button floated="right" icon="redo" color="black" content="Try Again" onClick={this.clearState} />
-										</Grid.Row>
+									<Segment vertical>
+										<Grid container stackable verticalAlign="middle">
+											<Grid.Row>
+												<Grid.Column width={16}>
+													<Header as="h2">
+														<Icon name="flag checkered" />
+														<Header.Content>HTTP Status Code Series </Header.Content>
+													</Header>
+													<HttpSeriesCardList httpSeriesList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))} />
+												</Grid.Column>
+											</Grid.Row>
+											<Divider />
+											<Grid.Row>
+												<Grid.Column width={16}>
+													<Button floated="right" icon="redo" color="black" content="Try Again" onClick={this.clearState} />
+												</Grid.Column>
+											</Grid.Row>
+										</Grid>
 									</Segment>
 								) : (
 									<Segment placeholder>

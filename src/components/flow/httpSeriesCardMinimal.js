@@ -8,7 +8,7 @@ export default function HttpSeriesCardMinimal(props) {
 		<Card>
 			<Card.Content>
 				<Card.Header>
-					<Label size={'big'} color={ColorMap[httpSeries.name]}>
+					<Label size={'big'} ribbon color={ColorMap[httpSeries.name]}>
 						<Icon name={IconMap[httpSeries.name]} />
 						{httpSeries.name} {httpSeries.type}
 					</Label>
