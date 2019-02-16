@@ -6,7 +6,8 @@ import QuestionComponent from '../../components/flow/questionComponent';
 import HttpCodeCardList from '../../components/flow/httpCodeCardList';
 import ContentHeader from '../../components/common/contentHeader';
 import { IconMap } from '../../constant/params';
-const mapStateToProps = (state, ownProps) => ({
+
+const mapStateToProps = state => ({
 	httpCodes: state.httpInfo.httpCodes,
 	httpCodeSeries: state.httpInfo.httpCodeSeries,
 	httpCodesQuestions: state.httpInfo.questions.httpCodes
@@ -16,6 +17,7 @@ const mapDispatchToProps = dispatch => ({});
 
 class HTTPStatusCodeAnswerContainer extends Component {
 	initialState = { currentSeries: '', currentAnswer: [], answered: false, currentIndex: 0 };
+
 	constructor(props) {
 		super(props);
 		this.state = this.initialState;
