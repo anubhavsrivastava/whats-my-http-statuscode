@@ -6,7 +6,8 @@ export default function QuestionCompoent(props) {
 	return question ? (
 		<React.Fragment>
 			<Header icon>
-				<Icon name="question" />
+				{question.type === 'suggestion' ? <Icon name="exclamation" /> : null}
+				{question.type === 'question' ? <Icon name="question" /> : null}
 				{question.mainText}
 			</Header>
 			<Segment.Inline>
