@@ -7,7 +7,7 @@ import HttpCodeCardList from '../../components/flow/httpCodeCardList';
 import ContentHeader from '../../components/common/contentHeader';
 import { IconMap } from '../../constant/params';
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, ownProps) => ({
 	httpCodes: state.httpInfo.httpCodes,
 	httpCodeSeries: state.httpInfo.httpCodeSeries,
 	httpCodesQuestions: state.httpInfo.questions.httpCodes
