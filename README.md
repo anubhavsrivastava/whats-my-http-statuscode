@@ -13,6 +13,10 @@ A UI Based interface to guide you to exact web api - http specification status y
 
 ## Contribution
 
+Suggestions and PRs are welcome!
+
+Please read the [contribution guidelines](CONTRIBUTING.md) to get started.
+
 ## License
 
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](LICENSE)
