@@ -1,1 +1,14 @@
-[]
+[
+	{
+		"id": 0,
+		"type": "suggestion",
+		"mainText": "Check recommended codes for this series",
+		"additionalTexts": [],
+		"options": [
+			{ "option": "all", "type": "bool", "action": { "type": "node", "value": ["100", "101", "102"] } },
+			{ "option": "100 Continue", "type": "bool", "action": { "type": "node", "value": "100" } },
+			{ "option": "101 Switching Protocols", "type": "bool", "action": { "type": "node", "value": "101" } },
+			{ "option": "102 Processing", "type": "bool", "action": { "type": "node", "value": "102" } }
+		]
+	}
+]
