@@ -8,7 +8,8 @@ export default function QuestionCompoent(props) {
 			<Header icon>
 				{question.type === 'suggestion' ? <Icon name="exclamation" /> : null}
 				{question.type === 'question' ? <Icon name="question" /> : null}
-				{question.mainText}
+
+				<h1>{question.mainText}</h1>
 			</Header>
 			<Segment.Inline>
 				{question.options.map((opt, i) => {
