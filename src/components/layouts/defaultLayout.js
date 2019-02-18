@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Icon, Image, Menu, Segment } from 'semantic-ui-react';
+import { Container, Icon, Button, Image, Menu, Segment } from 'semantic-ui-react';
 import logo from '../../static/img/logo.svg';
-
+const fixed = false;
 const FixedMenuLayout = props => (
-	<div>
-		<Segment inverted>
-			<Menu inverted secondary>
+	<>
+		<Segment inverted textAlign="center" vertical>
+			<Menu fixed={fixed ? 'top' : null} inverted={!fixed} pointing={!fixed} secondary={!fixed} size="large">
 				<a target="_blank" rel="noopener noreferrer" href="https://github.com/anubhavsrivastava/whats-my-http-statuscode" class="github-corner" aria-label="Star on Github">
 					<svg width="80" height="80" viewBox="0 0 250 250" style={{ fill: '#70B7FD', color: '#fff', position: 'absolute', top: '0', border: '0', right: '0' }} aria-hidden="true">
 						<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" />
@@ -18,8 +18,10 @@ const FixedMenuLayout = props => (
 					</svg>
 				</a>
 				<Container>
-					<Menu.Item as="a" href="#/" header>
-						<Image size="mini" className={'inverted-color'} src={logo} />
+					<Menu.Item id="header-logo" link>
+						<a href="#/">
+							<Image size="mini" className={'inverted-color'} src={logo} />
+						</a>
 					</Menu.Item>
 					<Menu.Item link>
 						<a href="#/httpcodedetails">
@@ -39,28 +41,11 @@ const FixedMenuLayout = props => (
 							FAQ
 						</a>
 					</Menu.Item>
-					{/* <Dropdown item simple text="Dropdown">
-					<Dropdown.Menu>
-						<Dropdown.Item>List Item</Dropdown.Item>
-						<Dropdown.Item>List Item</Dropdown.Item>
-						<Dropdown.Divider />
-						<Dropdown.Header>Header Item</Dropdown.Header>
-						<Dropdown.Item>
-							<i className="dropdown icon" />
-							<span className="text">Submenu</span>
-							<Dropdown.Menu>
-								<Dropdown.Item>List Item</Dropdown.Item>
-								<Dropdown.Item>List Item</Dropdown.Item>
-							</Dropdown.Menu>
-						</Dropdown.Item>
-						<Dropdown.Item>List Item</Dropdown.Item>
-					</Dropdown.Menu>
-				</Dropdown> */}
 				</Container>
 			</Menu>
 		</Segment>
 		{props.children}
-	</div>
+	</>
 );
 
 export default FixedMenuLayout;
