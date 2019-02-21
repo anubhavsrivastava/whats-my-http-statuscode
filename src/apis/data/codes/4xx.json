@@ -99,5 +99,12 @@
 		"description": "One or more conditions given in the request header fields evaluated to false when tested on the server.",
 		"additionalInfo": ["This response code allows the client to place preconditions on the current resource state (its current representations and metadata) and, thus, prevent the request method from being applied if the target resource is in an unexpected state."],
 		"more": "https://httpstatuses.com/412"
+	},
+	{
+		"code": 413,
+		"msg": "413 PAYLOAD TOO LARGE",
+		"description": "The server is refusing to process a request because the request payload is larger than the server is willing or able to process.",
+		"additionalInfo": ["The server MAY close the connection to prevent the client from continuing the request.", "If the condition is temporary, the server SHOULD generate a Retry-After header field to indicate that it is temporary and after what time the client MAY try again."],
+		"more": "https://httpstatuses.com/413"
 	}
 ]
