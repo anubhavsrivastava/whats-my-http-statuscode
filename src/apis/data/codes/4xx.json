@@ -222,5 +222,18 @@
 		"description": "A non-standard status code used to instruct nginx to close the connection without sending a response to the client, most commonly used to deny malicious or malformed requests.",
 		"additionalInfo": ["This status code is not seen by the client, it only appears in nginx log files."],
 		"more": "https://httpstatuses.com/444"
+	},
+	{
+		"code": 451,
+		"msg": "451 UNAVAILABLE FOR LEGAL REASONS",
+		"description": "The server is denying access to the resource as a consequence of a legal demand.",
+		"additionalInfo": [
+			"The server in question might not be an origin server. This type of legal demand typically most directly affects the operations of ISPs and search engines.",
+			"Responses using this status code SHOULD include an explanation, in the response body, of the details of the legal demand: the party making it, the applicable legislation or regulation, and what classes of person and resource it applies to.",
+			"The use of the 451 status code implies neither the existence nor non- existence of the resource named in the request. That is to say, it is possible that if the legal demands were removed, a request for the resource still might not succeed.",
+			"Note that in many cases clients can still access the denied resource by using technical countermeasures such as a VPN or the Tor network.",
+			"A 451 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls; see RFC7234."
+		],
+		"more": "https://httpstatuses.com/451"
 	}
 ]
