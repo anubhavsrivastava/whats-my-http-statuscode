@@ -235,5 +235,12 @@
 			"A 451 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls; see RFC7234."
 		],
 		"more": "https://httpstatuses.com/451"
+	},
+	{
+		"code": 499,
+		"msg": "499 CLIENT CLOSED REQUEST",
+		"description": "A non-standard status code introduced by nginx for the case when a client closes the connection while nginx is processing the request.",
+		"additionalInfo": [],
+		"more": "https://httpstatuses.com/499"
 	}
 ]
