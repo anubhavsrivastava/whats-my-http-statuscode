@@ -179,5 +179,12 @@
 		"description": "The method could not be performed on the resource because the requested action depended on another action and that action failed.",
 		"additionalInfo": ["For example, if a command in a PROPPATCH method fails, then, at minimum, the rest of the commands will also fail with 424 Failed Dependency."],
 		"more": "https://httpstatuses.com/424"
+	},
+	{
+		"code": 426,
+		"msg": "426 UPGRADE REQUIRED",
+		"description": "The server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol.",
+		"additionalInfo": ["The server MUST send an Upgrade header field in a 426 response to indicate the required protocol(s)"],
+		"more": "https://httpstatuses.com/426"
 	}
 ]
