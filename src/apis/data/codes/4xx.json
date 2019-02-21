@@ -106,5 +106,15 @@
 		"description": "The server is refusing to process a request because the request payload is larger than the server is willing or able to process.",
 		"additionalInfo": ["The server MAY close the connection to prevent the client from continuing the request.", "If the condition is temporary, the server SHOULD generate a Retry-After header field to indicate that it is temporary and after what time the client MAY try again."],
 		"more": "https://httpstatuses.com/413"
+	},
+	{
+		"code": 414,
+		"msg": "414 REQUEST-URI TOO LONG",
+		"description": "The server is refusing to service the request because the request-target is longer than the server is willing to interpret.",
+		"additionalInfo": [
+			"This rare condition is only likely to occur when a client has improperly converted a POST request to a GET request with long query information, when the client has descended into a \"black hole\" of redirection (e.g., a redirected URI prefix that points to a suffix of itself) or when the server is under attack by a client attempting to exploit potential security holes.",
+			"A 414 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls ."
+		],
+		"more": "https://httpstatuses.com/414"
 	}
 ]
