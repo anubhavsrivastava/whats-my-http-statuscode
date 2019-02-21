@@ -52,12 +52,10 @@
 		"more": "https://httpstatuses.com/405"
 	},
 	{
-		"code": 406,
-		"msg": "406 NOT ACCEPTABLE",
-		"description": "The target resource does not have a current representation that would be acceptable to the user agent, according to the proactive negotiation header fields received in the request, and the server is unwilling to supply a default representation.",
-		"additionalInfo": [
-			"The server SHOULD generate a payload containing a list of available representation characteristics and corresponding resource identifiers from which the user or user agent can choose the one most appropriate. A user agent MAY automatically select the most appropriate choice from that list. However, this specification does not define any standard for such automatic selection, as described in RFC7231 Section 6.4.1."
-		],
-		"more": "https://httpstatuses.com/406"
+		"code": 407,
+		"msg": "407 PROXY AUTHENTICATION REQUIRED",
+		"description": "Similar to 401 Unauthorized, but it indicates that the client needs to authenticate itself in order to use a proxy.",
+		"additionalInfo": ["The proxy MUST send a Proxy-Authenticate header field containing a challenge applicable to that proxy for the target resource. The client MAY repeat the request with a new or replaced Proxy-Authorization header field."],
+		"more": "https://httpstatuses.com/407"
 	}
 ]
