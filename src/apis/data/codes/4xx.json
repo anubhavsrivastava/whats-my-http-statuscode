@@ -81,7 +81,7 @@
 		"description": "The target resource is no longer available at the origin server and that this condition is likely to be permanent.",
 		"additionalInfo": [
 			"If the origin server does not know, or has no facility to determine, whether or not the condition is permanent, the status code 404 Not Found ought to be used instead.",
-			"The 410 response is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable and that the server owners desire that remote links to that resource be removed. Such an event is common for limited-time, promotional services and for resources belonging to individuals no longer associated with the origin server's site. It is not necessary to mark all permanently unavailable resources as "gone" or to keep the mark for any length of time -- that is left to the discretion of the server owner.",
+			"The 410 response is primarily intended to assist the task of web maintenance by notifying the recipient that the resource is intentionally unavailable and that the server owners desire that remote links to that resource be removed. Such an event is common for limited-time, promotional services and for resources belonging to individuals no longer associated with the origin server's site. It is not necessary to mark all permanently unavailable resources as \"gone\" or to keep the mark for any length of time -- that is left to the discretion of the server owner.",
 			"A 410 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls."
 		],
 		"more": "https://httpstatuses.com/410"
@@ -90,9 +90,14 @@
 		"code": 411,
 		"msg": "411 LENGTH REQUIRED",
 		"description": "The server refuses to accept the request without a defined Content-Length.",
-		"additionalInfo": [
-			"The client MAY repeat the request if it adds a valid Content-Length header field containing the length of the message body in the request message.",
-		],
+		"additionalInfo": ["The client MAY repeat the request if it adds a valid Content-Length header field containing the length of the message body in the request message."],
 		"more": "https://httpstatuses.com/411"
+	},
+	{
+		"code": 412,
+		"msg": "412 PRECONDITION FAILED",
+		"description": "One or more conditions given in the request header fields evaluated to false when tested on the server.",
+		"additionalInfo": ["This response code allows the client to place preconditions on the current resource state (its current representations and metadata) and, thus, prevent the request method from being applied if the target resource is in an unexpected state."],
+		"more": "https://httpstatuses.com/412"
 	}
 ]
