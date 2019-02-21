@@ -172,5 +172,12 @@
 		"description": "The source or destination resource of a method is locked.",
 		"additionalInfo": ["This response SHOULD contain an appropriate precondition or postcondition code, such as 'lock-token-submitted' or 'no-conflicting-lock'."],
 		"more": "https://httpstatuses.com/423"
+	},
+	{
+		"code": 424,
+		"msg": "424 FAILED DEPENDENCY",
+		"description": "The method could not be performed on the resource because the requested action depended on another action and that action failed.",
+		"additionalInfo": ["For example, if a command in a PROPPATCH method fails, then, at minimum, the rest of the commands will also fail with 424 Failed Dependency."],
+		"more": "https://httpstatuses.com/424"
 	}
 ]
