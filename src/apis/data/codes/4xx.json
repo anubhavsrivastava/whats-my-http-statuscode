@@ -85,5 +85,14 @@
 			"A 410 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls."
 		],
 		"more": "https://httpstatuses.com/410"
+	},
+	{
+		"code": 411,
+		"msg": "411 LENGTH REQUIRED",
+		"description": "The server refuses to accept the request without a defined Content-Length.",
+		"additionalInfo": [
+			"The client MAY repeat the request if it adds a valid Content-Length header field containing the length of the message body in the request message.",
+		],
+		"more": "https://httpstatuses.com/411"
 	}
 ]
