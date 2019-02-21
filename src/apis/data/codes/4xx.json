@@ -186,5 +186,16 @@
 		"description": "The server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol.",
 		"additionalInfo": ["The server MUST send an Upgrade header field in a 426 response to indicate the required protocol(s)"],
 		"more": "https://httpstatuses.com/426"
+	},
+	{
+		"code": 428,
+		"msg": "428 PRECONDITION REQUIRED",
+		"description": "The origin server requires the request to be conditional.",
+		"additionalInfo": [
+			"Its typical use is to avoid the \"lost update\" problem, where a client GETs a resource's state, modifies it, and PUTs it back to the server, when meanwhile a third party has modified the state on the server, leading to a conflict. By requiring requests to be conditional, the server can assure that clients are working with the correct copies.",
+			"Responses using this status code SHOULD explain how to resubmit the request successfully.",
+			"Responses with the 428 status code MUST NOT be stored by a cache."
+		],
+		"more": "https://httpstatuses.com/428"
 	}
 ]
