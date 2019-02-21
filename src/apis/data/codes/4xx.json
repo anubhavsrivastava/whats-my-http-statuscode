@@ -208,5 +208,12 @@
 			"Responses with the 429 status code MUST NOT be stored by a cache."
 		],
 		"more": "https://httpstatuses.com/429"
+	},
+	{
+		"code": 431,
+		"msg": "431 REQUEST HEADER FIELDS TOO LARGE",
+		"description": "The server is unwilling to process the request because its header fields are too large. The request MAY be resubmitted after reducing the size of the request header fields.",
+		"additionalInfo": ["It can be used both when the set of request header fields in total is too large, and when a single header field is at fault. In the latter case, the response representation SHOULD specify which header field was too large.", "Responses with the 431 status code MUST NOT be stored by a cache."],
+		"more": "https://httpstatuses.com/429"
 	}
 ]
