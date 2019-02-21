@@ -17,9 +17,11 @@ export default function HttpCodeInfoCard({ httpCode, color, icon }) {
 
 				<Card.Description>
 					{`${httpCode.description} `}
-					<a target="_blank" rel="noopener noreferrer" href={httpCode.more}>
-						Learn more
-					</a>
+					{httpCode.more ? (
+						<a target="_blank" rel="noopener noreferrer" href={httpCode.more}>
+							Learn more
+						</a>
+					) : null}
 				</Card.Description>
 			</Card.Content>
 		</Card>
