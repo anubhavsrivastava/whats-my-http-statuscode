@@ -57,5 +57,12 @@
 		"description": "Similar to 401 Unauthorized, but it indicates that the client needs to authenticate itself in order to use a proxy.",
 		"additionalInfo": ["The proxy MUST send a Proxy-Authenticate header field containing a challenge applicable to that proxy for the target resource. The client MAY repeat the request with a new or replaced Proxy-Authorization header field."],
 		"more": "https://httpstatuses.com/407"
+	},
+	{
+		"code": 408,
+		"msg": "408 REQUEST TIMEOUT",
+		"description": "The server did not receive a complete request message within the time that it was prepared to wait.",
+		"additionalInfo": ["A server SHOULD send the \"close\" connection option in the response, since 408 implies that the server has decided to close the connection rather than continue waiting. If the client has an outstanding request in transit, the client MAY repeat that request on a new connection."],
+		"more": "https://httpstatuses.com/408"
 	}
 ]
