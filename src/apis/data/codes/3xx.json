@@ -58,5 +58,12 @@
 			"A 304 response cannot contain a message-body; it is always terminated by the first empty line after the header fields."
 		],
 		"more": "https://httpstatuses.com/304"
+	},
+	{
+		"code": 305,
+		"msg": "305 USE PROXY",
+		"description": "Defined in a previous version of this specification and is now deprecated, due to security concerns regarding in-band configuration of a proxy.",
+		"additionalInfo": [],
+		"more": "https://httpstatuses.com/305"
 	}
 ]
