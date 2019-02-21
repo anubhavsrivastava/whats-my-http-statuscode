@@ -133,5 +133,12 @@
 			"Note: Because servers are free to ignore Range, many implementations will simply respond with the entire selected representation in a 200 OK response. That is partly because most clients are prepared to receive a 200 OK to complete the task (albeit less efficiently) and partly because clients might not stop making an invalid partial request until they have received a complete representation. Thus, clients cannot depend on receiving a 416 Range Not Satisfiable response even when it is most appropriate."
 		],
 		"more": "https://httpstatuses.com/416"
+	},
+	{
+		"code": 417,
+		"msg": "417 EXPECTATION FAILED",
+		"description": "The expectation given in the request's Expect header field could not be met by at least one of the inbound servers.",
+		"additionalInfo": [],
+		"more": "https://httpstatuses.com/416"
 	}
 ]
