@@ -139,6 +139,13 @@
 		"msg": "417 EXPECTATION FAILED",
 		"description": "The expectation given in the request's Expect header field could not be met by at least one of the inbound servers.",
 		"additionalInfo": [],
-		"more": "https://httpstatuses.com/416"
+		"more": "https://httpstatuses.com/417"
+	},
+	{
+		"code": 418,
+		"msg": "418 I'M A TEAPOT",
+		"description": "Any attempt to brew coffee with a teapot should result in the error code \"418 I'm a teapot\". The resulting entity body MAY be short and stout.",
+		"additionalInfo": [],
+		"more": "https://httpstatuses.com/418"
 	}
 ]
