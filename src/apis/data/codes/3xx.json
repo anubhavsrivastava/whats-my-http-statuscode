@@ -65,5 +65,16 @@
 		"description": "Defined in a previous version of this specification and is now deprecated, due to security concerns regarding in-band configuration of a proxy.",
 		"additionalInfo": [],
 		"more": "https://httpstatuses.com/305"
+	},
+	{
+		"code": 307,
+		"msg": "307 TEMPORARY REDIRECT",
+		"description": "The target resource resides temporarily under a different URI and the user agent MUST NOT change the request method if it performs an automatic redirection to that URI.",
+		"additionalInfo": [
+			"Since the redirection can change over time, the client ought to continue using the original effective request URI for future requests.",
+			"The server SHOULD generate a Location header field in the response containing a URI reference for the different URI. The user agent MAY use the Location field value for automatic redirection. The server's response payload usually contains a short hypertext note with a hyperlink to the different URI(s).",
+			"Note: This status code is similar to 302 Found, except that it does not allow changing the request method from POST to GET. This specification defines no equivalent counterpart for 301 Moved Permanently (RFC7238, however, proposes defining the status code 308 Permanent Redirect for this purpose)."
+		],
+		"more": "https://httpstatuses.com/307"
 	}
 ]
