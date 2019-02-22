@@ -1,8 +1,8 @@
 import stabilityJSON from './stability.json';
 import sitesJSON from './sites.json';
-import httpClassesJSON from './class.json';
+import httpSeriesJSON from './series.json';
 import httpCodesJSON from './codes';
-import httpClassQuestionJSON from './questions/httpClassCodeQuestions.json';
+import httpSeriesQuestionJSON from './questions/httpSeriesCodeQuestions.json';
 import httpCodesQuestionJSON from './questions/codes';
 function getStabilityCodes() {
 	return stabilityJSON;
@@ -13,7 +13,7 @@ function getRelatedSites() {
 }
 
 function gethttpCodeSeries() {
-	return httpClassesJSON;
+	return httpSeriesJSON;
 }
 
 function getHttpCodes() {
@@ -21,7 +21,7 @@ function getHttpCodes() {
 }
 
 function gethttpCodeSeriesQuestions() {
-	return httpClassQuestionJSON;
+	return httpSeriesQuestionJSON;
 }
 
 function getHttpCodeQuestions() {
