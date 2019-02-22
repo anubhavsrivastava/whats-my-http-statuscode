@@ -5,6 +5,9 @@ import { Step, Icon, Grid, Segment } from 'semantic-ui-react';
 import PageHeader from '../../components/common/pageHeader';
 import HttpStatusSeriesAnswerContainer from './httpStatusSeriesAnswerContainer';
 import HttpStatusCodeAnswerContainer from './httpStatusCodeAnswerContainer';
+import RoutesMapping from '../../constant/routes';
+const Routes = RoutesMapping.getRoutes();
+
 const mapStateToProps = (state, ownProps) => ({
 	// httpCodeSeries: state.httpInfo.httpCodeSeries,
 	// httpCodes: state.httpInfo.httpCodes,
@@ -15,19 +18,13 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({});
 
 class HTTPStatusAnswerContainer extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			tabId: +props.match.params.tabid || 0
-		};
-	}
-
-	switchTab = tabId => {
-		this.setState({ tabId });
+	switchTab = tabid => {
+		this.props.history.push(`${Routes.HTTPSTATUSANSWER.path}/${tabid}`);
 	};
 
 	render() {
-		const { tabId } = this.state;
+		const { tabid = '0' } = this.props.match.params;
+
 		return (
 			<React.Fragment>
 				<PageHeader title="What's my HTTP status?" />
@@ -36,14 +33,14 @@ class HTTPStatusAnswerContainer extends Component {
 						<Grid.Row>
 							<Grid.Column width={16}>
 								<Step.Group fluid stackable="tablet">
-									<Step active={tabId === 0} onClick={() => this.switchTab(0)} link>
+									<Step active={tabid === '0'} onClick={() => this.switchTab(0)} link>
 										<Icon name="cubes" />
 										<Step.Content>
 											<Step.Title>HTTP Class code</Step.Title>
 											<Step.Description>Choose HTTP status code series</Step.Description>
 										</Step.Content>
 									</Step>
-									<Step active={tabId === 1} onClick={() => this.switchTab(1)} link>
+									<Step active={tabid === '1'} onClick={() => this.switchTab(1)} link>
 										<Icon name="code" />
 										<Step.Content>
 											<Step.Title>HTTP Status Code</Step.Title>
@@ -54,8 +51,8 @@ class HTTPStatusAnswerContainer extends Component {
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
-					{tabId === 0 ? <HttpStatusSeriesAnswerContainer /> : null}
-					{tabId === 1 ? <HttpStatusCodeAnswerContainer /> : null}
+					{tabid === '0' ? <HttpStatusSeriesAnswerContainer /> : null}
+					{tabid === '1' ? <HttpStatusCodeAnswerContainer /> : null}
 				</Segment>
 			</React.Fragment>
 		);
