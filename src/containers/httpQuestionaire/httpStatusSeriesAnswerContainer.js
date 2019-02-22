@@ -78,7 +78,7 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 									<Segment placeholder raised>
 										<QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />
 										<Grid.Row style={{ minHeight: '50px' }}>
-											<Grid.Column width={16}>{sequence.length > 1 ? <Button floated="right" icon="undo" color="black" content="Back" onClick={this.undoQuestion} /> : null}</Grid.Column>
+											<Grid.Column width={16}>{sequence.length > 1 ? <Button floated="right" icon="undo" content="Back" onClick={this.undoQuestion} /> : null}</Grid.Column>
 										</Grid.Row>
 									</Segment>
 								)}
