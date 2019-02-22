@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Label, Icon, Card } from 'semantic-ui-react';
+import { Label, Icon, Button, Card } from 'semantic-ui-react';
 import { ColorMap, IconMap } from '../../constant/params';
 export default function HttpSeriesCardMinimal(props) {
-	const { httpSeries } = props;
+	const { httpSeries, onAction } = props;
 	return httpSeries ? (
 		<Card>
 			<Card.Content>
@@ -23,6 +23,19 @@ export default function HttpSeriesCardMinimal(props) {
 					) : null}
 				</Card.Description>
 			</Card.Content>
+			{onAction ? (
+				<Card.Content>
+					<Button
+						floated="right"
+						icon="code"
+						color="blue"
+						content="Find exact code"
+						onClick={() => {
+							onAction(httpSeries.name);
+						}}
+					/>
+				</Card.Content>
+			) : null}
 		</Card>
 	) : null;
 }

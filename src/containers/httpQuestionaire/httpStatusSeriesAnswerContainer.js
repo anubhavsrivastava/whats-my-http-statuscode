@@ -4,6 +4,8 @@ import { withRouter } from 'react-router';
 import { Divider, Button, Header, Icon, Grid, Segment } from 'semantic-ui-react';
 import QuestionComponent from '../../components/flow/questionComponent';
 import HttpSeriesCardList from '../../components/flow/httpSeriesCardList';
+import RoutesMapping from '../../constant/routes';
+const Routes = RoutesMapping.getRoutes();
 const mapStateToProps = (state, ownProps) => ({
 	httpCodeSeries: state.httpInfo.httpCodeSeries,
 	httpCodeSeriesQuestions: state.httpInfo.questions.httpCodeSeries
@@ -20,6 +22,10 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 
 	clearState = () => {
 		this.setState(this.initialState);
+	};
+
+	chooseCodeTab = seriesName => {
+		this.props.history.push(`${Routes.HTTPSTATUSANSWER.path}/1/${seriesName}`);
 	};
 
 	onOptionChoose = (question, option) => {
@@ -50,7 +56,9 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 														<Icon name="flag checkered" />
 														<Header.Content>HTTP Status Code Series </Header.Content>
 													</Header>
-													<HttpSeriesCardList httpSeriesList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))} />
+													<HttpSeriesCardList onAction={this.chooseCodeTab} httpSeriesList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))}>
+														anubhav
+													</HttpSeriesCardList>
 												</Grid.Column>
 											</Grid.Row>
 											<Divider />
