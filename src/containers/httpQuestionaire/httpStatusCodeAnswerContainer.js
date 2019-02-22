@@ -37,7 +37,6 @@ class HTTPStatusCodeAnswerContainer extends Component {
 
 	onSeriesSelection = (e, d) => {
 		this.props.history.push(`${Routes.HTTPSTATUSANSWER.path}/${this.props.match.params.tabid}/${d.value}`);
-		// this.setState({ ...this.initialState });
 	};
 
 	clearState = () => {
@@ -56,10 +55,11 @@ class HTTPStatusCodeAnswerContainer extends Component {
 	render() {
 		const { httpCodesQuestions = {}, httpCodes = {}, httpCodeSeries = [] } = this.props;
 		const { currentIndex, answered, currentAnswer } = this.state;
-		const { currentSeries = '' } = this.props.match.params;
+		const { option: currentSeries = '' } = this.props.match.params;
+
 		let currentQuestion = {};
 		let currentSeriesObj = {};
-		if (currentSeries) {
+		if (currentSeries && httpCodesQuestions[currentSeries]) {
 			currentQuestion = httpCodesQuestions[currentSeries].find(t => t.id === currentIndex);
 			currentSeriesObj = httpCodeSeries.find(t => t.name === currentSeries);
 		}
@@ -69,12 +69,11 @@ class HTTPStatusCodeAnswerContainer extends Component {
 					<Grid className="container-box" container stackable verticalAlign="middle">
 						<Grid.Row>
 							<Grid.Column width={16}>
-								<Dropdown onChange={this.onSeriesSelection} placeholder="Select Series" fluid selection options={this.getHttpSeriesDropDown()} />
+								<Dropdown defaultValue={currentSeries} onChange={this.onSeriesSelection} placeholder="Select Series" fluid selection options={this.getHttpSeriesDropDown()} />
 								{currentSeries ? (
 									answered ? (
 										<React.Fragment>
 											<ContentHeader icon={IconMap[currentSeriesObj.name]} description={currentSeriesObj.description} title={`${currentSeriesObj.name} ${currentSeriesObj.type}`} />
-
 											<Segment vertical>
 												<Grid container stackable verticalAlign="middle">
 													<Grid.Row>
