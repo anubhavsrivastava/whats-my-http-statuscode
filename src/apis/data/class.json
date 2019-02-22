@@ -7,7 +7,7 @@
 	},
 	{
 		"name": "2xx",
-		"description": "This class of status codes indicates the action requested by the client was received, understood and accepted.",
+		"description": "This class of status codes indicates the action requested by the client was received, understood and accepted. This series indicate that the request was successful ",
 		"type": "Success",
 		"stability": 0
 	},

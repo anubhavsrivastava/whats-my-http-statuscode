@@ -24,12 +24,11 @@ export default function HttpSeriesCardMinimal(props) {
 				</Card.Description>
 			</Card.Content>
 			{onAction ? (
-				<Card.Content>
+				<Card.Content meta>
 					<Button
-						floated="right"
 						icon="code"
-						color="blue"
-						content="Find exact code"
+						color="black"
+						content="Find exact HTTP code"
 						onClick={() => {
 							onAction(httpSeries.name);
 						}}
