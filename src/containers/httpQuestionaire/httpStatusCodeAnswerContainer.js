@@ -6,7 +6,8 @@ import QuestionComponent from '../../components/flow/questionComponent';
 import HttpCodeCardList from '../../components/flow/httpCodeCardList';
 import ContentHeader from '../../components/common/contentHeader';
 import { IconMap } from '../../constant/params';
-
+import RoutesMapping from '../../constant/routes';
+const Routes = RoutesMapping.getRoutes();
 const mapStateToProps = (state, ownProps) => ({
 	httpCodes: state.httpInfo.httpCodes,
 	httpCodeSeries: state.httpInfo.httpCodeSeries,
@@ -16,7 +17,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({});
 
 class HTTPStatusCodeAnswerContainer extends Component {
-	initialState = { currentSeries: '', currentAnswer: [], answered: false, currentIndex: 0 };
+	initialState = { currentAnswer: [], answered: false, currentIndex: 0 };
 
 	constructor(props) {
 		super(props);
@@ -35,11 +36,12 @@ class HTTPStatusCodeAnswerContainer extends Component {
 	};
 
 	onSeriesSelection = (e, d) => {
-		this.setState({ ...this.initialState, currentSeries: d.value });
+		this.props.history.push(`${Routes.HTTPSTATUSANSWER.path}/${this.props.match.params.tabid}/${d.value}`);
+		// this.setState({ ...this.initialState });
 	};
 
 	clearState = () => {
-		this.setState(Object.assign({}, this.initialState, { currentSeries: this.state.currentSeries }));
+		this.setState(Object.assign({}, this.initialState));
 	};
 
 	onOptionChoose = (question, option) => {
@@ -53,7 +55,8 @@ class HTTPStatusCodeAnswerContainer extends Component {
 
 	render() {
 		const { httpCodesQuestions = {}, httpCodes = {}, httpCodeSeries = [] } = this.props;
-		const { currentIndex, answered, currentAnswer, currentSeries } = this.state;
+		const { currentIndex, answered, currentAnswer } = this.state;
+		const { currentSeries = '' } = this.props.match.params;
 		let currentQuestion = {};
 		let currentSeriesObj = {};
 		if (currentSeries) {
