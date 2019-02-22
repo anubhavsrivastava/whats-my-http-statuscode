@@ -19,7 +19,9 @@ const mapDispatchToProps = dispatch => ({});
 
 class HTTPStatusAnswerContainer extends Component {
 	switchTab = tabid => {
-		this.props.history.push(`${Routes.HTTPSTATUSANSWER.path}/${tabid}`);
+		if (this.props.match.params.tabid !== tabid) {
+			this.props.history.push(`${Routes.HTTPSTATUSANSWER.path}/${tabid}`);
+		}
 	};
 
 	render() {
@@ -33,14 +35,14 @@ class HTTPStatusAnswerContainer extends Component {
 						<Grid.Row>
 							<Grid.Column width={16}>
 								<Step.Group fluid stackable="tablet">
-									<Step active={tabid === '0'} onClick={() => this.switchTab(0)} link>
+									<Step active={tabid === '0'} onClick={() => this.switchTab('0')} link>
 										<Icon name="cubes" />
 										<Step.Content>
 											<Step.Title>HTTP Class code</Step.Title>
 											<Step.Description>Choose HTTP status code series</Step.Description>
 										</Step.Content>
 									</Step>
-									<Step active={tabid === '1'} onClick={() => this.switchTab(1)} link>
+									<Step active={tabid === '1'} onClick={() => this.switchTab('1')} link>
 										<Icon name="code" />
 										<Step.Content>
 											<Step.Title>HTTP Status Code</Step.Title>
