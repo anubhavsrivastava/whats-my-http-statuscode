@@ -30,7 +30,7 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 		this.setState({ sequence: [...sequence], currentIndex: prevQuestion });
 	};
 	chooseCodeTab = seriesName => {
-		this.props.history.push(`${Routes.HTTPSTATUSANSWER.path}/1/${seriesName}`);
+		this.props.history.push(`${Routes.HTTPSTATUSANSWER.path}/code/${seriesName}`);
 	};
 
 	onOptionChoose = (question, option) => {
