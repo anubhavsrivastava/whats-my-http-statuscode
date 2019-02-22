@@ -25,7 +25,7 @@ class HTTPStatusAnswerContainer extends Component {
 	};
 
 	render() {
-		const { tabid = 'class' } = this.props.match.params;
+		const { tabid = 'series' } = this.props.match.params;
 
 		return (
 			<React.Fragment>
@@ -35,7 +35,7 @@ class HTTPStatusAnswerContainer extends Component {
 						<Grid.Row>
 							<Grid.Column width={16}>
 								<Step.Group fluid stackable="tablet">
-									<Step active={tabid === 'class'} onClick={() => this.switchTab('class')} link>
+									<Step active={tabid === 'series'} onClick={() => this.switchTab('series')} link>
 										<Icon name="cubes" />
 										<Step.Content>
 											<Step.Title>HTTP Class code</Step.Title>
@@ -53,7 +53,7 @@ class HTTPStatusAnswerContainer extends Component {
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
-					{tabid === 'class' ? <HttpStatusSeriesAnswerContainer /> : null}
+					{tabid === 'series' ? <HttpStatusSeriesAnswerContainer /> : null}
 					{tabid === 'code' ? <HttpStatusCodeAnswerContainer /> : null}
 				</Segment>
 			</React.Fragment>
