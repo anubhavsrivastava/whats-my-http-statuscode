@@ -18,7 +18,7 @@ class HTTPStatusAnswerContainer extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			tabId: 0
+			tabId: +props.match.params.tabid || 0
 		};
 	}
 

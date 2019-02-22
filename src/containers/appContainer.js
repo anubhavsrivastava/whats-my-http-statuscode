@@ -36,7 +36,7 @@ class AppContainer extends Component {
 						<Route exact path={Routes.RESOURCE.path} render={() => <ResourceContainer />} />
 						<Route exact path={Routes.HTTPCODEDETAILS.path} render={() => <HTTPCodesListContainer />} />
 						<Route exact path={Routes.FAQ.path} render={() => <FAQContainer />} />
-						<Route exact path={Routes.HTTPSTATUSANSWER.path} render={() => <HTTPStatusAnswerContainer />} />
+						<Route path={`${Routes.HTTPSTATUSANSWER.path}/:tabid?`} render={() => <HTTPStatusAnswerContainer />} />
 						<Redirect to={Routes.HTTPSTATUSANSWER.path} />
 					</Switch>
 				</FixedMenuLayout>
