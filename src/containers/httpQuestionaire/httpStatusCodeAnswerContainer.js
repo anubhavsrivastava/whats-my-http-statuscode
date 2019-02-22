@@ -17,7 +17,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({});
 
 class HTTPStatusCodeAnswerContainer extends Component {
-	initialState = { currentAnswer: [], answered: false, currentIndex: 0 };
+	initialState = { sequence: [0], currentAnswer: [], answered: false, currentIndex: 0 };
 
 	constructor(props) {
 		super(props);
@@ -39,6 +39,12 @@ class HTTPStatusCodeAnswerContainer extends Component {
 		this.props.history.push(`${Routes.HTTPSTATUSANSWER.path}/${this.props.match.params.tabid}/${d.value}`);
 	};
 
+	undoQuestion = () => {
+		const { sequence } = this.state;
+		const prevQuestion = sequence.pop();
+		this.setState({ sequence: [...sequence], currentIndex: prevQuestion });
+	};
+
 	clearState = () => {
 		this.setState(Object.assign({}, this.initialState));
 	};
@@ -50,11 +56,12 @@ class HTTPStatusCodeAnswerContainer extends Component {
 		if (option.action.type === 'link') {
 			this.setState({ currentIndex: option.action.value });
 		}
+		this.setState({ sequence: [...this.state.sequence, question.id] });
 	};
 
 	render() {
 		const { httpCodesQuestions = {}, httpCodes = {}, httpCodeSeries = [] } = this.props;
-		const { currentIndex, answered, currentAnswer } = this.state;
+		const { currentIndex, answered, currentAnswer, sequence } = this.state;
 		const { option: currentSeries = '' } = this.props.match.params;
 
 		let currentQuestion = {};
@@ -90,8 +97,11 @@ class HTTPStatusCodeAnswerContainer extends Component {
 											</Segment>
 										</React.Fragment>
 									) : (
-										<Segment placeholder>
+										<Segment placeholder raised>
 											<QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />
+											<Grid.Row style={{ minHeight: '50px' }}>
+												<Grid.Column width={16}>{sequence.length > 1 ? <Button floated="right" icon="undo" color="black" content="Back" onClick={this.undoQuestion} /> : null}</Grid.Column>
+											</Grid.Row>
 										</Segment>
 									)
 								) : null}

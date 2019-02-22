@@ -63,9 +63,7 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 														<Icon name="flag checkered" />
 														<Header.Content>HTTP Status Code Series </Header.Content>
 													</Header>
-													<HttpSeriesCardList onAction={this.chooseCodeTab} httpSeriesList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))}>
-														anubhav
-													</HttpSeriesCardList>
+													<HttpSeriesCardList onAction={this.chooseCodeTab} httpSeriesList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))} />
 												</Grid.Column>
 											</Grid.Row>
 											<Divider />
@@ -77,15 +75,11 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 										</Grid>
 									</Segment>
 								) : (
-									<Segment placeholder>
+									<Segment placeholder raised>
 										<QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />
-										{sequence.length > 1 ? (
-											<Grid.Row>
-												<Grid.Column width={16}>
-													<Button floated="right" icon="undo" color="black" content="Back" onClick={this.undoQuestion} />
-												</Grid.Column>
-											</Grid.Row>
-										) : null}
+										<Grid.Row style={{ minHeight: '50px' }}>
+											<Grid.Column width={16}>{sequence.length > 1 ? <Button floated="right" icon="undo" color="black" content="Back" onClick={this.undoQuestion} /> : null}</Grid.Column>
+										</Grid.Row>
 									</Segment>
 								)}
 							</Grid.Column>
