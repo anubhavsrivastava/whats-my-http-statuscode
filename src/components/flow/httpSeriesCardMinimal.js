@@ -24,7 +24,7 @@ export default function HttpSeriesCardMinimal(props) {
 				</Card.Description>
 			</Card.Content>
 			{onAction ? (
-				<Card.Content meta>
+				<Card.Content>
 					<Button
 						icon="code"
 						color="black"

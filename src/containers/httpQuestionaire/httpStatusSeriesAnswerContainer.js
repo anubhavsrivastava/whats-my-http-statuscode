@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({});
 
 class HTTPStatusSeriesAnswerContainer extends Component {
-	initialState = { currentAnswer: [], answered: false, currentSeries: [], currentIndex: 0 };
+	initialState = { sequence: [0], currentAnswer: [], answered: false, currentSeries: [], currentIndex: 0 };
 	constructor(props) {
 		super(props);
 		this.state = this.initialState;
@@ -24,6 +24,11 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 		this.setState(this.initialState);
 	};
 
+	undoQuestion = () => {
+		const { sequence } = this.state;
+		const prevQuestion = sequence.pop();
+		this.setState({ sequence: [...sequence], currentIndex: prevQuestion });
+	};
 	chooseCodeTab = seriesName => {
 		this.props.history.push(`${Routes.HTTPSTATUSANSWER.path}/1/${seriesName}`);
 	};
@@ -35,11 +40,13 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 		if (option.action.type === 'link') {
 			this.setState({ currentIndex: option.action.value });
 		}
+
+		this.setState({ sequence: [...this.state.sequence, question.id] });
 	};
 
 	render() {
 		const { httpCodeSeriesQuestions = [], httpCodeSeries = {} } = this.props;
-		const { currentIndex, answered, currentAnswer } = this.state;
+		const { currentIndex, answered, currentAnswer, sequence } = this.state;
 		const currentQuestion = httpCodeSeriesQuestions.find(t => t.id === currentIndex);
 		return (
 			<React.Fragment>
@@ -72,6 +79,13 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 								) : (
 									<Segment placeholder>
 										<QuestionComponent onOptionChoose={this.onOptionChoose.bind(this, currentQuestion)} question={currentQuestion} />
+										{sequence.length > 1 ? (
+											<Grid.Row>
+												<Grid.Column width={16}>
+													<Button floated="right" icon="undo" color="black" content="Back" onClick={this.undoQuestion} />
+												</Grid.Column>
+											</Grid.Row>
+										) : null}
 									</Segment>
 								)}
 							</Grid.Column>
