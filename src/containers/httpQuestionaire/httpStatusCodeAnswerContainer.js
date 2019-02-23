@@ -44,7 +44,7 @@ class HTTPStatusCodeAnswerContainer extends Component {
 	undoQuestion = () => {
 		const { sequence } = this.state;
 		const prevQuestion = sequence.pop();
-		this.setState({ sequence: [...sequence], currentIndex: prevQuestion });
+		this.setState({ answered: false, sequence: [...sequence], currentIndex: prevQuestion });
 	};
 
 	clearState = () => {
@@ -93,6 +93,7 @@ class HTTPStatusCodeAnswerContainer extends Component {
 													<Grid.Row>
 														<Grid.Column width={16}>
 															<Button floated="right" icon="redo" color="black" content="Try Again" onClick={this.clearState} />
+															{sequence.length > 1 ? <Button floated="right" icon="undo" content="Back" onClick={this.undoQuestion} /> : null}
 														</Grid.Column>
 													</Grid.Row>
 												</Grid>
