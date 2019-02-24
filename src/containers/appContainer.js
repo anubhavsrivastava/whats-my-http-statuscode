@@ -3,7 +3,6 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import RoutesMapping from '../constant/routes';
-import { getApplicationInfo } from '../actions/applicationAction';
 import '../static/css/App.css';
 import 'semantic-ui-css/semantic.min.css';
 import FixedMenuLayout from '../components/layouts/defaultLayout';
@@ -15,11 +14,7 @@ const Routes = RoutesMapping.getRoutes();
 
 const mapStateToProps = (state, ownProps) => ({});
 
-const mapDispatchToProps = dispatch => ({
-	updateApplicationInfo: () => {
-		return dispatch(getApplicationInfo());
-	}
-});
+const mapDispatchToProps = dispatch => ({});
 
 class AppContainer extends Component {
 	componentDidMount = () => {
