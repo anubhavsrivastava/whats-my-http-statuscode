@@ -99,9 +99,13 @@ const fetchHttpCodesQuestions = () => {
 
 const fetchAllHTTPInfo = () => {
 	return async dispatch => {
-		const httpCodeQuestions = await httpAPI.fetchHttpCodeQuestions();
-		dispatch(fetchHttpCodesQuestionAction(httpCodeQuestions));
+		dispatch(fetchStabilityData());
+		dispatch(fetchRelatedSitesData());
+		dispatch(fetchhttpCodeSeriesData());
+		dispatch(fetchHttpCodesData());
+		dispatch(fetchhttpCodeSeriesQuestions());
+		dispatch(fetchHttpCodesQuestions());
 	};
 };
 
-export { fetchHttpCodesQuestions, fetchhttpCodeSeriesQuestions, fetchHttpCodesData, fetchhttpCodeSeriesData, fetchStabilityData, fetchRelatedSitesData };
+export { fetchAllHTTPInfo, fetchHttpCodesQuestions, fetchhttpCodeSeriesQuestions, fetchHttpCodesData, fetchhttpCodeSeriesData, fetchStabilityData, fetchRelatedSitesData };
