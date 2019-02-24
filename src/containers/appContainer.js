@@ -9,16 +9,21 @@ import FixedMenuLayout from '../components/layouts/defaultLayout';
 import ResourceContainer from './resourceContainer';
 import HTTPCodesListContainer from './httpcodesListContainer';
 import FAQContainer from './FAQContainer';
+import { fetchAllHTTPInfo } from '../actions/httpInfoAction';
 import HTTPStatusAnswerContainer from './httpQuestionaire/httpStatusAnswerContainer';
 const Routes = RoutesMapping.getRoutes();
 
 const mapStateToProps = (state, ownProps) => ({});
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+	fetchAllHTTPInfo: () => {
+		return dispatch(fetchAllHTTPInfo());
+	}
+});
 
 class AppContainer extends Component {
 	componentDidMount = () => {
-		this.props.updateApplicationInfo();
+		this.props.fetchAllHTTPInfo();
 	};
 
 	render() {
