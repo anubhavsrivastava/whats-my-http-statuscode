@@ -23,19 +23,17 @@ class AppContainer extends Component {
 
 	render() {
 		return (
-			<React.Fragment>
-				<FixedMenuLayout>
-					<Switch>
-						{/* <Route path={RoutesMapping.HOME} component={}/> */}
-						<Route exact path={Routes.HTTPSTATUS.path} render={() => <ResourceContainer />} />
-						<Route exact path={Routes.RESOURCE.path} render={() => <ResourceContainer />} />
-						<Route exact path={Routes.HTTPCODEDETAILS.path} render={() => <HTTPCodesListContainer />} />
-						<Route exact path={Routes.FAQ.path} render={() => <FAQContainer />} />
-						<Route path={`${Routes.HTTPSTATUSANSWER.path}/:tabid?/:option?`} render={() => <HTTPStatusAnswerContainer />} />
-						<Redirect to={Routes.HTTPSTATUSANSWER.path} />
-					</Switch>
-				</FixedMenuLayout>
-			</React.Fragment>
+			<FixedMenuLayout>
+				<Switch>
+					{/* <Route path={RoutesMapping.HOME} component={}/> */}
+					<Route exact path={Routes.HTTPSTATUS.path} render={() => <ResourceContainer />} />
+					<Route exact path={Routes.RESOURCE.path} render={() => <ResourceContainer />} />
+					<Route exact path={Routes.HTTPCODEDETAILS.path} render={() => <HTTPCodesListContainer />} />
+					<Route exact path={Routes.FAQ.path} render={() => <FAQContainer />} />
+					<Route path={`${Routes.HTTPSTATUSANSWER.path}/:tabid?/:option?`} render={() => <HTTPStatusAnswerContainer />} />
+					<Redirect to={Routes.HTTPSTATUSANSWER.path} />
+				</Switch>
+			</FixedMenuLayout>
 		);
 	}
 }
