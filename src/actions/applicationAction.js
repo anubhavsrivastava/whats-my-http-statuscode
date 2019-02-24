@@ -1,4 +1,3 @@
-import packageJson from '../../package.json';
 import { fetchhttpCodeSeriesQuestions, fetchHttpCodesQuestions, fetchHttpCodesData, fetchStabilityData, fetchRelatedSitesData, fetchhttpCodeSeriesData } from './httpInfoAction';
 
 const getApplicationInfo = () => {
@@ -10,7 +9,6 @@ const getApplicationInfo = () => {
 			dispatch(fetchHttpCodesData());
 			dispatch(fetchhttpCodeSeriesQuestions());
 			dispatch(fetchHttpCodesQuestions());
-			resolve(packageJson.name);
 		});
 	};
 };

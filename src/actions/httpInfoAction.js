@@ -97,4 +97,11 @@ const fetchHttpCodesQuestions = () => {
 	};
 };
 
+const fetchAllHTTPInfo = () => {
+	return async dispatch => {
+		const httpCodeQuestions = await httpAPI.fetchHttpCodeQuestions();
+		dispatch(fetchHttpCodesQuestionAction(httpCodeQuestions));
+	};
+};
+
 export { fetchHttpCodesQuestions, fetchhttpCodeSeriesQuestions, fetchHttpCodesData, fetchhttpCodeSeriesData, fetchStabilityData, fetchRelatedSitesData };
