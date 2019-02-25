@@ -61,7 +61,7 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 												<Grid.Column width={16}>
 													<Header as="h2">
 														<Icon name="flag checkered" />
-														<Header.Content>HTTP Status Code Series </Header.Content>
+														<Header.Content>Your HTTP Status Code Series </Header.Content>
 													</Header>
 													<HttpSeriesCardList onAction={this.chooseCodeTab} httpSeriesList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))} />
 												</Grid.Column>
