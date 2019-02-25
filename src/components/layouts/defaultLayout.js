@@ -44,7 +44,9 @@ const FixedMenuLayout = props => (
 				</Container>
 			</Menu>
 		</Segment>
-		{props.children}
+		<main>
+			<Segment>{props.children}</Segment>
+		</main>
 	</>
 );
 
