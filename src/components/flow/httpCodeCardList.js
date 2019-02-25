@@ -8,7 +8,7 @@ export default function HttpCodeCardList(props) {
 	return httpCodeList && httpCodeList.length ? (
 		<Card.Group itemsPerRow={httpCodeList.length}>
 			{httpCodeList.map(httpCode => {
-				return <HttpCodeInfoCard key={httpCode.code} httpCode={httpCode} color={ColorMap[currentSeries]} icon={IconMap[currentSeries]} />;
+				return <HttpCodeInfoCard size="big" key={httpCode.code} httpCode={httpCode} color={ColorMap[currentSeries]} icon={IconMap[currentSeries]} />;
 			})}
 		</Card.Group>
 	) : null;
