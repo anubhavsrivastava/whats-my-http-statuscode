@@ -2,6 +2,7 @@ import React from 'react';
 import { List, Container, Icon, Image, Menu, Segment } from 'semantic-ui-react';
 import logo from '../../static/img/logo.svg';
 const fixed = false;
+const footerHeight = '48px';
 const FixedMenuLayout = props => (
 	<>
 		<Segment inverted textAlign="center" vertical>
@@ -38,10 +39,10 @@ const FixedMenuLayout = props => (
 				</Container>
 			</Menu>
 		</Segment>
-		<main style={{ paddingBottom: '48px' }}>
+		<main style={{ paddingBottom: footerHeight }}>
 			<Segment>{props.children}</Segment>
 		</main>
-		<footer style={{ bottom: 0, position: 'absolute', width: '100%', height: '48px' }}>
+		<footer style={{ height: footerHeight }}>
 			<Segment inverted vertical>
 				<Container textAlign="center">
 					{/* <Grid divided inverted stackable>
