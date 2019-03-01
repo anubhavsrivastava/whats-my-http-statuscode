@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider, Header, Grid, List, Container, Icon, Image, Menu, Segment } from 'semantic-ui-react';
+import { List, Container, Icon, Image, Menu, Segment } from 'semantic-ui-react';
 import logo from '../../static/img/logo.svg';
 const fixed = false;
 const FixedMenuLayout = props => (
