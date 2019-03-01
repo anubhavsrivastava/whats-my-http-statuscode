@@ -38,10 +38,10 @@ const FixedMenuLayout = props => (
 				</Container>
 			</Menu>
 		</Segment>
-		<main>
+		<main style={{ paddingBottom: '48px' }}>
 			<Segment>{props.children}</Segment>
 		</main>
-		<footer style={{ bottom: 0, position: 'absolute', width: '100%', height: '60px' }}>
+		<footer style={{ bottom: 0, position: 'absolute', width: '100%', height: '48px' }}>
 			<Segment inverted vertical>
 				<Container textAlign="center">
 					{/* <Grid divided inverted stackable>
