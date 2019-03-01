@@ -61,7 +61,7 @@ class HTTPCodesListContainer extends Component {
 					<Grid container stackable verticalAlign="middle">
 						<Grid.Row>
 							<Grid.Column width={16}>
-								<Tab menu={{ attached: false, tabular: false }} panes={panes} />
+								<Tab menu={{ fluid: true, pointing: true, attached: false, tabular: false, stackable: true }} panes={panes} />
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
