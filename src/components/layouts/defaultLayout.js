@@ -47,13 +47,13 @@ const FixedMenuLayout = props => (
 				<Container textAlign="center">
 					{/* <Image centered size="mini" src="/logo.png" /> */}
 					<List horizontal inverted divided link size="small">
-						<List.Item as="a" target="_blank" rel="noopener noreferre" href="http://about.theanubhav.com">
+						<List.Item as="a" target="_blank" rel="noopener noreferrer" href="http://about.theanubhav.com">
 							About Me
 						</List.Item>
-						{/* <List.Item as="a" href="#">
-							Contact Us
+						<List.Item as="a" target="_blank" rel="noopener noreferrer" href="https://github.com/anubhavsrivastava/whats-my-http-statuscode">
+							Source code
 						</List.Item>
-						<List.Item as="a" href="#">
+						{/* <List.Item as="a" href="#">
 							Terms and Conditions
 						</List.Item>
 						<List.Item as="a" href="#">
