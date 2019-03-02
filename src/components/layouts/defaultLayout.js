@@ -53,12 +53,9 @@ const FixedMenuLayout = props => (
 						<List.Item as="a" target="_blank" rel="noopener noreferrer" href="https://github.com/anubhavsrivastava/whats-my-http-statuscode">
 							Source code
 						</List.Item>
-						{/* <List.Item as="a" href="#">
-							Terms and Conditions
+						<List.Item as="a" href="#/credits">
+							Credits
 						</List.Item>
-						<List.Item as="a" href="#">
-							Privacy Policy
-						</List.Item> */}
 					</List>
 				</Container>
 			</Segment>
