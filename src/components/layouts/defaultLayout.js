@@ -45,7 +45,6 @@ const FixedMenuLayout = props => (
 		<footer style={{ height: footerHeight }}>
 			<Segment inverted vertical>
 				<Container textAlign="center">
-					{/* <Image centered size="mini" src="/logo.png" /> */}
 					<List horizontal inverted divided link size="small">
 						<List.Item as="a" target="_blank" rel="noopener noreferrer" href="http://about.theanubhav.com">
 							About Me
