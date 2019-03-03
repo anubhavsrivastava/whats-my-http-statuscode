@@ -25,11 +25,27 @@ class CreditsContainer extends Component {
 										Inspiration
 									</Card.Content>
 									<Card.Content>
-										Inspired by the phenomenal work on HTTP status code selection by
+										Inspired by the phenomenal work on HTTP status code selection by -
 										<a href="https://codetinkerer.com/2015/12/04/choosing-an-http-status-code.html" rel="noreferrer noopener" target="_blank">
 											Michael Kropat - Codetinkerer.com
 										</a>
 									</Card.Content>
+								</Card>
+								<Card fluid>
+									<Card.Content>
+										<Icon name="users" />
+										Contributors
+									</Card.Content>
+									<Card.Content>
+										<a href="https://github.com/anshulguleria" rel="noreferrer noopener" target="_blank">
+											Anshul Guleria
+										</a>
+										<br />
+										<a href="https://github.com/chiragswadia" rel="noreferrer noopener" target="_blank">
+											Chirag Swadia
+										</a>
+									</Card.Content>
+									<Card.Content extra>A big THANK YOU to these wonderful people!</Card.Content>
 								</Card>
 								<Card fluid>
 									<Card.Content>
