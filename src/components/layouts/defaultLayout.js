@@ -52,7 +52,7 @@ const FixedMenuLayout = props => (
 							<Icon name="user circle" />
 							About Me
 						</List.Item>
-						<List.Item as="a" target="_blank" rel="noopener noreferrer" href="https://github.com/anubhavsrivastava/whats-my-http-statuscode">
+						<List.Item as="a" target="_blank" rel="noopener noreferrer" href="https://github.com/anubhavsrivastava/whats-my-http-statuscode/stargazers">
 							<Icon name="star" /> Star on Github
 						</List.Item>
 						<List.Item as="a" href="#/credits">
