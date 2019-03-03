@@ -20,16 +20,29 @@ class CreditsContainer extends Component {
 						<Grid.Row>
 							<Grid.Column width={16}>
 								<Card fluid>
-									<Card.Content header="Inspiration" />
 									<Card.Content>
-										Inspired by the phenomenal work on HTTP status code selection by{' '}
+										<Icon name="hand peace outline" />
+										Inspiration
+									</Card.Content>
+									<Card.Content>
+										Inspired by the phenomenal work on HTTP status code selection by
 										<a href="https://codetinkerer.com/2015/12/04/choosing-an-http-status-code.html" rel="noreferrer noopener" target="_blank">
 											Michael Kropat - Codetinkerer.com
 										</a>
 									</Card.Content>
-
-									<Card.Content extra>
-										<Icon name="hand peace outline" /> Thanks a lot!
+								</Card>
+								<Card fluid>
+									<Card.Content>
+										<Icon name="code" />
+										Technical Stack
+									</Card.Content>
+									<Card.Content>
+										React/Redux
+										<br />
+										<a href="https://react.semantic-ui.com" rel="noreferrer noopener" target="_blank">
+											Semantic UI React
+										</a>
+										- for Design and Components
 									</Card.Content>
 								</Card>
 							</Grid.Column>
