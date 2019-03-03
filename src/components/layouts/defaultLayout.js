@@ -49,12 +49,14 @@ const FixedMenuLayout = props => (
 				<Container textAlign="center">
 					<List horizontal inverted divided link size="small">
 						<List.Item as="a" target="_blank" rel="noopener noreferrer" href="http://about.theanubhav.com">
+							<Icon name="user circle" />
 							About Me
 						</List.Item>
 						<List.Item as="a" target="_blank" rel="noopener noreferrer" href="https://github.com/anubhavsrivastava/whats-my-http-statuscode">
-							Source code
+							<Icon name="star" /> Star on Github
 						</List.Item>
 						<List.Item as="a" href="#/credits">
+							<Icon name="feed" />
 							Credits
 						</List.Item>
 					</List>
