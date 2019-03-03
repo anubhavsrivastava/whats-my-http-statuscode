@@ -61,6 +61,10 @@ class HTTPStatusCodeAnswerContainer extends Component {
 		this.setState({ sequence: [...this.state.sequence, question.id] });
 	};
 
+	getSeriesFromAnswer = code => {
+		return code[0] + 'xx';
+	};
+
 	render() {
 		const { httpCodesQuestions = {}, httpCodes = {}, httpCodeSeries = [] } = this.props;
 		const { currentIndex, answered, currentAnswer, sequence } = this.state;
@@ -68,9 +72,14 @@ class HTTPStatusCodeAnswerContainer extends Component {
 
 		let currentQuestion = {};
 		let currentSeriesObj = {};
+		let currentAnswerSeries = '';
 		if (currentSeries && httpCodesQuestions[currentSeries]) {
 			currentQuestion = httpCodesQuestions[currentSeries].find(t => t.id === currentIndex);
 			currentSeriesObj = httpCodeSeries.find(t => t.name === currentSeries);
+		}
+
+		if (answered) {
+			currentAnswerSeries = this.getSeriesFromAnswer(currentAnswer[0]);
 		}
 		return (
 			<React.Fragment>
@@ -87,7 +96,7 @@ class HTTPStatusCodeAnswerContainer extends Component {
 												<Grid container stackable verticalAlign="middle">
 													<Grid.Row>
 														<Grid.Column width={16}>
-															<HttpCodeCardList currentSeries={currentSeries} httpCodeList={httpCodes[currentSeries].filter(t => currentAnswer.includes(t.code.toString()))} />
+															<HttpCodeCardList currentSeries={currentAnswerSeries} httpCodeList={httpCodes[currentAnswerSeries].filter(t => currentAnswer.includes(t.code.toString()))} />
 														</Grid.Column>
 													</Grid.Row>
 													<Grid.Row>
