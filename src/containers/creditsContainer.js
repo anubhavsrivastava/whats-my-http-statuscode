@@ -67,6 +67,11 @@ class CreditsContainer extends Component {
 											Semantic UI React
 										</a>
 										- for Design and Components
+										<br />
+										<a href="https://www.netlify.com/" rel="noreferrer noopener" target="_blank">
+											Netlify
+										</a>
+										- for deployment
 									</Card.Content>
 								</Card>
 							</Grid.Column>
