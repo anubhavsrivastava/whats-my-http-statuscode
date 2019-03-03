@@ -75,11 +75,11 @@ class HTTPStatusCodeAnswerContainer extends Component {
 		let currentAnswerSeries = '';
 		if (currentSeries && httpCodesQuestions[currentSeries]) {
 			currentQuestion = httpCodesQuestions[currentSeries].find(t => t.id === currentIndex);
-			currentSeriesObj = httpCodeSeries.find(t => t.name === currentSeries);
 		}
 
 		if (answered) {
 			currentAnswerSeries = this.getSeriesFromAnswer(currentAnswer[0]);
+			currentSeriesObj = httpCodeSeries.find(t => t.name === currentAnswerSeries);
 		}
 		return (
 			<React.Fragment>
