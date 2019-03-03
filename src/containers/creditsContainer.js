@@ -72,6 +72,11 @@ class CreditsContainer extends Component {
 											Netlify
 										</a>
 										- for deployment
+										<br />
+										<a href="https://httpstatuses.com/" rel="noreferrer noopener" target="_blank">
+											HTTP Status Codes
+										</a>
+										- for core content
 									</Card.Content>
 								</Card>
 							</Grid.Column>
