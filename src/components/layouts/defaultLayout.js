@@ -42,7 +42,7 @@ const FixedMenuLayout = props => (
 			</Segment>
 		</header>
 		<main style={{ paddingBottom: footerHeight }}>
-			<Segment>{props.children}</Segment>
+			<Segment className="no-border">{props.children}</Segment>
 		</main>
 		<footer style={{ height: footerHeight }}>
 			<Segment inverted vertical>
