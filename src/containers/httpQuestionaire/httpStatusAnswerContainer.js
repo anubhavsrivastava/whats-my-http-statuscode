@@ -31,7 +31,7 @@ class HTTPStatusAnswerContainer extends Component {
 			<React.Fragment>
 				<PageHeader title="What's my HTTP status?" />
 				<Segment vertical>
-					<Grid className="container-box" container stackable verticalAlign="middle">
+					<Grid container stackable verticalAlign="middle">
 						<Grid.Row>
 							<Grid.Column width={16}>
 								<Step.Group fluid stackable="tablet">
