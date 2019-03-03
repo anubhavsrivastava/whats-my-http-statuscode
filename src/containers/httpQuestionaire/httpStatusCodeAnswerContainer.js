@@ -91,9 +91,13 @@ class HTTPStatusCodeAnswerContainer extends Component {
 								{currentSeries ? (
 									answered ? (
 										<React.Fragment>
-											<ContentHeader icon={IconMap[currentSeriesObj.name]} description={currentSeriesObj.description} title={`${currentSeriesObj.name} ${currentSeriesObj.type}`} />
-											<Segment vertical>
+											<Segment className="container-placeholder">
 												<Grid container stackable verticalAlign="middle">
+													<Grid.Row>
+														<Grid.Column width={16}>
+															<ContentHeader icon={IconMap[currentSeriesObj.name]} description={currentSeriesObj.description} title={`${currentSeriesObj.name} ${currentSeriesObj.type}`} />
+														</Grid.Column>
+													</Grid.Row>
 													<Grid.Row>
 														<Grid.Column width={16}>
 															<HttpCodeCardList currentSeries={currentAnswerSeries} httpCodeList={httpCodes[currentAnswerSeries].filter(t => currentAnswer.includes(t.code.toString()))} />

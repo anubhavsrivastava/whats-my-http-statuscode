@@ -55,7 +55,7 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 						<Grid.Row>
 							<Grid.Column width={16}>
 								{answered ? (
-									<Segment vertical>
+									<Segment className="container-placeholder">
 										<Grid container stackable verticalAlign="middle">
 											<Grid.Row>
 												<Grid.Column width={16}>
