@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Grid, Segment } from 'semantic-ui-react';
+import { Icon, Card, Grid, Segment } from 'semantic-ui-react';
 import PageHeader from '../components/common/pageHeader';
-import FAQ from './FAQ.json';
 
 const mapStateToProps = (state, ownProps) => ({});
 
@@ -20,9 +19,19 @@ class CreditsContainer extends Component {
 					<Grid container stackable verticalAlign="middle">
 						<Grid.Row>
 							<Grid.Column width={16}>
-								{FAQ.map(f => {
-									return <div>{f.scheme.heading}</div>;
-								})}
+								<Card fluid>
+									<Card.Content header="Inspiration" />
+									<Card.Content>
+										Inspired by the phenomenal work on HTTP status code selection by{' '}
+										<a href="https://codetinkerer.com/2015/12/04/choosing-an-http-status-code.html" rel="noreferrer noopener" target="_blank">
+											Michael Kropat - Codetinkerer.com
+										</a>
+									</Card.Content>
+
+									<Card.Content extra>
+										<Icon name="hand peace outline" /> Thanks a lot!
+									</Card.Content>
+								</Card>
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
