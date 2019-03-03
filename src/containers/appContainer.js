@@ -11,6 +11,7 @@ import HTTPCodesListContainer from './httpcodesListContainer';
 import FAQContainer from './FAQContainer';
 import { fetchAllHTTPInfo } from '../actions/httpInfoAction';
 import HTTPStatusAnswerContainer from './httpQuestionaire/httpStatusAnswerContainer';
+import CreditsContainer from './creditsContainer';
 const Routes = RoutesMapping.getRoutes();
 
 const mapStateToProps = (state, ownProps) => ({});
@@ -35,6 +36,7 @@ class AppContainer extends Component {
 					<Route exact path={Routes.RESOURCE.path} render={() => <ResourceContainer />} />
 					<Route exact path={Routes.HTTPCODEDETAILS.path} render={() => <HTTPCodesListContainer />} />
 					<Route exact path={Routes.FAQ.path} render={() => <FAQContainer />} />
+					<Route exact path={Routes.CREDITS.path} render={() => <CreditsContainer />} />
 					<Route path={`${Routes.HTTPSTATUSANSWER.path}/:tabid?/:option?`} render={() => <HTTPStatusAnswerContainer />} />
 					<Redirect to={Routes.HTTPSTATUSANSWER.path} />
 				</Switch>
