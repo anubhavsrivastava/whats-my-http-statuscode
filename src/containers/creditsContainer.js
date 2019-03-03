@@ -50,10 +50,18 @@ class CreditsContainer extends Component {
 								<Card fluid>
 									<Card.Content>
 										<Icon name="code" />
-										Technical Stack
+										Attributions
 									</Card.Content>
 									<Card.Content>
-										React/Redux
+										<a href="www.flaticon.com" rel="noreferrer noopener" target="_blank">
+											Flaticon
+										</a>
+										- for Logo
+										<br />
+										<a href="https://fontawesome.com/" rel="noreferrer noopener" target="_blank">
+											Font Awesome
+										</a>
+										- for awesome icons
 										<br />
 										<a href="https://react.semantic-ui.com" rel="noreferrer noopener" target="_blank">
 											Semantic UI React
