@@ -19,9 +19,9 @@ To add more features or fix a thing or two, to this project, you need to make su
 
 You need to be at least familiar with the following tools and languages:
 
-HTML/CSS 3/JavaScript
-React/Redux/React-Router
-JSON
+-   HTML/CSS 3/JavaScript
+-   React/Redux/React-Router
+-   JSON
 
 ### Installation
 
