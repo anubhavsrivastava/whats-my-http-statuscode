@@ -11,6 +11,35 @@ A UI Based interface to guide you to exact web api - http specification status y
 
 ## Usage
 
+## Development
+
+To add more features or fix a thing or two, to this project, you need to make sure you have all the requirements checked, this project installed, and a little understanding of this project.
+
+### Requirement
+
+You need to be at least familiar with the following tools and languages:
+
+HTML/CSS 3/JavaScript
+React/Redux/React-Router
+JSON
+
+### Installation
+
+You can now install the project and start developing. To do so, just follow these steps:
+
+-   Fork this project.
+-   Clone your fork git clone
+-   Branch out git branch -b NEW-BRANCH
+-   Make your changes.
+-   Create a pull request.
+
+To run this project locally, perform following steps
+
+-   Install packages via `npm install` or `yarn` , this will install all the dependencies required by the project
+-   To start development on local machine, run `npm start` on terminal.
+
+P.S This project is created from ejected `create-react-app`.
+
 ## Contribution
 
 One can contribute to this project in following ways,
