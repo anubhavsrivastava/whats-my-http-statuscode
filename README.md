@@ -24,6 +24,10 @@ This project can be improved so much more, with new features and design. Code re
 If you feel a feature is missing, or you have encounter a bug, report it in the issues section. Even if you feel question/flow are leading to wrong interpretation, feel free to open a issue.
 Please read the [contribution guidelines](CONTRIBUTING.md) to get started.
 
+### Spread the words
+
+Star this project, use it, or share it with your friends. It will really help us to gain motivation and zeal towards working on it.
+
 ## License
 
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](LICENSE)
