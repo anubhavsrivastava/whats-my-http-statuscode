@@ -13,7 +13,11 @@ A UI Based interface to guide you to exact web api - http specification status y
 
 ## Contribution
 
-Suggestions and PRs are welcome!
+One can contribute to this project in following ways,
+
+### Development
+
+This project can be improved so much more, with new features and design. Code refactoring is also welcomed. If you are willing and interested, feel free to help develop it for yourself and others.
 
 Please read the [contribution guidelines](CONTRIBUTING.md) to get started.
 
