@@ -19,6 +19,9 @@ One can contribute to this project in following ways,
 
 This project can be improved so much more, with new features and design. Code refactoring is also welcomed. If you are willing and interested, feel free to help develop it for yourself and others.
 
+### Report issues and help improve
+
+If you feel a feature is missing, or you have encounter a bug, report it in the issues section. Even if you feel question/flow are leading to wrong interpretation, feel free to open a issue.
 Please read the [contribution guidelines](CONTRIBUTING.md) to get started.
 
 ## License
