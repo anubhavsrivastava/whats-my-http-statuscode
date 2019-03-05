@@ -12,6 +12,7 @@ import FAQContainer from './FAQContainer';
 import { fetchAllHTTPInfo } from '../actions/httpInfoAction';
 import HTTPStatusAnswerContainer from './httpQuestionaire/httpStatusAnswerContainer';
 import CreditsContainer from './creditsContainer';
+import GATrackingContainer from './analytics/gaTrackingContainer';
 const Routes = RoutesMapping.getRoutes();
 
 const mapStateToProps = (state, ownProps) => ({});
@@ -29,18 +30,21 @@ class AppContainer extends Component {
 
 	render() {
 		return (
-			<FixedMenuLayout>
-				<Switch>
-					{/* <Route path={RoutesMapping.HOME} component={}/> */}
-					<Route exact path={Routes.HTTPSTATUS.path} render={() => <ResourceContainer />} />
-					<Route exact path={Routes.RESOURCE.path} render={() => <ResourceContainer />} />
-					<Route exact path={Routes.HTTPCODEDETAILS.path} render={() => <HTTPCodesListContainer />} />
-					<Route exact path={Routes.FAQ.path} render={() => <FAQContainer />} />
-					<Route exact path={Routes.CREDITS.path} render={() => <CreditsContainer />} />
-					<Route path={`${Routes.HTTPSTATUSANSWER.path}/:tabid?/:option?`} render={() => <HTTPStatusAnswerContainer />} />
-					<Redirect to={Routes.HTTPSTATUSANSWER.path} />
-				</Switch>
-			</FixedMenuLayout>
+			<>
+				<FixedMenuLayout>
+					<Switch>
+						{/* <Route path={RoutesMapping.HOME} component={}/> */}
+						<Route exact path={Routes.HTTPSTATUS.path} render={() => <ResourceContainer />} />
+						<Route exact path={Routes.RESOURCE.path} render={() => <ResourceContainer />} />
+						<Route exact path={Routes.HTTPCODEDETAILS.path} render={() => <HTTPCodesListContainer />} />
+						<Route exact path={Routes.FAQ.path} render={() => <FAQContainer />} />
+						<Route exact path={Routes.CREDITS.path} render={() => <CreditsContainer />} />
+						<Route path={`${Routes.HTTPSTATUSANSWER.path}/:tabid?/:option?`} render={() => <HTTPStatusAnswerContainer />} />
+						<Redirect to={Routes.HTTPSTATUSANSWER.path} />
+					</Switch>
+				</FixedMenuLayout>
+				<GATrackingContainer />
+			</>
 		);
 	}
 }
