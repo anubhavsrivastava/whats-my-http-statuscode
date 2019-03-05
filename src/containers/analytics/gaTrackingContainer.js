@@ -8,7 +8,11 @@ class GATrackingContainer extends Component {
 			return;
 		}
 
+		// Sets the page value on the tracker.
 		window.ga('set', 'page', page);
+
+		// Sending the pageview no longer requires passing the page
+		// value since it's now stored on the tracker object.
 		window.ga('send', 'pageview');
 	};
 

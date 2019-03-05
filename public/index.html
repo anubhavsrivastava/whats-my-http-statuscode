@@ -10,7 +10,7 @@
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
 		-->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-45109327-4"></script>
+		<script src="https://www.googletagmanager.com/gtag/js?id=UA-45109327-4"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
@@ -19,6 +19,7 @@
 			gtag('js', new Date());
 
 			gtag('config', 'UA-45109327-4');
+			window.ga('create', 'UA-45109327-4');
 		</script>
 
 		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
