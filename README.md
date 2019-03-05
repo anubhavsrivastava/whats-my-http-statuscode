@@ -11,7 +11,9 @@ A UI Based interface to guide you to exact web api - http specification status y
 
 This projects helps you choose appropriate HTTP status code for your web APIs. Based on series of questions, it lets arrive to a appropriate HTTP status code (with reason). In short, it makes choosing HTTP code much easier.
 
-## Usage
+## Inspiration
+
+Inspired by the awesome work on HTTP status code selection by [Michael Kropat - Codetinkerer.com](https://www.codetinkerer.com/2015/12/04/choosing-an-http-status-code.html)
 
 ## Development
 
