@@ -9,6 +9,7 @@ import RoutesMapping from '../../constant/routes';
 const Routes = RoutesMapping.getRoutes();
 const mapStateToProps = (state, ownProps) => ({
 	httpCodes: state.httpInfo.httpCodes,
+	httpCodeSeries: state.httpInfo.httpCodeSeries,
 	httpCodesQuestions: state.httpInfo.questions.httpCodes
 });
 
