@@ -17,6 +17,8 @@ Answer a series of question regarding your current implementation or problem tha
 
 ### Why should I use it?
 
+There can be a confusion regarding what exact HTTP status code should be for a particular scenario, for eg, should it be `404 Not Found` or `204 No Content` in scenarios where resource exist but has no information. Or should one give `403 Forbidden` for access denied resource and let the user know about existence of the resource (security) or should say `404 Not Found`.
+
 ### Who it is meant for?
 
 ## Inspiration
