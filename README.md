@@ -21,7 +21,7 @@ There can be a confusion regarding what exact HTTP status code should be for a p
 
 ### Who it is meant for?
 
-This is meant for Restful APIs and system that want to follow standard HTTP status code. One should consider following a specification for better usability across system, providing APIs to third party, disconnecting WEB API server with frontend, or simply more ahead with just `200 OK` status across the system with actual reason in body { "status": "failure" }
+This is meant for Restful APIs and system that want to follow standard HTTP status code. One should consider following a specification for better usability across system, providing APIs to third party, disconnecting WEB API server with frontend, or simply more ahead with just `200 OK` status across the system with actual reason in body `{ "status": "failure" }`
 
 ## Inspiration
 
