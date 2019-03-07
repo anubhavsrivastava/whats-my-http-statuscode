@@ -36,6 +36,7 @@ class HTTPStatusCodeAnswerContainer extends Component {
 	};
 
 	onSeriesSelection = (e, d) => {
+		this.clearState();
 		if (this.props.match.params.option !== d.value) {
 			this.props.history.push(`${Routes.HTTPSTATUSANSWER.path}/${this.props.match.params.tabid}/${d.value}`);
 		}
