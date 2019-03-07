@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import { Dropdown, Button, Grid, Segment } from 'semantic-ui-react';
+import { Header, Icon, Dropdown, Button, Grid, Segment } from 'semantic-ui-react';
 import QuestionComponent from '../../components/flow/questionComponent';
 import HttpCodeCardList from '../../components/flow/httpCodeCardList';
 import ContentHeader from '../../components/common/contentHeader';
@@ -96,7 +96,11 @@ class HTTPStatusCodeAnswerContainer extends Component {
 												<Grid container stackable verticalAlign="middle">
 													<Grid.Row>
 														<Grid.Column width={16}>
-															<ContentHeader icon={IconMap[currentSeriesObj.name]} description={currentSeriesObj.description} title={`${currentSeriesObj.name} ${currentSeriesObj.type}`} />
+															<Header as="h2">
+																<Icon name="flag checkered" />
+																<Header.Content>Your Web API should return </Header.Content>
+															</Header>
+															{/* <ContentHeader icon={IconMap[currentSeriesObj.name]} description={currentSeriesObj.description} title={`${currentSeriesObj.name} ${currentSeriesObj.type}`} /> */}
 														</Grid.Column>
 													</Grid.Row>
 													<Grid.Row>
