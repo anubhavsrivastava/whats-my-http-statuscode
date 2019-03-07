@@ -13,6 +13,8 @@ This projects helps you choose appropriate HTTP status code for your web APIs. B
 
 ## Usage
 
+Answer a series of question regarding your current implementation or problem that you have with the API, starting off with selection of HTTP code series, like 200 series (success) or 500 series (server error). Once you have correctly identified you HTTp status series, you can answer few more questions to get to exact HTTP status code.
+
 ### Why should I use it?
 
 ### Who it is meant for?
