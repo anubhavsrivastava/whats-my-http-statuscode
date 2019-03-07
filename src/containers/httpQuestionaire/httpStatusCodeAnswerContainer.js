@@ -4,13 +4,11 @@ import { withRouter } from 'react-router';
 import { Header, Icon, Dropdown, Button, Grid, Segment } from 'semantic-ui-react';
 import QuestionComponent from '../../components/flow/questionComponent';
 import HttpCodeCardList from '../../components/flow/httpCodeCardList';
-import ContentHeader from '../../components/common/contentHeader';
-import { IconMap } from '../../constant/params';
+
 import RoutesMapping from '../../constant/routes';
 const Routes = RoutesMapping.getRoutes();
 const mapStateToProps = (state, ownProps) => ({
 	httpCodes: state.httpInfo.httpCodes,
-	httpCodeSeries: state.httpInfo.httpCodeSeries,
 	httpCodesQuestions: state.httpInfo.questions.httpCodes
 });
 
@@ -67,12 +65,11 @@ class HTTPStatusCodeAnswerContainer extends Component {
 	};
 
 	render() {
-		const { httpCodesQuestions = {}, httpCodes = {}, httpCodeSeries = [] } = this.props;
+		const { httpCodesQuestions = {}, httpCodes = {} } = this.props;
 		const { currentIndex, answered, currentAnswer, sequence } = this.state;
 		const { option: currentSeries = '' } = this.props.match.params;
 
 		let currentQuestion = {};
-		let currentSeriesObj = {};
 		let currentAnswerSeries = '';
 		if (currentSeries && httpCodesQuestions[currentSeries]) {
 			currentQuestion = httpCodesQuestions[currentSeries].find(t => t.id === currentIndex);
@@ -80,7 +77,6 @@ class HTTPStatusCodeAnswerContainer extends Component {
 
 		if (answered) {
 			currentAnswerSeries = this.getSeriesFromAnswer(currentAnswer[0]);
-			currentSeriesObj = httpCodeSeries.find(t => t.name === currentAnswerSeries);
 		}
 		return (
 			<React.Fragment>
@@ -100,7 +96,6 @@ class HTTPStatusCodeAnswerContainer extends Component {
 																<Icon name="flag checkered" />
 																<Header.Content>Your Web API should return </Header.Content>
 															</Header>
-															{/* <ContentHeader icon={IconMap[currentSeriesObj.name]} description={currentSeriesObj.description} title={`${currentSeriesObj.name} ${currentSeriesObj.type}`} /> */}
 														</Grid.Column>
 													</Grid.Row>
 													<Grid.Row>
