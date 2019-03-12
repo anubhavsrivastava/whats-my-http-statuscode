@@ -121,7 +121,15 @@ class HTTPStatusCodeAnswerContainer extends Component {
 											</Grid.Row>
 										</Segment>
 									)
-								) : null}
+								) : (
+									<Segment placeholder raised>
+										<Header icon>
+											<Icon name="tasks" />
+											<h1>Following questionaire will help you find exact HTTP status code for your Web API </h1>
+											<h2>To begin, select respective HTTP status code series from dropdown above</h2>
+										</Header>
+									</Segment>
+								)}
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
