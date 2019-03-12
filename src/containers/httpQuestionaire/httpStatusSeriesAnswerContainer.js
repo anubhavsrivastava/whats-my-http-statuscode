@@ -14,11 +14,15 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({});
 
 class HTTPStatusSeriesAnswerContainer extends Component {
-	initialState = { sequence: [0], currentAnswer: [], answered: false, currentSeries: [], currentIndex: 0 };
+	initialState = { questionStarted: false, sequence: [0], currentAnswer: [], answered: false, currentSeries: [], currentIndex: 0 };
 	constructor(props) {
 		super(props);
 		this.state = this.initialState;
 	}
+
+	startQuestions = () => {
+		this.setState({ questionStarted: true });
+	};
 
 	clearState = () => {
 		this.setState(this.initialState);
@@ -46,7 +50,7 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 
 	render() {
 		const { httpCodeSeriesQuestions = [], httpCodeSeries = {} } = this.props;
-		const { currentIndex, answered, currentAnswer, sequence } = this.state;
+		const { currentIndex, answered, currentAnswer, sequence, questionStarted } = this.state;
 		const currentQuestion = httpCodeSeriesQuestions.find(t => t.id === currentIndex);
 		return (
 			<React.Fragment>
@@ -54,7 +58,18 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 					<Grid container stackable verticalAlign="middle">
 						<Grid.Row>
 							<Grid.Column width={16}>
-								{answered ? (
+								{!questionStarted ? (
+									<Segment placeholder raised>
+										<Header icon>
+											<Icon name="tasks" />
+											<h1>Following questionaire will help you find HTTP status code series for your Web API </h1>
+										</Header>
+										<Segment.Inline>
+											{/* <Button icon="code" color="black" content="Yes, help me find HTTP code class" onClick={this.startQuestions} /> */}
+											<Button floated="right" color="black" icon="play" content="OK Cool!" onClick={this.startQuestions} />{' '}
+										</Segment.Inline>
+									</Segment>
+								) : answered ? (
 									<Segment className="container-placeholder">
 										<Grid container stackable verticalAlign="middle">
 											<Grid.Row>
