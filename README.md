@@ -11,6 +11,8 @@ A UI Based interface to guide you to exact web api - http specification status y
 
 This projects helps you choose appropriate HTTP status code for your web APIs. Based on series of questions, it lets arrive to a appropriate HTTP status code (with reason). In short, it makes choosing HTTP code much easier.
 
+## Concepts
+
 ### Usage
 
 Answer a series of question regarding your current implementation or problem that you have with the API, starting off with selection of HTTP code series, like 200 series (success) or 500 series (server error). Once you have correctly identified you HTTp status series, you can answer few more questions to get to exact HTTP status code.

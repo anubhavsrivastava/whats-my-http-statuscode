@@ -2,5 +2,14 @@
 	{
 		"type": "question",
 		"scheme": { "heading": "Why there is limited set of HTTP Status codes?", "content": [""] }
+	},
+	{
+		"type": "question",
+		"scheme": {
+			"heading": "Who it is meant for?",
+			"content": [
+				"This is meant for Restful APIs and system that want to follow standard HTTP status code. One should consider following a specification for better usability across system, providing APIs to third party, disconnecting WEB API server with frontend to understand API response, or simply move ahead with just `200 OK` status across the system with actual reason in body `{ \"status\": \"failure\" }`"
+			]
+		}
 	}
 ]
