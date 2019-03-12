@@ -85,7 +85,7 @@ class HTTPStatusCodeAnswerContainer extends Component {
 					<Grid container stackable verticalAlign="middle">
 						<Grid.Row>
 							<Grid.Column width={16}>
-								<Dropdown defaultValue={currentSeries} onChange={this.onSeriesSelection} placeholder="Select HTTP status code series" fluid selection options={this.getHttpSeriesDropDown()} />
+								<Dropdown className="icon" floating button defaultValue={currentSeries} onChange={this.onSeriesSelection} placeholder="Select HTTP status code series" fluid options={this.getHttpSeriesDropDown()} />
 								{currentSeries ? (
 									answered ? (
 										<React.Fragment>
