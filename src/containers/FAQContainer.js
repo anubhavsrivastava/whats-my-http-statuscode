@@ -21,7 +21,14 @@ class FAQContainer extends Component {
 						<Grid.Row>
 							<Grid.Column width={16}>
 								{FAQ.map(f => {
-									return <div>{f.scheme.heading}</div>;
+									return (
+										<>
+											<h3>{f.scheme.heading}</h3>
+											{f.scheme.content.map((c, i) => {
+												return <span key={i}>{c}</span>;
+											})}
+										</>
+									);
 								})}
 							</Grid.Column>
 						</Grid.Row>
