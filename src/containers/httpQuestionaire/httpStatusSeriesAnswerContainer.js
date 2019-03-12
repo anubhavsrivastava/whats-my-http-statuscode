@@ -62,7 +62,7 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 									<Segment placeholder raised>
 										<Header icon>
 											<Icon name="tasks" />
-											<h1>Following questionaire will help you find HTTP status code series for your Web API </h1>
+											<h1>Following questionaire will help you find HTTP status series for your Web API </h1>
 										</Header>
 										<Segment.Inline>
 											<Button floated="right" color="black" icon="play" content="OK Cool!" onClick={this.startQuestions} />{' '}

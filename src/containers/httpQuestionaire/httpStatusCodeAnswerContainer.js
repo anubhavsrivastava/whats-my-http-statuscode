@@ -125,8 +125,7 @@ class HTTPStatusCodeAnswerContainer extends Component {
 									<Segment placeholder raised>
 										<Header icon>
 											<Icon name="tasks" />
-											<h1>Following questionaire will help you find exact HTTP status code for your Web API </h1>
-											<h2>To begin, select respective HTTP status code series from dropdown above</h2>
+											<h3>To find exact HTTP status code for your Web API, please select respective HTTP series from dropdown above</h3>
 										</Header>
 									</Segment>
 								)}
