@@ -28,7 +28,7 @@ class HTTPStatusAnswerContainer extends Component {
 									<Step active={tabid === 'series'} onClick={() => this.switchTab('series')} link>
 										<Icon name="cubes" />
 										<Step.Content>
-											<Step.Title>HTTP Class code</Step.Title>
+											<Step.Title>HTTP Status Code Series</Step.Title>
 											<Step.Description>Choose HTTP status code series</Step.Description>
 										</Step.Content>
 									</Step>
