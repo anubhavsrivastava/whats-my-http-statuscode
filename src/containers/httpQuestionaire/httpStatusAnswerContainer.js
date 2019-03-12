@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { Step, Icon, Grid, Segment } from 'semantic-ui-react';
 import PageHeader from '../../components/common/pageHeader';
@@ -7,15 +6,6 @@ import HttpStatusSeriesAnswerContainer from './httpStatusSeriesAnswerContainer';
 import HttpStatusCodeAnswerContainer from './httpStatusCodeAnswerContainer';
 import RoutesMapping from '../../constant/routes';
 const Routes = RoutesMapping.getRoutes();
-
-const mapStateToProps = (state, ownProps) => ({
-	// httpCodeSeries: state.httpInfo.httpCodeSeries,
-	// httpCodes: state.httpInfo.httpCodes,
-	// httpCodeSeriesQuestions: state.httpInfo.questions.httpCodeSeries,
-	// httpCodesQuestions: state.httpInfo.questions.httpCodes
-});
-
-const mapDispatchToProps = dispatch => ({});
 
 class HTTPStatusAnswerContainer extends Component {
 	switchTab = tabid => {
@@ -61,9 +51,4 @@ class HTTPStatusAnswerContainer extends Component {
 	}
 }
 
-export default withRouter(
-	connect(
-		mapStateToProps,
-		mapDispatchToProps
-	)(HTTPStatusAnswerContainer)
-);
+export default withRouter(HTTPStatusAnswerContainer);
