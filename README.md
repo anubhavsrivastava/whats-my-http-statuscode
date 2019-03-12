@@ -17,11 +17,11 @@ This projects helps you choose appropriate HTTP status code for your web APIs. B
 
 Answer a series of question regarding your current implementation or problem that you have with the API, starting off with selection of HTTP code series, like 200 series (success) or 500 series (server error). Once you have correctly identified you HTTp status series, you can answer few more questions to get to exact HTTP status code.
 
-#### Why should I use it?
+#### Why should any developer use it?
 
 There can be a confusion regarding what exact HTTP status code should be for a particular scenario, for eg, should it be `404 Not Found` or `204 No Content` in scenarios where resource exist but has no information. Or should one give `403 Forbidden` for access denied resource and let the user know about existence of the resource (security) or should say `404 Not Found`.
 
-#### Who it is meant for?
+#### For whom is this tool meant for?
 
 This is meant for Restful APIs and system that want to follow standard HTTP status code. One should consider following a specification for better usability across system, providing APIs to third party, disconnecting WEB API server with frontend to understand API response, or simply move ahead with just `200 OK` status across the system with actual reason in body `{ "status": "failure" }`
 
