@@ -61,7 +61,7 @@ class HTTPStatusSeriesAnswerContainer extends Component {
 												<Grid.Column width={16}>
 													<Header as="h2">
 														<Icon name="flag checkered" />
-														<Header.Content>Your Web API should return </Header.Content>
+														<Header.Content>Your Web API should return following series </Header.Content>
 													</Header>
 													<HttpSeriesCardList onAction={this.chooseCodeTab} httpSeriesList={httpCodeSeries.filter(t => currentAnswer.includes(t.name))} />
 												</Grid.Column>
