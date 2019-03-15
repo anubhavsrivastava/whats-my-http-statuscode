@@ -19,7 +19,7 @@ class HTTPStatusAnswerContainer extends Component {
 
 		return (
 			<React.Fragment>
-				<PageHeader title="Find perfect HTTP status code for your API" />
+				<PageHeader title="Choose the perfect HTTP status code for your API" />
 				<Segment vertical>
 					<Grid container stackable verticalAlign="middle">
 						<Grid.Row>

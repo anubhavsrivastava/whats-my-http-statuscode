@@ -1,6 +1,6 @@
 # Whats my HTTP Status Code - [Visit](https://httpstatuscode.netlify.com)
 
-A UI Based interface to guide you to exact web api - http specification status your server should return for any request.
+A UI Based interface to guide you to exact web api - http specification status your server should return for any web request.
 
 [![Build Status](https://travis-ci.org/anubhavsrivastava/whats-my-http-statuscode.svg?branch=master)](https://travis-ci.org/anubhavsrivastava/whats-my-http-statuscode)
 [![Coverage Status](https://coveralls.io/repos/github/anubhavsrivastava/whats-my-http-statuscode/badge.svg?branch=master)](https://coveralls.io/github/anubhavsrivastava/whats-my-http-statuscode?branch=master)
