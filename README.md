@@ -73,7 +73,7 @@ Please read the [contribution guidelines](CONTRIBUTING.md) to get started.
 
 ### Spread the words
 
-Star this project, use it, or share it with your friends. It will really help us to gain motivation and zeal towards working on it.
+⭐️ Star this project, use it, or share it with your friends. It will really help us to gain motivation and zeal towards working on it.
 
 ## License
 
