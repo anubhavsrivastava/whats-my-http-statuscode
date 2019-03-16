@@ -79,4 +79,4 @@ Please read the [contribution guidelines](CONTRIBUTING.md) to get started.
 
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](LICENSE)
 
-Refer `LICENSE` file in this repository.
+Refer [LICENSE](LICENSE) file in this repository.
