@@ -44,7 +44,7 @@
 	{
 		"id": 6,
 		"type": "question",
-		"mainText": "Does the resource even exists?",
+		"mainText": "Does the resource that is requested even exists?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 8 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 7 } }]
 	},
