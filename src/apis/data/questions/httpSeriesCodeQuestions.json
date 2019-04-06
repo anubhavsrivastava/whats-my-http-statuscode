@@ -2,28 +2,28 @@
 	{
 		"id": 0,
 		"type": "question",
-		"mainText": "Is there problem with the request?",
+		"mainText": "Is there problem with the HTTP request?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["4xx"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 1 } }]
 	},
 	{
 		"id": 1,
 		"type": "question",
-		"mainText": "Is there problem at server(or server side)?",
+		"mainText": "Is there problem at the server for incoming request?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["5xx"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
 	},
 	{
 		"id": 2,
 		"type": "question",
-		"mainText": "Are you implementing a web server?",
+		"mainText": "Are you implementing a web server to handle HTTP request?",
 		"additionalTexts": ["Implementing anything that is above the application layer"],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["1xx", "2xx", "3xx"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 3 } }]
 	},
 	{
 		"id": 3,
 		"type": "question",
-		"mainText": "Do you want to redirect the user to new location?",
+		"mainText": "Do you want to redirect the user to new location for this request?",
 		"additionalTexts": ["Implementing anything that is above the application layer"],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["3xx"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["2xx"] } }]
 	}
