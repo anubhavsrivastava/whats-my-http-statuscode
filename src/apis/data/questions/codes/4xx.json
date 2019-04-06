@@ -16,7 +16,7 @@
 	{
 		"id": 2,
 		"type": "question",
-		"mainText": "Does the user need authenticate?",
+		"mainText": "Does the user need authentication for this request?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 3 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 4 } }]
 	},
