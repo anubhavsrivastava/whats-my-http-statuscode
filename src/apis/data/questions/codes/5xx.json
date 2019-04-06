@@ -2,28 +2,28 @@
 	{
 		"id": 0,
 		"type": "question",
-		"mainText": "Should the user retry after sometime?",
+		"mainText": "Should the user retry after sometime as it cannot be processed now?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["503"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 1 } }]
 	},
 	{
 		"id": 1,
 		"type": "question",
-		"mainText": "Is it a problem with another server for this request?",
+		"mainText": "Is it a problem with third party service/server for this request?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 2 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 3 } }]
 	},
 	{
 		"id": 2,
 		"type": "question",
-		"mainText": "Is the other server responding to this request?",
+		"mainText": "Is the third party service/server responding to this request?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["502"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["504"] } }]
 	},
 	{
 		"id": 3,
 		"type": "question",
-		"mainText": "Does you code does not handle such request and will handle such request in future ?",
+		"mainText": "Is that your code does not handle such request and will handle such request in future?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["501"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["500"] } }]
 	}
