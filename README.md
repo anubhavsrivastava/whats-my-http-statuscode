@@ -6,6 +6,7 @@ A UI Based interface to guide you to exact web api - http specification status y
 [![Coverage Status](https://coveralls.io/repos/github/anubhavsrivastava/whats-my-http-statuscode/badge.svg?branch=master)](https://coveralls.io/github/anubhavsrivastava/whats-my-http-statuscode?branch=master)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![GitHub issues](https://img.shields.io/github/issues/anubhavsrivastava/whats-my-http-statuscode.svg?style=flat-square)](https://github.com/anubhavsrivastava/whats-my-http-statuscode/issues)
+[![HitCount](http://hits.dwyl.io/anubhavsrivastava/whats-my-http-statuscode.svg)](http://hits.dwyl.io/anubhavsrivastava/whats-my-http-statuscode)
 
 ## Introduction
 
