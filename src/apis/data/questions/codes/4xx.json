@@ -2,42 +2,42 @@
 	{
 		"id": 0,
 		"type": "question",
-		"mainText": "Is the request/user being throttled with rate limiting?",
+		"mainText": "Is the request/user being throttled with rate limiting (more request made in short duration)?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 1 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
 	},
 	{
 		"id": 1,
 		"type": "question",
-		"mainText": "Are you twitter or want to act cool?",
+		"mainText": "Are you twitter or do you want to act cool with current request?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["420"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["429"] } }]
 	},
 	{
 		"id": 2,
 		"type": "question",
-		"mainText": "Does the user need to authenticate?",
+		"mainText": "Does the user need authenticate?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 3 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 4 } }]
 	},
 	{
 		"id": 3,
 		"type": "question",
-		"mainText": "Are you using HTTP auth?",
+		"mainText": "Are you using Basic HTTP auth (Header based Authentication)?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["401"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 5 } }]
 	},
 	{
 		"id": 4,
 		"type": "question",
-		"mainText": "Does the user have access to the resource?",
+		"mainText": "Does the user have access/authorised to the resource (even if authenticated)?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 6 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 5 } }]
 	},
 	{
 		"id": 5,
 		"type": "question",
-		"mainText": "is the resource a secret?",
+		"mainText": "Is the resource a secret and should not be known to user about its existence?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["404"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["403"] } }]
 	},
@@ -51,28 +51,28 @@
 	{
 		"id": 7,
 		"type": "question",
-		"mainText": "Are you rage-quitting the internet or resource has been removed/soft-deleted?",
+		"mainText": "Is resource removed or soft-deleted?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["410"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["404"] } }]
 	},
 	{
 		"id": 8,
 		"type": "question",
-		"mainText": "Is the HTTP method/verb handled by resource?",
+		"mainText": "Is the HTTP method/verb of the request allowed for the resource?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 9 } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["405"] } }]
 	},
 	{
 		"id": 9,
 		"type": "question",
-		"mainText": "Is there any problem with the header?",
+		"mainText": "Is there any problem with the header of HTTP request?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 10 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 11 } }]
 	},
 	{
 		"id": 10,
 		"type": "question",
-		"mainText": "Which header is missing or is mandatory?",
+		"mainText": "Which header is missing from HTTP reqeust or is mandatory?",
 		"additionalTexts": [],
 		"options": [
 			{ "option": "Accept", "type": "bool", "action": { "type": "node", "value": ["406"] } },
@@ -86,14 +86,14 @@
 	{
 		"id": 11,
 		"type": "question",
-		"mainText": "Request incompatible with previos request or condition?",
+		"mainText": "Is the request incompatible with previous request or condition?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["409"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 12 } }]
 	},
 	{
 		"id": 12,
 		"type": "question",
-		"mainText": "Is the request body/header well formed but is invalid?",
+		"mainText": "Is the request body/header well formed but is invalid or leading to unexpected inputs?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["422"] } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 13 } }]
 	},
@@ -107,7 +107,7 @@
 	{
 		"id": 14,
 		"type": "question",
-		"mainText": "Are you implementing a web server?",
+		"mainText": "Are you implementing a web server for handling HTTP request?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["408", "413", "414", "416", "426"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["400"] } }]
 	}
