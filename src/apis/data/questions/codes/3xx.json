@@ -2,35 +2,35 @@
 	{
 		"id": 0,
 		"type": "question",
-		"mainText": "Is it to same resource at new location?",
+		"mainText": "Is request referring to resource at new location?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 1 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 2 } }]
 	},
 	{
 		"id": 1,
 		"type": "question",
-		"mainText": "Can the method change to GET verb?",
+		"mainText": "Can the HTTP method of request change to GET verb?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "link", "value": 3 } }, { "option": "no", "type": "bool", "action": { "type": "link", "value": 4 } }]
 	},
 	{
 		"id": 2,
 		"type": "question",
-		"mainText": "Was the location created for the request?",
+		"mainText": "Was the destination resource location created for/by this particular request?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["201"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["303"] } }]
 	},
 	{
 		"id": 3,
 		"type": "question",
-		"mainText": "Is the new Location temporary?",
+		"mainText": "Is the redirected resource location temporary?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["302"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["301"] } }]
 	},
 	{
 		"id": 4,
 		"type": "question",
-		"mainText": "Is the new Location temporary?",
+		"mainText": "Is the redirected resource Location temporary?",
 		"additionalTexts": [],
 		"options": [{ "option": "yes", "type": "bool", "action": { "type": "node", "value": ["307"] } }, { "option": "no", "type": "bool", "action": { "type": "node", "value": ["308"] } }]
 	}
