@@ -6,8 +6,8 @@ const footerHeight = '48px';
 const FixedMenuLayout = props => (
 	<>
 		<header>
-			<Segment inverted textAlign="center" vertical>
-				<Menu stackable fixed={fixed ? 'top' : null} inverted={!fixed} pointing={!fixed} secondary={!fixed} size="large">
+			<Segment textAlign="center" vertical>
+				<Menu className="no-bottom-border" stackable fixed={fixed ? 'top' : null} pointing={!fixed} secondary={!fixed} size="large">
 					<a target="_blank" rel="noopener noreferrer" href="https://github.com/anubhavsrivastava/whats-my-http-statuscode" className="github-corner" aria-label="Star on Github">
 						<svg width="80" height="80" viewBox="0 0 250 250" style={{ fill: '#70B7FD', color: '#fff', position: 'absolute', top: '0', border: '0', right: '0' }} aria-hidden="true">
 							<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" />
