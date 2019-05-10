@@ -76,6 +76,10 @@ code {
 		animation: octocat-wave 560ms ease-in-out;
 	}
 }
+
+.no-bottom-border {
+	border-bottom: unset !important;
+}
 /* 
 .App {
 	text-align: center;

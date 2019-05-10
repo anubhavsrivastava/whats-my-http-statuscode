@@ -4,7 +4,7 @@ import { Grid, Header, Segment } from 'semantic-ui-react';
 export default function PageHeader(props) {
 	const { title } = props;
 	return (
-		<Segment vertical>
+		<Segment className="no-bottom-border" vertical>
 			<Grid container stackable verticalAlign="middle">
 				<Grid.Row>
 					<Grid.Column width={16}>
