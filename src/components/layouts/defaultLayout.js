@@ -45,9 +45,9 @@ const FixedMenuLayout = props => (
 			<Segment className="no-border">{props.children}</Segment>
 		</main>
 		<footer style={{ height: footerHeight }}>
-			<Segment inverted vertical>
+			<Segment vertical>
 				<Container textAlign="center">
-					<List horizontal inverted divided link size="small">
+					<List horizontal divided link size="small">
 						<List.Item as="a" target="_blank" rel="noopener noreferrer" href="http://about.theanubhav.com">
 							<Icon name="user circle" />
 							About Me
