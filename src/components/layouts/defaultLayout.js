@@ -22,7 +22,7 @@ const FixedMenuLayout = props => (
 					<Container>
 						<Menu.Item id="header-logo" link>
 							<a href="#/">
-								<Image alt="logo" size="mini" className={'inverted-color'} src={logo} />
+								<Image alt="logo" size="mini" className={'no-inverted-color'} src={logo} />
 							</a>
 						</Menu.Item>
 						<Menu.Item as="a" href="#/httpcodedetails" link>
