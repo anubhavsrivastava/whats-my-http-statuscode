@@ -81,7 +81,10 @@
 		"type": "git",
 		"url": "git+https://github.com/anubhavsrivastava/whats-my-http-statuscode.git"
 	},
-	"author": "",
+	"author": {
+		"name": "Anubhav Srivastava",
+		"email": "anubhav.srivastava00@gmail.com"
+	},
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/anubhavsrivastava/whats-my-http-statuscode/issues"
