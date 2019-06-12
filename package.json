@@ -50,6 +50,7 @@
 		"redux-thunk": "^2.3.0",
 		"resolve": "1.8.1",
 		"sass-loader": "7.1.0",
+		"scrollreveal": "^4.0.5",
 		"semantic-ui-css": "^2.4.1",
 		"semantic-ui-react": "^0.84.0",
 		"style-loader": "0.23.0",
