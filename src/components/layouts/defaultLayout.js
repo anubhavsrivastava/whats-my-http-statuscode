@@ -19,7 +19,7 @@ const FixedMenuLayout = props => (
 							/>
 						</svg>
 					</a>
-					<Container>
+					<Container className="animate-from-bottom">
 						<Menu.Item id="header-logo" link>
 							<a href="#/">
 								<Image alt="logo" size="mini" className={'no-inverted-color'} src={logo} />
@@ -42,9 +42,9 @@ const FixedMenuLayout = props => (
 			</Segment>
 		</header>
 		<main style={{ paddingBottom: footerHeight }}>
-			<Segment className="no-border">{props.children}</Segment>
+			<Segment className="no-border animate-from-bottom">{props.children}</Segment>
 		</main>
-		<footer style={{ height: footerHeight }}>
+		<footer className="animate-ease-in" style={{ height: footerHeight }}>
 			<Segment vertical>
 				<Container textAlign="center">
 					<List horizontal divided link size="small">

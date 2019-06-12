@@ -13,6 +13,8 @@ import { fetchAllHTTPInfo } from '../actions/httpInfoAction';
 import HTTPStatusAnswerContainer from './httpQuestionaire/httpStatusAnswerContainer';
 import CreditsContainer from './creditsContainer';
 import GATrackingContainer from './analytics/gaTrackingContainer';
+import Revealer from '../components/motion/ScrollReveal';
+
 const Routes = RoutesMapping.getRoutes();
 
 const mapStateToProps = (state, ownProps) => ({});
@@ -31,6 +33,7 @@ class AppContainer extends Component {
 	render() {
 		return (
 			<>
+				<Revealer />
 				<FixedMenuLayout>
 					<Switch>
 						{/* <Route path={RoutesMapping.HOME} component={}/> */}
