@@ -19,6 +19,9 @@
 	},
 	{
 		"type": "question",
-		"scheme": { "heading": "Why there is limited set of HTTP Status codes?", "content": [""] }
+		"scheme": {
+			"heading": "Why there is limited set of HTTP Status codes shown on this site?",
+			"content": ["There are more HTTP status codes for cases which are not considered in this site. For eg, `104` indicated that connection was reset by Peer (server), this is not part of this site. However, status codes that are mentioned in this site should cover about 9/10 use cases for HTTP communication."]
+		}
 	}
 ]
