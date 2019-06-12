@@ -23,5 +23,12 @@
 			"heading": "Why there is limited set of HTTP Status codes shown on this site?",
 			"content": ["There are more HTTP status codes for cases which are not considered in this site. For eg, `104` indicated that connection was reset by Peer (server), this is not part of this site. However, status codes that are mentioned in this site should cover about 9/10 use cases for HTTP communication."]
 		}
+	},
+	{
+		"type": "question",
+		"scheme": {
+			"heading": "I have a bug, feature request, enhancement that can be included in this site, how can I help?",
+			"content": ["You can create a issue in the Github Repo, and we shall take it forward from there. You can simply visit the repository by clicking on Github icon in the Footer section of the page. "]
+		}
 	}
 ]
