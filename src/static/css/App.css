@@ -80,3 +80,7 @@ code {
 .no-bottom-border {
 	border-bottom: unset !important;
 }
+
+.ui.menu .item {
+	color: rgba(0, 0, 0, 0.5);
+}
