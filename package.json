@@ -12,6 +12,8 @@
 		"babel-plugin-named-asset-import": "^0.2.3",
 		"babel-preset-react-app": "^6.1.0",
 		"bfj": "6.1.1",
+		"browserlist": "^1.0.1",
+		"caniuse-lite": "^1.0.30001066",
 		"case-sensitive-paths-webpack-plugin": "2.1.2",
 		"chalk": "2.4.1",
 		"css-loader": "1.0.0",

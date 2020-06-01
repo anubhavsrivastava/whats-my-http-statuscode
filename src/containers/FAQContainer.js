@@ -10,11 +10,11 @@ const mapStateToProps = (state, ownProps) => ({});
 const mapDispatchToProps = dispatch => ({});
 
 class FAQContainer extends Component {
-	componentDidMount = () => {};
+	componentDidMount = () => { };
 
 	render() {
 		return (
-			<React.Fragment>
+			<>
 				<PageHeader title="FAQ - Frequently Asked Questions" />
 				<Segment vertical>
 					<Grid container stackable verticalAlign="middle">
@@ -22,19 +22,19 @@ class FAQContainer extends Component {
 							<Grid.Column width={16}>
 								{FAQ.map(f => {
 									return (
-										<>
+										<React.Fragment key={f.scheme.heading}>
 											<h3>{f.scheme.heading}</h3>
 											{f.scheme.content.map((c, i) => {
 												return <span key={i}>{c}</span>;
 											})}
-										</>
+										</React.Fragment>
 									);
 								})}
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
 				</Segment>
-			</React.Fragment>
+			</>
 		);
 	}
 }
