@@ -24,9 +24,15 @@
 		"repo": ""
 	},
 	{
-		"name": "HTTP  Dogs",
+		"name": "HTTP Dogs",
 		"description": "Status Codes To Dog Memes, as a Service.",
-		"url": "https://httpstatusdogs.com/",
+		"url": "https://http.dog/",
+		"repo": ""
+	},
+	{
+		"name": "HTTP Goats",
+		"description": "Status Codes To Goat Memes, as a Service.",
+		"url": "https://httpgoats.com/",
 		"repo": ""
 	},
 	{
